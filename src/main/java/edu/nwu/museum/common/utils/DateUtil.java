@@ -11,7 +11,6 @@ import java.util.Locale;
  * 时间工具类
  */
 public class DateUtil {
-
   public static final String FULL_TIME_PATTERN = "yyyyMMddHHmmss";
 
   public static final String FULL_TIME_SPLIT_PATTERN = "yyyy-MM-dd HH:mm:ss";
@@ -35,5 +34,4 @@ public class DateUtil {
     Date d = sdf.parse(date);
     return DateUtil.getDateFormat(d, format);
   }
-
 }
