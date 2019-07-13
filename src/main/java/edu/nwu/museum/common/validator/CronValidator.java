@@ -7,7 +7,6 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 public class CronValidator implements ConstraintValidator<IsCron, String> {
-
   @Override
   public void initialize(IsCron isCron) {
   }

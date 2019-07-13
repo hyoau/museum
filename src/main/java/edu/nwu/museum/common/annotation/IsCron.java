@@ -13,7 +13,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = CronValidator.class)
 public @interface IsCron {
-
   String message();
 
   Class<?>[] groups() default {};
