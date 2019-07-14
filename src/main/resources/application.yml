@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8236
 
 spring:
   datasource:
@@ -16,7 +16,6 @@ spring:
       # 配置默认数据源
       primary: primary
       datasource:
-        # 数据源-1，名称为 primary
         primary:
           username: root
           password: root
@@ -31,10 +30,6 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-  mvc:
-    view:
-      prefix: /templates
-
 
 #mybatis plus 设置
 mybatis-plus:

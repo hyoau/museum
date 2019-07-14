@@ -1,15 +1,10 @@
 package edu.nwu.museum.common.utils;
 
-import edu.nwu.museum.common.authentication.JWTUtil;
 import edu.nwu.museum.common.domain.CommonConstant;
-import edu.nwu.museum.common.function.CacheSelector;
-import edu.nwu.museum.common.service.CacheService;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
 
-import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
 /**
@@ -17,34 +12,6 @@ import java.util.stream.IntStream;
  */
 @Slf4j
 public class CommonUtil {
-
-  /**
-   * 缓存查询模板
-   *
-   * @param cacheSelector 查询缓存的方法
-   * @param databaseSelector 数据库查询方法
-   * @return T
-   */
-  public static <T> T selectCacheByTemplate(CacheSelector<T> cacheSelector,
-      Supplier<T> databaseSelector) {
-    try {
-      log.debug("query data from redis ······");
-      // 先查 Redis缓存
-      T t = cacheSelector.select();
-      if (t == null) {
-        // 没有记录再查询数据库
-        return databaseSelector.get();
-      } else {
-        return t;
-      }
-    } catch (Exception e) {
-      // 缓存查询出错，则去数据库查询
-      log.error("redis error：", e);
-      log.debug("query data from database ······");
-      return databaseSelector.get();
-    }
-  }
-
   /**
    * token 加密
    *

@@ -8,90 +8,21 @@ import com.wuwenze.poi.annotation.ExcelField;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import lombok.Data;
 
+@Data
 public class User implements Serializable {
   private static final long serialVersionUID = -4852732617765810959L;
-  // 账户状态
-  public static final String STATUS_VALID = "1";
 
-  public static final String STATUS_LOCK = "0";
-
-  public static final String DEFAULT_AVATAR = "default.jpg";
-  // 性别
-  public static final String SEX_MALE = "0";
-
-  public static final String SEX_FEMALE = "1";
-
-  public static final String SEX_UNKNOWN = "2";
-  // 默认密码
-  public static final String DEFAULT_PASSWD = "1234qwer";
-
-  @TableId(value = "USER_ID", type = IdType.AUTO)
   private Long userId;
 
-  @Size(min = 4, max = 10, message = "{range}")
-  @ExcelField(value = "用户名")
-  private String username;
+  private String userName;
 
   private String password;
 
-  private Long deptId;
-
-  @ExcelField(value = "部门")
-  private transient String deptName;
-
-  @Size(max = 50, message = "{noMoreThan}")
-  @Email(message = "{email}")
-  @ExcelField(value = "邮箱")
-  private String email;
-
-  @Pattern(regexp = RegexpConstant.MOBILE_REG, message = "{mobile}")
-  @ExcelField(value = "手机号")
-  private String mobile;
-
-  @NotBlank(message = "{required}")
-  @ExcelField(value = "状态", writeConverterExp = "0=锁定,1=有效")
-  private String status;
-
-  @ExcelField(value = "创建时间", writeConverter = TimeConverter.class)
   private Date createTime;
 
-  private Date modifyTime;
-
-  @ExcelField(value = "最后登录时间", writeConverter = TimeConverter.class)
-  private Date lastLoginTime;
-
-  @NotBlank(message = "{required}")
-  @ExcelField(value = "性别", writeConverterExp = "0=男,1=女,2=保密")
-  private String sex;
-
-  @Size(max = 100, message = "{noMoreThan}")
-  @ExcelField(value = "个人描述")
-  private String description;
-
-  private String avatar;
-
-  @NotBlank(message = "{required}")
-  private transient String roleId;
-
-  @ExcelField(value = "角色")
-  private transient String roleName;
-
-  // 排序字段
-  private transient String sortField;
-
-  // 排序规则 ascend 升序 descend 降序
-  private transient String sortOrder;
-
-  private transient String createTimeFrom;
-
-  private transient String createTimeTo;
-
-  private transient String id;
+  private String status;
 
   /**
    * shiro-redis v3.1.0 必须要有 getAuthCacheKey()或者 getId()方法
