@@ -1,8 +1,8 @@
 package edu.nwu.museum.backstage.domain;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import lombok.Data;
-import net.sf.jsqlparser.expression.DateTimeLiteralExpression.DateTime;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
@@ -16,8 +16,7 @@ public class News {
   //主持人
   private String newsSpeaker;
   //活动开始时间
-  @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-  private DateTime newsTime;
+  private Timestamp newsTime;
   //博物馆ID
   private String museumId;
   //图片
