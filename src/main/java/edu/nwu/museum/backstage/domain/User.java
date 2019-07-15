@@ -1,13 +1,10 @@
 package edu.nwu.museum.backstage.domain;
 
-import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
-public class User implements Serializable {
-  private static final long serialVersionUID = -4852732617765810959L;
+public class User {
   // 用户id
   private String userId;
   // 用户名
@@ -35,12 +32,10 @@ public class User implements Serializable {
   // 真实姓名
   private String realName;
   // 创建日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date createDate;
   // 创建者id
   private String creator;
   // 更新日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date updateDate;
   // 更新者id
   private String updater;

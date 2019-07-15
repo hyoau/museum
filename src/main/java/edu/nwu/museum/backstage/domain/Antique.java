@@ -1,8 +1,7 @@
 package edu.nwu.museum.backstage.domain;
 
-import java.util.Date;
+import java.sql.Date;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 public class Antique {
@@ -47,12 +46,10 @@ public class Antique {
   // 来源
   private String antiqueSource;
   // 收藏日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date antiqueCollectionDate;
   // 登记号
   private String antiqueRegistrationNum;
   // 鉴定日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date antiqueIdentificationDate;
   // 藏品等级
   private Integer antiqueLevel;
@@ -61,12 +58,10 @@ public class Antique {
   // 保护优先等级
   private Integer antiqueProtectionLevel;
   // 创建日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date createDate;
   // 创建人
   private String creator;
   // 更新日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date updateDate;
   // 更新人
   private String updater;

@@ -1,8 +1,7 @@
 package edu.nwu.museum.backstage.domain;
 
-import java.util.Date;
+import java.sql.Date;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 public class Topic {
@@ -21,12 +20,10 @@ public class Topic {
   // 专题描述
   private String topicDescription;
   // 创建日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date createDate;
   // 创建人
   private String creator;
   // 更新日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date updateDate;
   // 更新人id
   private String updater;
