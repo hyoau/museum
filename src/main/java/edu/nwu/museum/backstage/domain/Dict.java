@@ -13,11 +13,7 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Data
-@TableName("t_dict")
-@Excel("字典信息表")
-public class Dict implements Serializable {
-  private static final long serialVersionUID = 7780820231535870010L;
-
+public class Dict {
   @TableId(value = "DICT_ID", type = IdType.AUTO)
   private Long dictId;
 
