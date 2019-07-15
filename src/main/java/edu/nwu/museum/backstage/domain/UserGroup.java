@@ -1,8 +1,10 @@
 package edu.nwu.museum.backstage.domain;
 
 import java.util.Date;
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+@Data
 public class UserGroup {
   // 用户组id
   private String groupId;
