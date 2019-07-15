@@ -1,9 +1,11 @@
 package edu.nwu.museum.backstage.domain;
 
-import java.util.Date;
+import java.sql.Date;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
+/**
+ * 资源表
+ */
 @Data
 public class Resource {
   // 资源id
@@ -15,7 +17,6 @@ public class Resource {
   // 资源URL
   private String resourceURL;
   // 创建日期
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date createDate;
   // 创建人
   private Integer creator;
