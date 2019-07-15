@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan(value = {"edu.nwu.museum.*.dao"})
+@MapperScan(value = {"edu.nwu.Museum.*.dao"})
 public class MyBatisConfig {
   /**
    * 分页插件
