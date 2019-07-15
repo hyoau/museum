@@ -2,7 +2,6 @@ package edu.nwu.museum.backstage.domain;
 
 import java.sql.Date;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 public class UserGroup {
