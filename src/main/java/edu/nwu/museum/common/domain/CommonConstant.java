@@ -10,7 +10,7 @@ public class CommonConstant {
   // user角色缓存前缀
   public static final String USER_ROLE_CACHE_PREFIX = "febs.cache.user.role.";
   // user权限缓存前缀
-  public static final String USER_PERMISSION_CACHE_PREFIX = "febs.cache.user.permission.";
+  public static final String USER_PERMISSION_CACHE_PREFIX = "febs.cache.user.Permission.";
   // user个性化配置前缀
   public static final String USER_CONFIG_CACHE_PREFIX = "febs.cache.user.config.";
   // token缓存前缀
