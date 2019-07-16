@@ -8,44 +8,44 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Data
 public class Museum {
   //  博物馆id
-  private String museum_id;
+  private String museumId;
   //  名字
-  private String museum_name;
+  private String museumName;
   //  等级
-  private int museum_level;
+  private int museumLevel;
   //  首页展示权重
-  private int show_weight;
+  private int showWeight;
   //  地址
-  private String museum_address;
+  private String museumAddress;
   //  官网
-  private String museum_index_url;
+  private String museumIndexUrl;
   //  馆长
   private String curator;
   //  藏品数量
-  private int museum_antique_count;
+  private int museumAntiqueCount;
   //  所属部门
-  private String museum_department;
+  private String museumDepartment;
   //  门票价格
-  private double museum_ticket_price;
+  private double museumTicketPrice;
   //  竣工时间
   @DateTimeFormat(pattern = "yyyy-MM-dd")
-  private Date museum_complete_time;
+  private Date museumCompleteTime;
   //  组织结构说明
-  private String museum_manage_img;
+  private String museumManageImg;
   //  详细介绍
-  private String museum_intro;
+  private String museumIntro;
   //  参观指南
-  private String museum_guide;
+  private String museumGuide;
   //  模板id
-  private int template_id;
+  private int templateId;
   //  创建时间
-  private Timestamp create_date;
+  private Timestamp createDate;
   //  创建人id
   private String creator;
   //  更新时间
-  private Timestamp update_date;
+  private Timestamp updateDate;
   //  更新人id
   private String updater;
   //  删除标识
-  private int del_flag;
+  private int delFlag;
 }

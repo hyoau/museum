@@ -7,17 +7,17 @@ import java.sql.Timestamp;
 @Data
 public class Comment {
   //文物序列号
-  private int antique_seq_no;
+  private int antiqueSeqNo;
   //评论序列号
-  private int comment_seq_no;
+  private int commentSeqNo;
   //内容
-  private String commont_content;
+  private String commentContent;
   //评论者id
-  private String user_id;
+  private String userId;
   //时间
-  private Timestamp comment_time;
+  private Timestamp commentTime;
   //点赞数
-  private int like_count;
+  private int likeCount;
   //被评论者id
-  private String commented_user_id;
+  private String commentedUserId;
 }

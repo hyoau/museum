@@ -5,17 +5,17 @@ import lombok.Data;
 @Data
 public class Log {
   //日志序列号
-  private int log_seq_no;
+  private int logSeqNo;
   //用户id
-  private String user_id;
+  private String userId;
   //用户名
-  private String user_name;
+  private String userName;
   //登陆ip地址
-  private String login_ip;
+  private String loginIp;
   //操作类型
-  private int log_action_type;
+  private int logActionType;
   //操作内容
-  private String log_action;
+  private String logAction;
   //操作时间
-  private Timestamp log_action_time;
+  private Timestamp logActionTime;
 }
