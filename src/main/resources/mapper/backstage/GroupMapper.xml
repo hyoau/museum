@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.GroupMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Group">
+    <id column="group_id" jdbcType="VARCHAR" property="groupId"/>
+    <result column="group_name" jdbcType="VARCHAR" property="groupName"/>
+    <result column="group_info" jdbcType="VARCHAR" property="groupInfo"/>
+    <result column="create_date" jdbcType="DATE" property="createDate"/>
+    <result column="creator" jdbcType="VARCHAR" property="creator"/>
+    <result column="update_date" jdbcType="DATE" property="updateDate"/>
+    <result column="updater" jdbcType="VARCHAR" property="updater"/>
+    <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+  </resultMap>
+
+  <select id="findAllGroup" resultType="edu.nwu.museum.backstage.domain.Group">
+    SELECT
+      group_id groupId,
+      group_name groupName,
+      group_info groupInfo,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    FROM t_group
+  </select>
+
+  <select id="findGroupById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Group">
+    SELECT
+      group_id groupId,
+      group_name groupName,
+      group_info groupInfo,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    FROM t_group
+    WHERE group_id = #{groupId}
+  </select>
+
+  <insert id="insertById" parameterType="edu.nwu.museum.backstage.domain.Group">
+    INSERT INTO t_group (
+      group_id,
+      group_name,
+      group_info,
+      create_date,
+      creator,
+      update_date,
+      updater,
+      del_flag
+    ) VALUES (
+      #{groupId},
+      #{groupName},
+      #{groupInfo},
+      #{createDate, jdbcType=DATE},
+      #{creator},
+      #{updateDate, jdbcType=DATE},
+      #{updater},
+      #{delFlag}
+    )
+  </insert>
+
+  <update id="updateById" parameterType="edu.nwu.museum.backstage.domain.Group">
+    UPDATE t_group
+    SET group_id = #{groupId},
+        group_name = #{groupName},
+        group_info = #{groupInfo},
+        create_date = #{createDate, jdbcType=DATE},
+        creator = #{creator},
+        update_date = #{updateDate, jdbcType=DATE},
+        updater = #{updater},
+        del_flag = #{delFlag}
+    WHERE group_id = #{groupId}
+  </update>
+
+  <delete id="deleteById" parameterType="java.lang.String">
+    delete from t_group where group_id = #{groupId}
+  </delete>
+</mapper>

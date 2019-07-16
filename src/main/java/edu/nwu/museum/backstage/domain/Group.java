@@ -1,10 +1,12 @@
 package edu.nwu.museum.backstage.domain;
 
+import java.io.Serializable;
 import java.sql.Date;
 import lombok.Data;
 
 @Data
-public class Group {
+public class Group implements Serializable {
+  private static final long serialVersionUID = 1L;
   // 用户组id
   private String groupId;
   // 用户组名称
