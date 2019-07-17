@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.CommentMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Comment">
+    <id column="comment_seq_no" jdbcType="INTEGER" property="commentSeqNo"/>
+    <result column="antique_seq_no" jdbcType="INTEGER" property="commentSeqNo"/>
+    <result column="comment_content" jdbcType="VARCHAR" property="commentContent"/>
+    <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+    <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime"/>
+    <result column="like_count" jdbcType="INTEGER" property="likeCount"/>
+    <result column="commented_user_id" jdbcType="VARCHAR" property="commentedUserId"/>
+  </resultMap>
+
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Comment">
+    SELECT
+      comment_seq_no commentSeqNo,
+      antique_seq_no  commentSeqNo,
+      comment_content commentContent,
+      user_id userId,
+      comment_time commentTime,
+      like_count likeCount,
+      commented_user_id commentedUserId
+      FROM comment
+  </select>
+
+  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.backstage.domain.Comment">
+    SELECT
+      comment_seq_no commentSeqNo,
+      antique_seq_no  antiqueSeqNo,
+      comment_content commentContent,
+      user_id userId,
+      comment_time commentTime,
+      like_count likeCount,
+      commented_user_id commentedUserId
+    FROM comment
+    WHERE comment_seq_no = #{commentSeqNo}
+  </select>
+
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Comment">
+    INSERT INTO comment(
+      comment_seq_no,
+      antique_seq_no,
+      comment_content,
+      user_id,
+      comment_time,
+      like_count,
+      commented_user_id
+    ) VALUES (
+      #{commentSeqNo},
+      #{antiqueSeqNo},
+      #{commentContent},
+      #{userId},
+      #{commentTime,jdbcType=TIMESTAMP},
+      #{likeCount},
+      #{commentedUserId}
+    )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Group">
+    UPDATE comment
+    SET comment_seq_no = #{commentSeqNo},
+        antique_seq_no = #{antiqueSeqNo},
+        comment_content = #{commentContent},
+        user_id = #{userId},
+        comment_time = #{commentTime,jdbcType=TIMESTAMP},
+        like_count = #{likeCount},
+        commented_user_id = #{commentedUserId}
+    WHERE comment_seq_no = #{commentSeqNo}
+  </update>
+
+  <delete id="delete" parameterType="java.lang.Integer">
+    delete from comment where comment_seq_no = #{commentSeqNo}
+  </delete>
+
+</mapper>
