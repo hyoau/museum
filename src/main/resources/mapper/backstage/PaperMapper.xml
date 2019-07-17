@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.PaperMapper">
+  <resultMap type="edu.nwu.museum.backstage.domain.Paper" id="PaperMap">
+    <id column="paper_id" property="paperId" jdbcType="VARCHAR"/>
+    <id column="paper_title" property="paperTitle" jdbcType="VARCHAR"/>
+    <id column="paper_author" property="paperAuthor" jdbcType="VARCHAR"/>
+    <id column="key_words" property="keyWord" jdbcType="VARCHAR"/>
+    <id column="paper_periodical" property="paperPeriodical" jdbcType="VARCHAR"/>
+    <id column="paper_creat_time" property="creatTime" jdbcType="DATE"/>
+    <id column="paper_text" property="paperText" jdbcType="BLOB"/>
+    <id column="paper_image" property="paperImage" jdbcType="VARCHAR"/>
+    <id column="museum_id" property="museumId" jdbcType="VARCHAR"/>
+  </resultMap>
+
+  <!--查询所有论文信息-->
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Paper">
+    select paper_id paperId,
+      paper_title paperTitle,
+      paper_author paperAuthor,
+      key_words keyWord,
+      paper_periodical paperPeriodical,
+      paper_creat_time creatTime,
+      paper_text paperText,
+      paper_image paperImage,
+      museum_id museumId
+    from paper
+  </select>
+
+  <!--根据ID查询论文信息-->
+  <select id="findByPaperId" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Paper">
+    select paper_id paperId,
+      paper_title paperTitle,
+      paper_author paperAuthor,
+      key_words keyWord,
+      paper_periodical paperPeriodical,
+      paper_creat_time creatTime,
+      paper_text paperText,
+      paper_image paperImage,
+      museum_id museumId
+    from paper
+    where paper_id = #{ paperId }
+  </select>
+
+  <!--修改论文信息-->
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Paper">
+    update paper
+    set paper_id = #{ paperId },
+      paper_title = #{ paperTitle },
+      paper_author = #{ paperAuthor },
+      key_words = #{ keyWord },
+      paper_periodical = #{ paperPeriodical },
+      paper_creat_time = #{ creatTime },
+      paper_text = #{ paperText },
+      paper_image = #{ paperImage },
+      museum_id = #{ museumId }
+    where paper_id = #{ paperId }
+  </update>
+
+  <!--添加论文-->
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Paper">
+    insert into paper (
+      paper_id,
+      paper_title,
+      paper_author,
+      key_words,
+      paper_periodical,
+      paper_creat_time,
+      paper_text,
+      paper_image,
+      museum_id
+    )
+    values (
+      #{ paperId },
+      #{ paperTitle },
+      #{ paperAuthor },
+      #{ keyWord },
+      #{ paperPeriodical },
+      #{ creatTime },
+      #{ paperText },
+      #{ paperImage },
+      #{ museumId }
+    )
+  </insert>
+
+  <!--根据ID删除论文-->
+  <delete id="deleteByPaperId" parameterType="java.lang.String">
+    delete from paper where paper_id = #{ paperId }
+  </delete>
+</mapper>
