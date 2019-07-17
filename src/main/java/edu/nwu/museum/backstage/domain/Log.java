@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Log {
   //日志序列号
-  private int logSeqNo;
+  private Integer logSeqNo;
   //用户id
   private String userId;
   //用户名
@@ -13,7 +13,7 @@ public class Log {
   //登陆ip地址
   private String loginIp;
   //操作类型
-  private int logActionType;
+  private Integer logActionType;
   //操作内容
   private String logAction;
   //操作时间
