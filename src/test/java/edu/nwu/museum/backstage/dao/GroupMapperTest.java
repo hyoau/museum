@@ -18,7 +18,19 @@ public class GroupMapperTest {
 
   @Test
   public void testSelectAllGroup() {
-    Assert.assertNotNull(groupMapper.findAllGroup());
-    System.out.println(groupMapper.findAllGroup());
+    Assert.assertNotNull(groupMapper.findAll());
+    System.out.println("==========");
+    System.out.println(groupMapper.findAll());
+    System.out.println("==========");
+  }
+
+  @Test
+  public void testSelect() {
+    System.out.println("==========");
+    System.out.println(groupMapper.find("1"));
+    System.out.println("==========");
+    System.out.println("==========");
+    System.out.println(groupMapper.find("2"));
+    System.out.println("==========");
   }
 }

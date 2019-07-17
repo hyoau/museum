@@ -4,13 +4,13 @@ import edu.nwu.museum.backstage.domain.Group;
 import java.util.List;
 
 public interface GroupMapper{
-  List<Group> findAllGroup();
+  List<Group> findAll();
 
-  Group findGroupById();
+  Group find(String groupId);
 
-  void updateById(Group group);
+  void update(Group group);
 
-  void deleteById(String groupId);
+  void delete(String groupId);
 
-  void insertById(Group group);
+  void insert(Group group);
 }
