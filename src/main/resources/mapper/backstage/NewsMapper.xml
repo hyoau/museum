@@ -16,29 +16,29 @@
 
   <select id="findAll" resultType="edu.nwu.museum.backstage.domain.News">
     select news_id newsId,
-       news_title newsTitle,
-       news_type newsType,
-       news_speaker newsSpeaker,
-       news_time newsTime,
-       museum_id museumId,
-       news_image newsImage,
-       news_text newsText,
-       create_time createTime,
-       creator creator
+      news_title newsTitle,
+      news_type newsType,
+      news_speaker newsSpeaker,
+      news_time newsTime,
+      museum_id museumId,
+      news_image newsImage,
+      news_text newsText,
+      create_time createTime,
+      creator creator
     from news
   </select>
 
   <select id="findByNewsId" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.News">
     select news_id newsId,
-       news_title newsTitle,
-       news_type newsType,
-       news_speaker newsSpeaker,
-       news_time newsTime,
-       museum_id museumId,
-       news_image newsImage,
-       news_text newsText,
-       create_time createTime,
-       creator creator
+      news_title newsTitle,
+      news_type newsType,
+      news_speaker newsSpeaker,
+      news_time newsTime,
+      museum_id museumId,
+      news_image newsImage,
+      news_text newsText,
+      create_time createTime,
+      creator creator
     from news
     where news_id = #{ newsId }
   </select>
@@ -46,42 +46,42 @@
   <update id="update" parameterType="edu.nwu.museum.backstage.domain.News">
     update news
     set news_id = #{ newsId },
-       news_title = #{ newsTitle },
-       news_type = #{ newsType },
-       news_speaker = #{ newsSpeaker },
-       news_time = #{ newsTime, jdbcType = TIMESTAMP },
-       museum_id = #{ museumId },
-       news_image = #{ newsImage },
-       news_text = #{ newsText },
-       create_time = #{ createTime },
-       creator = #{ creator }
+      news_title = #{ newsTitle },
+      news_type = #{ newsType },
+      news_speaker = #{ newsSpeaker },
+      news_time = #{ newsTime, jdbcType = TIMESTAMP },
+      museum_id = #{ museumId },
+      news_image = #{ newsImage },
+      news_text = #{ newsText },
+      create_time = #{ createTime },
+      creator = #{ creator }
     where news_id = #{ newsId }
   </update>
 
   <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.News">
     insert into news (
       news_id,
-       news_title,
-       news_type,
-       news_speaker,
-       news_time,
-       museum_id,
-       news_image,
-       news_text,
-       create_time,
-       creator
+      news_title,
+      news_type,
+      news_speaker,
+      news_time,
+      museum_id,
+      news_image,
+      news_text,
+      create_time,
+      creator
     )
     values (
-       #{ newsId },
-       #{ newsTitle },
-       #{ newsType },
-       #{ newsSpeaker },
-       #{ newsTime, jdbcType = TIMESTAMP },
-       #{ museumId },
-       #{ newsImage },
-       #{ newsText },
-       #{ createTime },
-       #{ creator }
+      #{ newsId },
+      #{ newsTitle },
+      #{ newsType },
+      #{ newsSpeaker },
+      #{ newsTime, jdbcType = TIMESTAMP },
+      #{ museumId },
+      #{ newsImage },
+      #{ newsText },
+      #{ createTime },
+      #{ creator }
     )
   </insert>
 
