@@ -14,6 +14,7 @@
     <id column="creator" property="creator" jdbcType="VARCHAR"/>
   </resultMap>
 
+  <!--查询所有资讯信息-->
   <select id="findAll" resultType="edu.nwu.museum.backstage.domain.News">
     select news_id newsId,
       news_title newsTitle,
@@ -28,6 +29,7 @@
     from news
   </select>
 
+  <!--根据ID查询资讯信息-->
   <select id="findByNewsId" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.News">
     select news_id newsId,
       news_title newsTitle,
@@ -43,13 +45,14 @@
     where news_id = #{ newsId }
   </select>
 
+  <!--修改资讯信息-->
   <update id="update" parameterType="edu.nwu.museum.backstage.domain.News">
     update news
     set news_id = #{ newsId },
       news_title = #{ newsTitle },
       news_type = #{ newsType },
       news_speaker = #{ newsSpeaker },
-      news_time = #{ newsTime, jdbcType = TIMESTAMP },
+      news_time = #{ newsTime },
       museum_id = #{ museumId },
       news_image = #{ newsImage },
       news_text = #{ newsText },
@@ -58,6 +61,7 @@
     where news_id = #{ newsId }
   </update>
 
+  <!--添加资讯-->
   <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.News">
     insert into news (
       news_id,
@@ -85,6 +89,7 @@
     )
   </insert>
 
+  <!--根据ID删除资讯-->
   <delete id="deleteByNewsId">
     delete from news where news_id = #{ newsId }
   </delete>
