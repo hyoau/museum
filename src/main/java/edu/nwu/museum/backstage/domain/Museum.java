@@ -12,9 +12,9 @@ public class Museum {
   //  名字
   private String museumName;
   //  等级
-  private int museumLevel;
+  private Integer museumLevel;
   //  首页展示权重
-  private int showWeight;
+  private Integer showWeight;
   //  地址
   private String museumAddress;
   //  官网
@@ -22,7 +22,7 @@ public class Museum {
   //  馆长
   private String curator;
   //  藏品数量
-  private int museumAntiqueCount;
+  private Integer museumAntiqueCount;
   //  所属部门
   private String museumDepartment;
   //  门票价格
@@ -33,11 +33,11 @@ public class Museum {
   //  组织结构说明
   private String museumManageImg;
   //  详细介绍
-  private String museumIntro;
+  private String museumIntegerro;
   //  参观指南
   private String museumGuide;
   //  模板id
-  private int templateId;
+  private Integer templateId;
   //  创建时间
   private Timestamp createDate;
   //  创建人id
@@ -47,5 +47,5 @@ public class Museum {
   //  更新人id
   private String updater;
   //  删除标识
-  private int delFlag;
+  private Integer delFlag;
 }

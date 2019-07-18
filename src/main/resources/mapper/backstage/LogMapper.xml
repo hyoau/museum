@@ -58,13 +58,13 @@
 
   <update id="update" parameterType="edu.nwu.museum.backstage.domain.Log">
     UPDATE log
-    SET log_seq_no = #{logSeqNo}
-    SET user_id = #{userId}
-    SET user_name = #{userName}
-    SET login_ip = #{loginIp}
-    SET log_action_type = #{logActionType}
-    SET log_action = #{logAction}
-    SET log_action_time = #{logActionTime,jdbcType=TIMESTAMP}
+    SET log_seq_no = #{logSeqNo},
+        user_id = #{userId},
+        user_name = #{userName},
+        login_ip = #{loginIp},
+        log_action_type = #{logActionType},
+        log_action = #{logAction},
+        log_action_time = #{logActionTime,jdbcType=TIMESTAMP}
   </update>
 
   <delete id="delete" parameterType="java.lang.String">
