@@ -2,9 +2,10 @@ package edu.nwu.museum.backstage.dao;
 
 import edu.nwu.museum.backstage.domain.News;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface NewsMapper {
-
   //查询所有资讯信息
   List<News> findAll();
   //根据ID查询资讯信息

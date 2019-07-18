@@ -4,7 +4,9 @@ import edu.nwu.museum.backstage.dao.GroupMapper;
 import edu.nwu.museum.backstage.domain.Group;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GroupService {
   @Autowired
   GroupMapper groupMapper;
