@@ -21,4 +21,11 @@ public class LoginController {
   public String login() {
     return "login";
   }
+
+  @RequestMapping("/")
+  public String redirectIndex() {
+    return "redirect:/index";
+  }
+
+
 }
