@@ -58,9 +58,9 @@
     #{permName},
     #{permType},
     #{permResId},
-    #{createTime},
+    #{createTime, jdbcType=TIMESTAMP},
     #{creator},
-    #{updateTime},
+    #{updateTime, jdbcType=TIMESTAMP},
     #{updater},
     #{delFlag}
     )
@@ -72,9 +72,9 @@
         perm_name = #{permName},
         perm_type = #{permType},
         perm_res_id = #{permId},
-        create_time = #{createTime},
+        create_time = #{createTime, jdbcType=TIMESTAMP},
         creator = #{creator},
-        update_time = #{updateTime},
+        update_time = #{updateTime, jdbcType=TIMESTAMP},
         updater = #{updater},
         del_flag = #{delFlag}
     WHERE perm_id = #{permId}
