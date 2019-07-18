@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.User">
+    <id column="user_id" jdbcType="VARCHAR" property="userId"/>
+    <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+    <result column="password" jdbcType="VARCHAR" property="password"/>
+    <result column="user_tel" jdbcType="VARCHAR" property="userTel"/>
+    <result column="email" jdbcType="VARCHAR" property="userName"/>
+    <result column="dept_id" jdbcType="BIGINT" property="deptId"/>
+    <result column="user_avatar" jdbcType="VARCHAR" property="userAvatar"/>
+    <result column="user_sex" jdbcType="INTEGER" property="userSex"/>
+    <result column="user_status" jdbcType="INTEGER" property="userStatus"/>
+    <result column="address" jdbcType="VARCHAR" property="address"/>
+    <result column="birthday" jdbcType="DATE" property="birthday"/>
+    <result column="museum_id" jdbcType="VARCHAR" property="museumId"/>
+    <result column="real_name" jdbcType="VARCHAR" property="realName"/>
+    <result column="create_date" jdbcType="DATE" property="createDate"/>
+    <result column="creator" jdbcType="VARCHAR" property="creator"/>
+    <result column="update_date" jdbcType="DATE" property="updateDate"/>
+    <result column="updater" jdbcType="VARCHAR" property="updater"/>
+  </resultMap>
+
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.User">
+    SELECT
+      user_id userId,
+      user_name userName,
+      password password,
+      user_tel userTel,
+      email email,
+      dept_id deptId,
+      user_avatar userAvatar,
+      user_sex userSex,
+      user_status userStatus,
+      address address,
+      birthday birthday,
+      museum_id museumId,
+      real_name realName,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater
+    FROM t_user
+  </select>
+
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.User">
+    SELECT
+      user_id userId,
+      user_name userName,
+      password password,
+      user_tel userTel,
+      email email,
+      dept_id deptId,
+      user_avatar userAvatar,
+      user_sex userSex,
+      user_status userStatus,
+      address address,
+      birthday birthday,
+      museum_id museumId,
+      real_name realName,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater
+    FROM t_user
+    WHERE user_id = #{userId}
+  </select>
+
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.User">
+    INSERT INTO t_user (
+      user_id,
+      user_name,
+      password,
+      user_tel,
+      email,
+      dept_id,
+      user_avatar,
+      user_sex,
+      user_status,
+      address,
+      birthday,
+      museum_id,
+      real_name,
+      create_date,
+      creator,
+      update_date,
+      updater
+    ) VALUES (
+      #{userId},
+      #{userName},
+      #{password},
+      #{userTel},
+      #{email},
+      #{deptId},
+      #{userAvatar},
+      #{userSex},
+      #{userStatus},
+      #{address},
+      #{birthday},
+      #{museumId},
+      #{realName},
+      #{createDate},
+      #{creator},
+      #{updateDate},
+      #{updater}
+    )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.User">
+    UPDATE t_user
+    SET user_id = #{userId},
+        user_name = #{userName},
+        password = #{password},
+        user_tel = #{userTel},
+        email = #{email},
+        dept_id = #{deptId},
+        user_avatar = #{userAvatar},
+        user_sex = #{userSex},
+        user_status = #{userStatus},
+        address = #{address},
+        birthday = #{birthday},
+        museum_id = #{museumId},
+        real_name = #{realName},
+        create_date = #{createDate},
+        creator = #{creator},
+        update_date = #{updateDate},
+        updater = #{updater}
+    WHERE user_id = #{userId}
+  </update>
+
+  <delete id="deleteById" parameterType="java.lang.String">
+    DELETE FROM t_user WHERE user_id = #{userId}
+  </delete>
+</mapper>
