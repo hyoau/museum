@@ -3,6 +3,7 @@ package edu.nwu.museum.common.authentication;
 import java.util.LinkedHashMap;
 
 import org.apache.shiro.authz.AuthorizationException;
+import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
@@ -62,6 +63,7 @@ public class ShiroConfig {
     DefaultWebSecurityManager securityManager =  new DefaultWebSecurityManager();
     securityManager.setRealm(shiroRealm());
     securityManager.setRememberMeManager(rememberMeManager());
+    securityManager.setCacheManager(getEhCacheManager());
     return securityManager;
   }
 
@@ -106,5 +108,15 @@ public class ShiroConfig {
     public String handleAuthorizationException() {
       return "403";
     }
+  }
+
+  /**
+   * Ehcache Manage
+   */
+  @Bean
+  public EhCacheManager getEhCacheManager() {
+    EhCacheManager em = new EhCacheManager();
+    em.setCacheManagerConfigFile("classpath:config/shiro-ehcache.xml");
+    return em;
   }
 }
