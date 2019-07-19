@@ -4,9 +4,9 @@ import java.io.Serializable;
 import lombok.Data;
 
 @Data
-public class Permission implements Serializable{
+public class Role implements Serializable {
   private static final long serialVersionUID = 1L;
   private Integer id;
-  private String url;
   private String name;
+  private String memo;
 }
