@@ -26,7 +26,7 @@ public class LoginController {
 
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public String login(String userId, String password) {
-//    password = MD5Util.encrypt(userId, password);
+    // password = MD5Util.encrypt(userId, password);
     UsernamePasswordToken token = new UsernamePasswordToken(userId, password);
     Subject subject = SecurityUtils.getSubject();
     try {
