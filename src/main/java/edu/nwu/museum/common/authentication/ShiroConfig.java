@@ -2,9 +2,12 @@ package edu.nwu.museum.common.authentication;
 
 import java.util.LinkedHashMap;
 
+import org.apache.shiro.codec.Base64;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
+import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.apache.shiro.web.servlet.SimpleCookie;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -33,7 +36,8 @@ public class ShiroConfig {
     filterChainDefinitionMap.put("/logout", "logout");
     filterChainDefinitionMap.put("/", "anon");
     // 除上以外所有url都必须认证通过才可以访问，未通过认证自动访问LoginUrl
-    filterChainDefinitionMap.put("/**", "authc");
+    // user指的是用户认证通过或者配置了Remember Me记住用户登录状态后可访问
+    filterChainDefinitionMap.put("/**", "user");
 
     shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
     return shiroFilterFactoryBean;
@@ -42,8 +46,9 @@ public class ShiroConfig {
   @Bean
   public SecurityManager securityManager(){
     // 配置SecurityManager，并注入shiroRealm
-    DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+    DefaultWebSecurityManager securityManager =  new DefaultWebSecurityManager();
     securityManager.setRealm(shiroRealm());
+    securityManager.setRememberMeManager(rememberMeManager());
     return securityManager;
   }
 
@@ -52,5 +57,29 @@ public class ShiroConfig {
     // 配置Realm，需自己实现
     ShiroRealm shiroRealm = new ShiroRealm();
     return shiroRealm;
+  }
+
+  /**
+   * cookie对象
+   * @return
+   */
+  public SimpleCookie rememberMeCookie() {
+    // 设置cookie名称，对应login.html页面的<input type="checkbox" name="rememberMe"/>
+    SimpleCookie cookie = new SimpleCookie("rememberMe");
+    // 设置cookie的过期时间，单位为秒，这里为一天
+    cookie.setMaxAge(86400);
+    return cookie;
+  }
+
+  /**
+   * cookie管理对象
+   * @return
+   */
+  public CookieRememberMeManager rememberMeManager() {
+    CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
+    cookieRememberMeManager.setCookie(rememberMeCookie());
+    // rememberMe cookie加密的密钥
+    cookieRememberMeManager.setCipherKey(Base64.decode("4AvVhmFLUs0KTA3Kprsdag=="));
+    return cookieRememberMeManager;
   }
 }

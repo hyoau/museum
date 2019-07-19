@@ -24,14 +24,19 @@ public class LoginController {
     return "redirect:/index";
   }
 
+  @RequestMapping("/test")
+  public String test() {
+    return "Test";
+  }
+
   @RequestMapping(value = "/login", method = RequestMethod.POST)
-  public String login(String userId, String password) {
-    // password = MD5Util.encrypt(userId, password);
-    UsernamePasswordToken token = new UsernamePasswordToken(userId, password);
+  public String login(String userId, String password, Boolean rememberMe) {
+    // 暂时先用明文来存储密码
+    UsernamePasswordToken token = new UsernamePasswordToken(userId, password, rememberMe);
     Subject subject = SecurityUtils.getSubject();
     try {
       subject.login(token);
-      return "OK";
+      return "认证成功";
     } catch (UnknownAccountException e) {
       return "认证失败";
     } catch (IncorrectCredentialsException e) {
