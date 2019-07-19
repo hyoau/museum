@@ -16,12 +16,12 @@ import org.apache.shiro.subject.Subject;
 public class LoginController {
   @RequestMapping("/login")
   public String login() {
-    return "login";
+    return "Login";
   }
 
   @RequestMapping("/")
   public String redirectIndex() {
-    return "redirect:/index";
+    return "Index";
   }
 
   @RequestMapping("/test")
