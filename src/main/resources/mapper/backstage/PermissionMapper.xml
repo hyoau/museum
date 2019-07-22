@@ -54,15 +54,15 @@
       updater,
       del_flag
     ) VALUES (
-    #{permId},
-    #{permName},
-    #{permType},
-    #{permResId},
-    #{createTime, jdbcType=TIMESTAMP},
-    #{creator},
-    #{updateTime, jdbcType=TIMESTAMP},
-    #{updater},
-    #{delFlag}
+      #{permId},
+      #{permName},
+      #{permType},
+      #{permResId},
+      #{createTime, jdbcType=TIMESTAMP},
+      #{creator},
+      #{updateTime, jdbcType=TIMESTAMP},
+      #{updater},
+      #{delFlag}
     )
   </insert>
 

@@ -20,20 +20,20 @@ public class Museum {
   //  官网
   private String museumIndexUrl;
   //  馆长
-  private String curator;
+  private String museumCurator;
   //  藏品数量
   private Integer museumAntiqueCount;
   //  所属部门
   private String museumDepartment;
   //  门票价格
-  private double museumTicketPrice;
+  private Double museumTicketPrice;
   //  竣工时间
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date museumCompleteTime;
   //  组织结构说明
   private String museumManageImg;
   //  详细介绍
-  private String museumIntegerro;
+  private String museumIntro;
   //  参观指南
   private String museumGuide;
   //  模板id

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.MuseumMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Museum">
+    <id column="museum_id" jdbcType="VARCHAR" property="museumId"/>
+    <result column="museum_name" jdbcType="VARCHAR" property="museumName"/>
+    <result column="museum_level" jdbcType="INTEGER" property="museumLevel"/>
+    <result column="show_weight" jdbcType="VARCHAR" property="showWeight"/>
+    <result column="museum_address" jdbcType="VARCHAR" property="museumAddress"/>
+    <result column="museum_index_url" jdbcType="VARCHAR" property="museumIndexUrl"/>
+    <result column="museum_curator" jdbcType="VARCHAR" property="museumCurator"/>
+    <result column="museum_antique_count" jdbcType="INTEGER" property="museumAntiqueCount"/>
+    <result column="museum_department" jdbcType="VARCHAR" property="museumDepartment"/>
+    <result column="museum_ticket_price" jdbcType="VARCHAR" property="museumTicketPrice"/>
+    <result column="museum_completed_time" jdbcType="DATE" property="museumCompletedTime"/>
+    <result column="museum_manage_img" jdbcType="VARCHAR" property="museumManageImg"/>
+    <result column="museum_intro" jdbcType="VARCHAR" property="museumIntro"/>
+    <result column="museum_guide" jdbcType="VARCHAR" property="museumGuide"/>
+    <result column="template_id" jdbcType="INTEGER" property="templateId"/>
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
+    <result column="creator" jdbcType="VARCHAR" property="creator"/>
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate"/>
+    <result column="updater" jdbcType="VARCHAR" property="updater"/>
+    <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+  </resultMap>
+
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Museum">
+    SELECT
+      museum_id museumId,
+      museum_name museumName,
+      museum_level museumLevel,
+      show_weight showWeight,
+      museum_address museumAddress,
+      museum_index_url museumIndexUrl,
+      museum_curator museumCurator,
+      museum_antique_count museumAntiqueCount,
+      museum_department museumDepartment,
+      museum_ticket_price museumTicketPrice,
+      museum_completed_time museumCompletedTime,
+      museum_manage_img museumManageImg,
+      museum_intro museumIntro,
+      museum_guide museumGuide,
+      template_id templateId,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    FROM t_museum
+  </select>
+
+  <select id="find" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Museum">
+    SELECT
+      museum_id museumId,
+      museum_name museumName,
+      museum_level museumLevel,
+      show_weight showWeight,
+      museum_address museumAddress,
+      museum_index_url museumIndexUrl,
+      museum_curator museumCurator,
+      museum_antique_count museumAntiqueCount,
+      museum_department museumDepartment,
+      museum_ticket_price museumTicketPrice,
+      museum_completed_time museumCompletedTime,
+      museum_manage_img museumManageImg,
+      museum_intro museumIntro,
+      museum_guide museumGuide,
+      template_id templateId,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+      FROM t_museum
+      WHERE museum_id = #{museumId}
+  </select>
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Museum">
+  INSERT INTO t_museum(
+    museum_id,
+    museum_name,
+    museum_level,
+    show_weight,
+    museum_address,
+    museum_index_url,
+    museum_curator,
+    museum_antique_count,
+    museum_department,
+    museum_ticket_price,
+    museum_completed_time,
+    museum_manage_img,
+    museum_intro,
+    museum_guide,
+    template_id,
+    create_date,
+    creator,
+    update_date,
+    updater,
+    del_flag
+  ) VALUES (
+    #{museumId},
+    #{museumName},
+    #{museumLevel},
+    #{showWeight},
+    #{museumAddress},
+    #{museumIndexUrl},
+    #{museumCurator},
+    #{museumAntiqueCount},
+    #{museumDepartment},
+    #{museumTicketPrice},
+    #{museumCompletedTime,jdbcType=DATE},
+    #{museumManageImg},
+    #{museumIntro},
+    #{museumGuide},
+    #{templateId},
+    #{createDate,jdbcType=TIMESTAMP},
+    #{creator},
+    #{updateDate,jdbcType=TIMESTAMP},
+    #{updater},
+    #{delFlag}
+  )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Museum">
+    UPDATE t_museum
+    SET museum_id = #{museumId},
+        museum_name = #{museumName},
+        museum_level = #{museumLevel},
+        show_weight = #{showWeight},
+        museum_address = #{museumAddress},
+        museum_index_url = #{museumIndexUrl},
+        museum_curator = #{museumCurator},
+        museum_antique_count = #{museumAntiqueCount},
+        museum_department = #{museumDepartment},
+        museum_ticket_price = #{museumTicketPrice},
+        museum_completed_time = #{museumCompletedTime,jdbcType=DATE},
+        museum_manage_img = #{museumManageImg},
+        museum_intro = #{museumIntro},
+        museum_guide = #{museumGuide},
+        template_id = #{templateId},
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+        creator = #{creator},
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+        updater = #{updater},
+        del_flag = #{delFlag}
+    WHERE museum_id = #{museumId}
+  </update>
+
+  <delete id="delete" parameterType="java.lang.String">
+    delete from t_museum where museum_id = #{museumId}
+  </delete>
+</mapper>
