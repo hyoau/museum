@@ -1,6 +1,5 @@
 server:
   port: 8236
-
 spring:
   datasource:
     url: jdbc:mysql://39.107.230.204:3306/museum?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -12,8 +11,10 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  resources:
+    static-locations: /META-INF/resources/,classpath:/resources/, classpath:/static/
 
 #mybatis设置
 mybatis:
-  mapper-locations: classpath:mapper/*/*.xml
+  mapper-locations: classpath:/mapper/*/*.xml
   # type-aliases-package: edu.nwu.Museum.backstage.domain
