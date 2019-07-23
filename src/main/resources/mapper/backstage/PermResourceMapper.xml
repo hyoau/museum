@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.PermResourceMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.PermResource">
+    <id column="perm_res_id" jdbcType="VARCHAR" property="permResId"/>
+    <result column="perm_res_name" jdbcType="VARCHAR" property="permResName"/>
+    <result column="perm_url" jdbcType="VARCHAR" property="permUrl"/>
+  </resultMap>
+
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.PermResource">
+    SELECT
+      perm_res_id permResId,
+      perm_res_name permResName,
+      perm_url permUrl
+    FROM perm_resource
+  </select>
+
+  <select id="find" resultType="edu.nwu.museum.backstage.domain.PermResource">
+    SELECT
+      perm_res_id permResId,
+      perm_res_name permResName,
+      perm_url permUrl
+    FROM perm_resource
+    WHERE perm_res_id = #{permResId}
+  </select>
+
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.PermResource">
+    INSERT INTO perm_resource (
+      perm_res_id,
+      perm_res_name,
+      perm_url
+    ) VALUES (
+      #{permResId},
+      #{permResName},
+      #{permUrl}
+    )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.PermResource">
+    UPDATE perm_resource
+    SET perm_res_id = #{permResId},
+        perm_res_name = #{permResName},
+        perm_url = #{groupInfo},
+    WHERE perm_res_id = #{permResId}
+  </update>
+
+  <delete id="delete" parameterType="java.lang.String">
+    delete from perm_resource where perm_res_id = #{permResId}
+  </delete>
+</mapper>

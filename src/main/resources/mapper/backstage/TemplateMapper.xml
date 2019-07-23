@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.TemplateMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Template">
+    <id column="template_id" jdbcType="VARCHAR" property="templateId"/>
+    <result column="template_name" jdbcType="VARCHAR" property="templateName"/>
+    <result column="template_type" jdbcType="INTEGER" property="templateType"/>
+    <result column="template_source_url" jdbcType="VARCHAR" property="templateSourceUrl"/>
+    <result column="template_description" jdbcType="VARCHAR" property="templateDescription"/>
+    <result column="template_status" jdbcType="INTEGER" property="templateStatus"/>
+  </resultMap>
+
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Template">
+    SELECT
+      template_id templateId,
+      template_name templateName,
+      template_type templateType,
+      template_source_url templateSourceUrl,
+      template_description templateDescription,
+      template_status templateStatus
+    FROM template
+  </select>
+
+  <select id="find" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Template">
+    SELECT
+      template_id templateId,
+      template_name templateName,
+      template_type templateType,
+      template_source_url templateSourceUrl,
+      template_description templateDescription,
+      template_status templateStatus
+    FROM template
+    WHERE template_id = #{templateId}
+  </select>
+
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Template">
+    INSERT INTO template (
+      template_id,
+      template_name,
+      template_type,
+      template_source_url,
+      template_description,
+      template_status
+    ) VALUES (
+      #{templateId},
+      #{templateName},
+      #{templateType},
+      #{templateSourceUrl},
+      #{templateDescription},
+      #{templateStatus}
+    )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Template">
+    UPDATE template
+    SET template_id = #{templateId},
+        template_name = #{templateName},
+        template_type = #{templateType},
+        template_source_url = #{templateSourceUrl},
+        template_description = #{templateDescription},
+        template_status = #{templateStatus}
+    WHERE template_id = #{templateId}
+  </update>
+
+  <delete id="delete" parameterType="java.lang.String">
+    delete from template where template_id = #{templateId}
+  </delete>
+</mapper>
