@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.AntiqueMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Antique">
+    <id column="antique_id" jdbcType="VARCHAR" property="antiqueId"/>
+    <id column="seq_no" jdbcType="INTEGER" property="seqNo"/>
+    <result column="antique_name" jdbcType="VARCHAR" property="antiqueName"/>
+    <result column="antique_type" jdbcType="INTEGER" property="antiqueType"/>
+    <result column="antique_dynasty" jdbcType="VARCHAR" property="antiqueDynasty"/>
+    <result column="antique_area" jdbcType="INTEGER" property="antiqueArea"/>
+    <result column="antique_texture" jdbcType="INTEGER" property="antiqueTexture"/>
+    <result column="antique_usage" jdbcType="INTEGER" property="antiqueUsage"/>
+    <result column="antique_complete" jdbcType="INTEGER" property="antiqueCompletion"/>
+    <result column="antique_length" jdbcType="DECIMAL" property="antiqueLength"/>
+    <result column="antique_width" jdbcType="DECIMAL" property="antiqueWidth"/>
+    <result column="antique_height" jdbcType="DECIMAL" property="antiqueHeight"/>
+    <result column="antique_weight" jdbcType="DECIMAL" property="antiqueWeight"/>
+    <result column="antique_count" jdbcType="INTEGER" property="antiqueCount"/>
+    <result column="museum_id" jdbcType="VARCHAR" property="museumId"/>
+    <result column="author_id" jdbcType="VARCHAR" property="authorId"/>
+    <result column="antique_like_count" jdbcType="INTEGER" property="antiqueLikeCount"/>
+    <result column="antique_favourite_count" jdbcType="INTEGER" property="antiqueFavouriteCount"/>
+    <result column="antique_collection_department" jdbcType="INTEGER" property="antiqueCollectionDepartment"/>
+    <result column="antique_source" jdbcType="VARCHAR" property="antiqueSource"/>
+    <result column="antique_collection_date" jdbcType="DATE" property="antiqueCollectionDate"/>
+    <result column="antique_registration_num" jdbcType="INTEGER" property="antiqueRegistrationNum"/>
+    <result column="antique_identification_date" jdbcType="DATE" property="antiqueIdentificationDate"/>
+    <result column="antique_level" jdbcType="INTEGER" property="antiqueLevel"/>
+    <result column="antique_appraiser" jdbcType="VARCHAR" property="antiqueAppraiser"/>
+    <result column="antique_protection_level" jdbcType="INTEGER" property="antiqueProtectionLevel"/>
+    <result column="create_date" jdbcType="DATE" property="createDate"/>
+    <result column="creator" jdbcType="VARCHAR" property="creator"/>
+    <result column="update_date" jdbcType="DATE" property="updateDate"/>
+    <result column="updater" jdbcType="VARCHAR" property="updater"/>
+    <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+  </resultMap>
+  
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Antique">
+    select antique_id antiqueId,
+      seq_no seqNo,
+      antique_name antiqueName,
+      antique_type antiqueType,
+      antique_dynasty antiqueDynasty,
+      antique_area antiqueArea,
+      antique_texture antiqueTexture,
+      antique_usage antiqueUsage,
+      antique_completion antiqueCompletion,
+      antique_length antiqueLength,
+      antique_width antiqueWidth,
+      antique_height antiqueHeight,
+      antique_weight antiqueWeight,
+      antique_count antiqueCount,
+      museum_id museumId,
+      author_id authorId,
+      antique_like_count antiqueLikeCount,
+      antique_favourite_count antiqueFavouriteCount,
+      antique_collection_department antiqueCollectionDepartment,
+      antique_source antiqueSource,
+      antique_collection_date antiqueCollectionDate,
+      antique_registration_num antiqueRegistrationNum,
+      antique_identification_date antiqueIdentificationDate,
+      antique_level antiqueLevel,
+      antique_appraiser antiqueAppraiser,
+      antique_protection_level antiqueProtectionLevel,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    from t_antique
+  </select>
+
+  <select id="findById" resultType="edu.nwu.museum.backstage.domain.Antique">
+    select antique_id antiqueId,
+      seq_no seqNo,
+      antique_name antiqueName,
+      antique_type antiqueType,
+      antique_dynasty antiqueDynasty,
+      antique_area antiqueArea,
+      antique_texture antiqueTexture,
+      antique_usage antiqueUsage,
+      antique_completion antiqueCompletion,
+      antique_length antiqueLength,
+      antique_width antiqueWidth,
+      antique_height antiqueHeight,
+      antique_weight antiqueWeight,
+      antique_count antiqueCount,
+      museum_id museumId,
+      author_id authorId,
+      antique_like_count antiqueLikeCount,
+      antique_favourite_count antiqueFavouriteCount,
+      antique_collection_department antiqueCollectionDepartment,
+      antique_source antiqueSource,
+      antique_collection_date antiqueCollectionDate,
+      antique_registration_num antiqueRegistrationNum,
+      antique_identification_date antiqueIdentificationDate,
+      antique_level antiqueLevel,
+      antique_appraiser antiqueAppraiser,
+      antique_protection_level antiqueProtectionLevel,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    from t_antique
+    where antique_id = #{ antiqueId }
+    and seq_no = #{ seqNo }
+  </select>
+
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Antique">
+    insert into t_antique(
+      antique_id,
+      seq_no,
+      antique_name,
+      antique_type,
+      antique_dynasty,
+      antique_area,
+      antique_texture,
+      antique_usage,
+      antique_completion,
+      antique_length,
+      antique_width,
+      antique_height,
+      antique_weight,
+      antique_count,
+      museum_id,
+      author_id,
+      antique_like_count,
+      antique_favourite_count,
+      antique_collection_department,
+      antique_source,
+      antique_collection_date,
+      antique_registration_num,
+      antique_identification_date,
+      antique_level,
+      antique_appraiser,
+      antique_protection_level,
+      create_date,
+      creator,
+      update_date,
+      updater,
+      del_flag
+    ) values (
+      #{ antiqueId },
+      #{ seqNo },
+      #{ antiqueName },
+      #{ antiqueType },
+      #{ antiqueDynasty },
+      #{ antiqueArea },
+      #{ antiqueTexture },
+      #{ antiqueUsage },
+      #{ antiqueCompletion },
+      #{ antiqueLength },
+      #{ antiqueWidth },
+      #{ antiqueHeight },
+      #{ antiqueWeight },
+      #{ antiqueCount },
+      #{ museumId },
+      #{ authorId },
+      #{ antiqueLikeCount },
+      #{ antiqueFavouriteCount },
+      #{ antiqueCollectionDepartment },
+      #{ antiqueSource },
+      #{ antiqueCollectionDate },
+      #{ antiqueRegistrationNum },
+      #{ antiqueIdentificationDate },
+      #{ antiqueLevel },
+      #{ antiqueAppraiser },
+      #{ antiqueProtectionLevel },
+      #{ createDate },
+      #{ creator },
+      #{ updateDate },
+      #{ updater },
+      #{ delFlag }
+    )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Antique">
+    update t_antique
+    set antique_id = #{ antiqueId },
+      seq_no = #{ seqNo },
+      antique_name = #{ antiqueName },
+      antique_type = #{ antiqueType },
+      antique_dynasty = #{ antiqueDynasty },
+      antique_area = #{ antiqueArea },
+      antique_texture = #{ antiqueTexture },
+      antique_usage = #{ antiqueUsage },
+      antique_completion = #{ antiqueCompletion },
+      antique_length = #{ antiqueLength },
+      antique_width = #{ antiqueWidth },
+      antique_height = #{ antiqueHeight },
+      antique_weight = #{ antiqueWeight },
+      antique_count = #{ antiqueCount },
+      museum_id = #{ museumId },
+      author_id = #{ authorId },
+      antique_like_count = #{ antiqueLikeCount },
+      antique_favourite_count = #{ antiqueFavouriteCount },
+      antique_collection_department = #{ antiqueCollectionDepartment },
+      antique_source = #{ antiqueSource },
+      antique_collection_date = #{ antiqueCollectionDate },
+      antique_registration_num = #{ antiqueRegistrationNum },
+      antique_identification_date = #{ antiqueIdentificationDate },
+      antique_level = #{ antiqueLevel },
+      antique_appraiser = #{ antiqueAppraiser },
+      antique_protection_level = #{ antiqueProtectionLevel },
+      create_date = #{ createDate },
+      creator = #{ creator },
+      update_date = #{ updateDate },
+      updater = #{ updater },
+      del_flag = #{ delFlag }
+    where antique_id = #{ antiqueId }
+    and seq_no = #{ seqNo }
+  </update>
+
+  <delete id="deleteById" parameterType="java.lang.String">
+    delete from t_antique where antique_id = #{ antiqueId } and seq_no = #{ seqNo }
+  </delete>
+</mapper>
