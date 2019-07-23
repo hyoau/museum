@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nwu.museum.backstage.dao.TopicMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Topic">
+    <id column="topic_id" jdbcType="VARCHAR" property="topicId"/>
+    <result column="museum_id" jdbcType="VARCHAR" property="museumId"/>
+    <result column="topic_name" jdbcType="VARCHAR" property="topicName"/>
+    <result column="topic_type" jdbcType="INTEGER" property="topicType"/>
+    <result column="show_weight" jdbcType="INTEGER" property="showWeight"/>
+    <result column="topic_image_url" jdbcType="VARCHAR" property="topicImageUrl"/>
+    <result column="topic_description" jdbcType="VARCHAR" property="topicDescription"/>
+    <result column="create_date" jdbcType="DATE" property="createDate"/>
+    <result column="creator" jdbcType="VARCHAR" property="creator"/>
+    <result column="update_date" jdbcType="DATE" property="updateDate"/>
+    <result column="updater" jdbcType="VARCHAR" property="updater"/>
+    <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+  </resultMap>
+
+  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Topic">
+    SELECT
+      topic_id topicId,
+      museum_id museumId,
+      topic_name topicName,
+      topic_type topicType,
+      show_weight showWeight,
+      topic_image_url topicImageUrl,
+      topic_description topicDescription,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag
+    FROM t_topic
+  </select>
+
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Topic">
+    SELECT
+      topic_id topicId,
+      museum_id museumId,
+      topic_name topicName,
+      topic_type topicType,
+      show_weight showWeight,
+      topic_image_url topicImageUrl,
+      topic_description topicDescription,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    FROM t_topic
+    WHERE topic_id = #{topicId}
+  </select>
+
+  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Topic">
+    INSERT INTO t_topic (
+      topic_id,
+      museum_id,
+      topic_name,
+      topic_type,
+      show_weight,
+      topic_image_url,
+      topic_description,
+      create_date,
+      creator,
+      update_date,
+      updater,
+      del_flag
+    ) VALUES (
+      #{topicId},
+      #{museumId},
+      #{topicName},
+      #{topicType},
+      #{showWeight},
+      #{topicImageUrl},
+      #{topicDescription},
+      #{createDate},
+      #{creator},
+      #{updateDate},
+      #{updater},
+      #{delFlag}
+    )
+  </insert>
+
+  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Topic">
+    UPDATE t_topic
+    SET topic_id = #{topicId},
+        museum_id = #{museumId},
+        topic_name = #{topicName},
+        topic_type = #{topicType},
+        show_weight = #{showWeight},
+        topic_image_url = #{topicImageUrl},
+        topic_description = #{topicDescription},
+        create_date = #{createDate},
+        creator = #{creator},
+        update_date = #{updateDate},
+        updater = #{updater},
+        del_flag = #{delFlag}
+    WHERE topic_id = #{topicId}
+  </update>
+
+  <delete id="deleteById" parameterType="java.lang.String">
+    DELETE FROM t_topic WHERE topic_id = #{topicId}
+  </delete>
+</mapper>

@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Data
 public class Topic {
-  // 博物馆id
-  private String museumId;
   // 专题id
   private String topicId;
+  // 博物馆id
+  private String museumId;
   // 专题标题
   private String topicName;
   // 分类
