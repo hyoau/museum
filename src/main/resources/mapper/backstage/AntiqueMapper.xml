@@ -212,7 +212,7 @@
     and seq_no = #{ seqNo }
   </update>
 
-  <delete id="deleteById" parameterType="java.lang.String">
+  <delete id="deleteById">
     delete from t_antique where antique_id = #{ antiqueId } and seq_no = #{ seqNo }
   </delete>
 </mapper>

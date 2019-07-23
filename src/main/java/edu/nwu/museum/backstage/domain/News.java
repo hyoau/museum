@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 public class News {
-  //资讯ID
+  //资讯ID 主键
   private String newsId;
   //资讯标题
   private String newsTitle;

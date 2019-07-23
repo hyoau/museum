@@ -3,14 +3,14 @@
 <mapper namespace="edu.nwu.museum.backstage.dao.PaperMapper">
   <resultMap type="edu.nwu.museum.backstage.domain.Paper" id="PaperMap">
     <id column="paper_id" property="paperId" jdbcType="VARCHAR"/>
-    <id column="paper_title" property="paperTitle" jdbcType="VARCHAR"/>
-    <id column="paper_author" property="paperAuthor" jdbcType="VARCHAR"/>
-    <id column="key_words" property="keyWord" jdbcType="VARCHAR"/>
-    <id column="paper_periodical" property="paperPeriodical" jdbcType="VARCHAR"/>
-    <id column="paper_creat_time" property="creatTime" jdbcType="DATE"/>
-    <id column="paper_text" property="paperText" jdbcType="BLOB"/>
-    <id column="paper_image" property="paperImage" jdbcType="VARCHAR"/>
-    <id column="museum_id" property="museumId" jdbcType="VARCHAR"/>
+    <result column="paper_title" property="paperTitle" jdbcType="VARCHAR"/>
+    <result column="paper_author" property="paperAuthor" jdbcType="VARCHAR"/>
+    <result column="key_words" property="keyWord" jdbcType="VARCHAR"/>
+    <result column="paper_periodical" property="paperPeriodical" jdbcType="VARCHAR"/>
+    <result column="paper_creat_time" property="creatTime" jdbcType="DATE"/>
+    <result column="paper_text" property="paperText" jdbcType="BLOB"/>
+    <result column="paper_image" property="paperImage" jdbcType="VARCHAR"/>
+    <result column="museum_id" property="museumId" jdbcType="VARCHAR"/>
   </resultMap>
 
   <!--查询所有论文信息-->
@@ -28,7 +28,7 @@
   </select>
 
   <!--根据ID查询论文信息-->
-  <select id="findByPaperId" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Paper">
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Paper">
     select paper_id paperId,
       paper_title paperTitle,
       paper_author paperAuthor,
@@ -84,7 +84,7 @@
   </insert>
 
   <!--根据ID删除论文-->
-  <delete id="deleteByPaperId" parameterType="java.lang.String">
+  <delete id="deleteById" parameterType="java.lang.String">
     delete from paper where paper_id = #{ paperId }
   </delete>
 </mapper>

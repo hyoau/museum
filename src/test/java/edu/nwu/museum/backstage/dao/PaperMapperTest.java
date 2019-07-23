@@ -20,48 +20,54 @@ public class PaperMapperTest {
   @Test
   public void testSelectAll() {
     System.out.println("========testSelectAll========");
-    System.out.println(paperMapper.findAll());
-    System.out.println(paperMapper.findAll().size());
+    Assert.assertNotNull(paperMapper.findAll());
+    for (Paper userIterator: paperMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("========testSelectAll========");
   }
 
   @Test
   public void testSelectById() {
+
     System.out.println("==========testSelectById==========");
-    Assert.assertNotNull(paperMapper.findByPaperId("1"));
-    System.out.println(paperMapper.findByPaperId("1"));
+    System.out.println(paperMapper.findById("1"));
+    System.out.println(paperMapper.findById("3"));
+    System.out.println("==========testSelectById==========");
   }
 
   @Test
   public void testInsert() {
     Paper paper = new Paper();
     paper.setPaperId("6");
-    System.out.println(paperMapper.findAll());
     System.out.println("==========testInsert==========");
-    System.out.println(paperMapper.insert(paper));
-    System.out.println("========testSelectById========");
-    System.out.println(paperMapper.findAll());
+    paperMapper.insert(paper);
+    for (Paper userIterator: paperMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("==========testInsert==========");
   }
 
   @Test
   public void testUpdate() {
     Paper paper = new Paper();
-    System.out.println("========testSelectAll========");
-    System.out.println(paperMapper.findAll());
-    System.out.println(paperMapper.findAll().size());
-    paper.setPaperId("4");
+    System.out.println("========testUpdate========");
+    paper.setPaperId("6");
     paper.setPaperTitle("可视化");
-    System.out.println("==========testUpdateById==========");
-    System.out.println(paperMapper.update(paper));
-    System.out.println("========testSelectById========");
-    System.out.println(paperMapper.findByPaperId("4"));
+    System.out.println(paperMapper.findById("6"));
+    paperMapper.update(paper);
+    System.out.println(paperMapper.findById("6"));
+    System.out.println("========testUpdate========");
   }
 
   @Test
   public void testDeleteById() {
 
     System.out.println("==========testDeleteById==========");
-    System.out.println(paperMapper.deleteByPaperId("4"));
-    System.out.println("========testSelectAll========");
-    System.out.println(paperMapper.findAll());
+    System.out.println(paperMapper.deleteById("6"));
+    for (Paper userIterator: paperMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("==========testDeleteById==========");
   }
 }

@@ -21,50 +21,55 @@ public class NewsMapperTest {
   public void testSelectAll() {
     System.out.println("========testSelectAll========");
     Assert.assertNotNull(newsMapper.findAll());
-    System.out.println(newsMapper.findAll());
-    System.out.println(newsMapper.findAll().size());
+    for (News userIterator: newsMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("========testSelectAll========");
   }
 
   @Test
   public void testSelectById() {
 
     System.out.println("==========testSelectById==========");
-    Assert.assertNotNull(newsMapper.findByNewsId("1"));
-    System.out.println(newsMapper.findByNewsId("1"));
+    System.out.println(newsMapper.findById("1"));
+    System.out.println(newsMapper.findById("3"));
+    System.out.println("==========testSelectById==========");
   }
 
   @Test
   public void testInsert() {
-    News news = new News();
-    System.out.println("========testSelectAll========");
-    System.out.println(newsMapper.findAll());
-    System.out.println(newsMapper.findAll().size());
-    news.setNewsId("7");
     System.out.println("==========testInsert==========");
-    System.out.println(newsMapper.insert(news));
-    System.out.println("========testSelectById========");
-    System.out.println(newsMapper.findByNewsId("7"));
+    News news = new News();
+    news.setNewsId("12");
+    news.setNewsTitle("红酥手");
+    newsMapper.insert(news);
+    for (News userIterator: newsMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("==========testInsert==========");
   }
 
   @Test
   public void testUpdateById() {
+    System.out.println("========testUpdateById========");
     News news = new News();
-    System.out.println("========testSelectAll========");
-    System.out.println(newsMapper.findAll());
-    System.out.println(newsMapper.findAll().size());
-    news.setNewsId("6");
-    news.setNewsTitle("人生啊~~~~~");
+    news.setNewsId("12");
+    news.setNewsTitle("黄縢酒");
+    System.out.println(newsMapper.findById("12"));
+    newsMapper.update(news);
+    System.out.println(newsMapper.findById("12"));
     System.out.println("==========testUpdateById==========");
-    System.out.println(newsMapper.update(news));
-    System.out.println("========testSelectById========");
-    System.out.println(newsMapper.findByNewsId("6"));
   }
 
   @Test
   public void testDeleteById() {
 
     System.out.println("==========testDeleteById==========");
-    System.out.println(newsMapper.deleteByNewsId("1"));
+    newsMapper.deleteById("12");
+    for (News userIterator: newsMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("==========testDeleteById==========");
   }
 }
 

@@ -3,15 +3,15 @@
 <mapper namespace="edu.nwu.museum.backstage.dao.NewsMapper">
   <resultMap type="edu.nwu.museum.backstage.domain.News" id="NewsMap">
     <id column="news_id" property="newsId" jdbcType="VARCHAR"/>
-    <id column="news_title" property="newsTitle" jdbcType="VARCHAR"/>
-    <id column="news_type" property="newsType" jdbcType="INTEGER"/>
-    <id column="news_speaker" property="newsSpeaker" jdbcType="VARCHAR"/>
-    <id column="news_time" property="newsTime" jdbcType="DATE"/>
-    <id column="museum_id" property="museumId" jdbcType="VARCHAR"/>
-    <id column="news_image" property="newsImage" jdbcType="VARCHAR"/>
-    <id column="news_text" property="newsText" jdbcType="BLOB"/>
-    <id column="create_time" property="createTime" jdbcType="DATE"/>
-    <id column="creator" property="creator" jdbcType="VARCHAR"/>
+    <result column="news_title" property="newsTitle" jdbcType="VARCHAR"/>
+    <result column="news_type" property="newsType" jdbcType="INTEGER"/>
+    <result column="news_speaker" property="newsSpeaker" jdbcType="VARCHAR"/>
+    <result column="news_time" property="newsTime" jdbcType="DATE"/>
+    <result column="museum_id" property="museumId" jdbcType="VARCHAR"/>
+    <result column="news_image" property="newsImage" jdbcType="VARCHAR"/>
+    <result column="news_text" property="newsText" jdbcType="BLOB"/>
+    <result column="create_time" property="createTime" jdbcType="DATE"/>
+    <result column="creator" property="creator" jdbcType="VARCHAR"/>
   </resultMap>
 
   <!--查询所有资讯信息-->
@@ -30,7 +30,7 @@
   </select>
 
   <!--根据ID查询资讯信息-->
-  <select id="findByNewsId" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.News">
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.News">
     select news_id newsId,
       news_title newsTitle,
       news_type newsType,
@@ -90,7 +90,7 @@
   </insert>
 
   <!--根据ID删除资讯-->
-  <delete id="deleteByNewsId">
+  <delete id="deleteById" parameterType="java.lang.String">
     delete from news where news_id = #{ newsId }
   </delete>
 </mapper>

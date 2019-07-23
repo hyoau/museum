@@ -20,50 +20,53 @@ public class ExpertMapperTest {
   @Test
   public void testSelectAll() {
     System.out.println("========testSelectAll========");
-    System.out.println(expertMapper.findAll());
-    System.out.println(expertMapper.findAll().size());
+    Assert.assertNotNull(expertMapper.findAll());
+    for (Expert userIterator: expertMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("========testSelectAll========");
   }
 
   @Test
   public void testSelectById() {
 
     System.out.println("==========testSelectById==========");
-    Assert.assertNotNull(expertMapper.findByExpertId("1"));
-    System.out.println(expertMapper.findByExpertId("1"));
+    System.out.println(expertMapper.findById("1"));
+    System.out.println(expertMapper.findById("3"));
+    System.out.println("==========testSelectById==========");
   }
 
   @Test
   public void testInsert() {
+    System.out.println("==========testInsert==========");
     Expert expert = new Expert();
     expert.setExpertId("4");
-    System.out.println("==========test==========");
-    System.out.println(expert);
+    expertMapper.insert(expert);
+    for (Expert userIterator: expertMapper.findAll()) {
+      System.out.println(userIterator);
+    }
     System.out.println("==========testInsert==========");
-    System.out.println(expertMapper.insert(expert));
-    System.out.println("========testSelectById========");
-    System.out.println(expertMapper.findByExpertId("4"));
   }
 
   @Test
   public void testUpdateById() {
+    System.out.println("========testUpdateById========");
+    System.out.println(expertMapper.findById("4"));
     Expert expert = new Expert();
-    System.out.println("========testSelectAll========");
-    System.out.println(expertMapper.findAll());
-    System.out.println(expertMapper.findAll().size());
     expert.setExpertId("4");
     expert.setExpertName("可视化");
+    expertMapper.update(expert);
+    System.out.println(expertMapper.findById("4"));
     System.out.println("==========testUpdateById==========");
-    System.out.println(expertMapper.update(expert));
-    System.out.println("========testSelectById========");
-    System.out.println(expertMapper.findByExpertId("4"));
   }
 
   @Test
   public void testDeleteById() {
-
     System.out.println("==========testDeleteById==========");
-    System.out.println(expertMapper.deleteByExpertId("4"));
-    System.out.println("========testSelectAll========");
-    System.out.println(expertMapper.findAll());
+    System.out.println(expertMapper.deleteById("4"));
+    for (Expert userIterator: expertMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("==========testDeleteById==========");
   }
 }

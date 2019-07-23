@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Template {
-  //模板ID
+  //模板ID 主键
   private String templateId;
   //模板名字
   private String templateName;

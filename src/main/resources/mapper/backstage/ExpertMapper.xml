@@ -3,10 +3,10 @@
 <mapper namespace="edu.nwu.museum.backstage.dao.ExpertMapper">
   <resultMap type="edu.nwu.museum.backstage.domain.Expert" id="ExpertMap">
     <id column="expert_id" property="expertId" jdbcType="VARCHAR"/>
-    <id column="expert_name" property="expertName" jdbcType="VARCHAR"/>
-    <id column="expert_icon" property="expertAvatar" jdbcType="VARCHAR"/>
-    <id column="expert_text" property="expertIntroduction" jdbcType="BLOB"/>
-    <id column="museum_id" property="museumId" jdbcType="VARCHAR"/>
+    <result column="expert_name" property="expertName" jdbcType="VARCHAR"/>
+    <result column="expert_icon" property="expertAvatar" jdbcType="VARCHAR"/>
+    <result column="expert_text" property="expertIntroduction" jdbcType="BLOB"/>
+    <result column="museum_id" property="museumId" jdbcType="VARCHAR"/>
   </resultMap>
 
   <!--查询所有专家信息-->
@@ -20,7 +20,7 @@
   </select>
 
   <!--根据ID查询专家信息-->
-  <select id="findByExpertId" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Expert">
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Expert">
     select expert_id expertId,
       expert_name expertName,
       expert_icon expertAvatar,
@@ -60,7 +60,7 @@
   </update>
 
   <!--根据ID删除专家-->
-  <delete id="deleteByExpertId" parameterType="java.lang.String">
+  <delete id="deleteById" parameterType="java.lang.String">
     delete from expert where expert_id = #{ expertId }
   </delete>
 

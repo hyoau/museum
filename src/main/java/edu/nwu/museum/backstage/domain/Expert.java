@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Expert {
-  //专家ID
+  //专家ID 主键
   private String expertId;
   //专家名字
   private String expertName;

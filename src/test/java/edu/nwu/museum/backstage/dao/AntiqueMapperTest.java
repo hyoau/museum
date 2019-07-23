@@ -22,53 +22,57 @@ public class AntiqueMapperTest {
   public void testSelectAll() {
     System.out.println("========testSelectAll========");
     Assert.assertNotNull(antiqueMapper.findAll());
-    System.out.println(antiqueMapper.findAll());
-    System.out.println(antiqueMapper.findAll().size());
+    for (Antique userIterator: antiqueMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("========testSelectAll========");
   }
 
   @Test
   public void testSelectById() {
 
     System.out.println("==========testSelectById==========");
-    System.out.println(antiqueMapper.findById("5",5));
+    System.out.println(antiqueMapper.findById("1",1));
+    System.out.println(antiqueMapper.findById("3",3));
+    System.out.println("==========testSelectById==========");
   }
 
   @Test
   public void testInsert() {
     Antique antique = new Antique();
-    System.out.println("========testSelectAll========");
-    System.out.println(antiqueMapper.findAll().size());
+    System.out.println("========testInsert========");
     antique.setAntiqueId("5");
     antique.setSeqNo(5);
     antique.setAntiqueName("可视化研究所");
-    System.out.println("==========testInsert==========");
     antiqueMapper.insert(antique);
-    System.out.println("========testSelectById========");
-    System.out.println(antiqueMapper.findById("5",5));
+    for (Antique userIterator: antiqueMapper.findAll()) {
+      System.out.println(userIterator);
+    }
+    System.out.println("========testInsert========");
   }
 
   @Test
   public void testUpdateById() {
     Antique antique = new Antique();
-    System.out.println("========testSelectById========");
+    System.out.println("========testUpdateById========");
     System.out.println(antiqueMapper.findById("5",5));
     antique.setAntiqueId("5");
     antique.setSeqNo(5);
     antique.setAntiqueName("人生啊~~~~~");
-    System.out.println("==========testUpdateById==========");
+    System.out.println("==========update==========");
     antiqueMapper.update(antique);
-    System.out.println("========testSelectById========");
     System.out.println(antiqueMapper.findById("5",5));
+    System.out.println("==========testUpdateById==========");
+
   }
 
   @Test
   public void testDeleteById() {
-    System.out.println("========testSelectAll========");
-    System.out.println(antiqueMapper.findAll());
-    System.out.println(antiqueMapper.findAll().size());
+    System.out.println("========testDeleteById========");
+    antiqueMapper.deleteById("5",5);
+    for (Antique userIterator: antiqueMapper.findAll()) {
+      System.out.println(userIterator);
+    }
     System.out.println("==========testDeleteById==========");
-    antiqueMapper.deleteById("5");
-    System.out.println(antiqueMapper.findAll());
-    System.out.println(antiqueMapper.findAll().size());
   }
 }

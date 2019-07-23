@@ -9,11 +9,11 @@ public interface PaperMapper {
   //查询所有论文信息
   List<Paper> findAll();
   //根据ID查询论文信息
-  Paper findByPaperId(String paperId);
+  Paper findById(String paperId);
   //修改论文信息
-  int update(Paper paper);
+  void update(Paper paper);
   //添加论文
-  int insert(Paper paper);
+  void insert(Paper paper);
   //根据ID删除论文
-  int deleteByPaperId(String paperId);
+  int deleteById(String paperId);
 }

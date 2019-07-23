@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 public class Paper {
-  //论文ID
+  //论文ID 主键
   private String paperId;
   //论文标题
   private String paperTitle;
