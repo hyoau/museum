@@ -2,6 +2,7 @@ package edu.nwu.museum.backstage.controller;
 
 import edu.nwu.museum.common.utils.MD5Util;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,7 @@ public class LoginController {
     return "Test";
   }
 
+  @CrossOrigin
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public String login(String userId, String password, Boolean rememberMe) {
     // 暂时先用明文来存储密码
