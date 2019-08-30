@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.LogMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Log">
+<mapper namespace="edu.nwu.museum.dao.LogMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Log">
     <id column="log_seq_no" jdbcType="INTEGER" property="logSeqNo"/>
     <result column="user_id" jdbcType="VARCHAR" property="userId"/>
     <result column="user_name" jdbcType="VARCHAR" property="userName"/>
@@ -11,7 +11,7 @@
     <result column="log_action_time" jdbcType="TIMESTAMP" property="logActionTime"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Log">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Log">
     SELECT
       log_seq_no logSeqNo,
       user_id userId,
@@ -23,7 +23,7 @@
     FROM log
   </select>
 
-  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.backstage.domain.Log">
+  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.Log">
     SELECT
     log_seq_no logSeqNo,
     user_id userId,
@@ -36,7 +36,7 @@
     WHERE log_seq_no = #{logSeqNo}
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Log">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Log">
     INSERT INTO log(
       log_seq_no,
       user_id,
@@ -56,7 +56,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Log">
+  <update id="update" parameterType="edu.nwu.museum.domain.Log">
     UPDATE log
     SET log_seq_no = #{logSeqNo},
         user_id = #{userId},

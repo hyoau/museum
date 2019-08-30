@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.BackupMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Backup">
+<mapper namespace="edu.nwu.museum.dao.BackupMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Backup">
     <id column="seq_no" jdbcType="INTEGER" property="seqNo"/>
     <result column="backup_time" jdbcType="TIMESTAMP" property="backupTime"/>
     <result column="backup_url" jdbcType="VARCHAR" property="backupUrl"/>
@@ -9,7 +9,7 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Backup">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Backup">
     SELECT seq_no seqNo,
       backup_time backupTime,
       backup_url backupUrl,
@@ -18,7 +18,7 @@
     FROM db_backups
   </select>
 
-  <select id="findById" parameterType="java.lang.Integer" resultType="edu.nwu.museum.backstage.domain.Backup">
+  <select id="findById" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.Backup">
     SELECT seq_no seqNo,
       backup_time backupTime,
       backup_url backupUrl,
@@ -28,7 +28,7 @@
     WHERE seq_no = #{ seqNo }
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Backup">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Backup">
     INSERT INTO db_backups (
       seq_no,
       backup_time,
@@ -44,7 +44,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Backup">
+  <update id="update" parameterType="edu.nwu.museum.domain.Backup">
     UPDATE db_backups
     SET seq_no = #{ seqNo },
       backup_time = #{ backupTime },

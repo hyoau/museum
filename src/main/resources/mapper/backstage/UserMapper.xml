@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.User">
+<mapper namespace="edu.nwu.museum.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.User">
     <id column="user_id" jdbcType="VARCHAR" property="userId"/>
     <result column="user_name" jdbcType="VARCHAR" property="userName"/>
     <result column="password" jdbcType="VARCHAR" property="password"/>
@@ -21,7 +21,7 @@
     <result column="updater" jdbcType="VARCHAR" property="updater"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.User">
+  <select id="findAll" resultType="edu.nwu.museum.domain.User">
     SELECT
       user_id userId,
       user_name userName,
@@ -43,7 +43,7 @@
     FROM t_user
   </select>
 
-  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.User">
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.domain.User">
     SELECT
       user_id userId,
       user_name userName,
@@ -66,7 +66,7 @@
     WHERE user_id = #{userId}
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.User">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.User">
     INSERT INTO t_user (
       user_id,
       user_name,
@@ -106,7 +106,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.User">
+  <update id="update" parameterType="edu.nwu.museum.domain.User">
     UPDATE t_user
     SET user_id = #{userId},
         user_name = #{userName},

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.CommentMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Comment">
+<mapper namespace="edu.nwu.museum.dao.CommentMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Comment">
     <id column="comment_seq_no" jdbcType="INTEGER" property="commentSeqNo"/>
     <result column="antique_seq_no" jdbcType="INTEGER" property="commentSeqNo"/>
     <result column="comment_content" jdbcType="VARCHAR" property="commentContent"/>
@@ -11,7 +11,7 @@
     <result column="commented_user_id" jdbcType="VARCHAR" property="commentedUserId"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Comment">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Comment">
     SELECT
       comment_seq_no commentSeqNo,
       antique_seq_no  commentSeqNo,
@@ -23,7 +23,7 @@
       FROM comment
   </select>
 
-  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.backstage.domain.Comment">
+  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.Comment">
     SELECT
       comment_seq_no commentSeqNo,
       antique_seq_no  antiqueSeqNo,
@@ -36,7 +36,7 @@
     WHERE comment_seq_no = #{commentSeqNo}
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Comment">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Comment">
     INSERT INTO comment(
       comment_seq_no,
       antique_seq_no,
@@ -56,7 +56,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Group">
+  <update id="update" parameterType="edu.nwu.museum.domain.Group">
     UPDATE comment
     SET comment_seq_no = #{commentSeqNo},
         antique_seq_no = #{antiqueSeqNo},

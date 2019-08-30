@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.DictionaryMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Dictionary">
+<mapper namespace="edu.nwu.museum.dao.DictionaryMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Dictionary">
     <id column="dict_item_code" jdbcType="INTEGER" property="dictItemCode"/>
     <id column="dict_code" jdbcType="VARCHAR" property="dictCode"/>
     <result column="dict_item_name" jdbcType="VARCHAR" property="dictItemName"/>
@@ -9,7 +9,7 @@
     <result column="remark" jdbcType="VARCHAR" property="remark"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Dictionary">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Dictionary">
     SELECT dict_item_code dictItemCode,
       dict_code dictCode,
       dict_item_name dictItemName,
@@ -18,7 +18,7 @@
     FROM dictionary
   </select>
 
-  <select id="findById" resultType="edu.nwu.museum.backstage.domain.Dictionary">
+  <select id="findById" resultType="edu.nwu.museum.domain.Dictionary">
     SELECT dict_item_code dictItemCode,
       dict_code dictCode,
       dict_item_name dictItemName,
@@ -29,7 +29,7 @@
     AND dict_code = #{ dictCode }
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Dictionary">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Dictionary">
     INSERT INTO dictionary (
       dict_item_code,
       dict_code,
@@ -45,7 +45,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Dictionary">
+  <update id="update" parameterType="edu.nwu.museum.domain.Dictionary">
     UPDATE dictionary
     SET dict_item_code = #{ dictItemCode },
       dict_code = #{ dictCode },

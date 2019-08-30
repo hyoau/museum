@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.UserRoleMapper">
-  <resultMap type="edu.nwu.museum.backstage.domain.Role" id="role">
+<mapper namespace="edu.nwu.museum.dao.UserRoleMapper">
+  <resultMap type="edu.nwu.museum.domain.Role" id="role">
     <id column="id" property="id" javaType="java.lang.Integer" jdbcType="NUMERIC"/>
     <id column="name" property="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
     <id column="memo" property="memo" javaType="java.lang.String" jdbcType="VARCHAR"/>

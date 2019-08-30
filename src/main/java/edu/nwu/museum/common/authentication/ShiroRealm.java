@@ -1,11 +1,11 @@
 package edu.nwu.museum.common.authentication;
 
-import edu.nwu.museum.backstage.domain.Permission;
-import edu.nwu.museum.backstage.domain.Role;
-import edu.nwu.museum.backstage.domain.User;
-import edu.nwu.museum.backstage.service.UserPermissionService;
-import edu.nwu.museum.backstage.service.UserRoleService;
-import edu.nwu.museum.backstage.service.UserService;
+import edu.nwu.museum.domain.Permission;
+import edu.nwu.museum.domain.Role;
+import edu.nwu.museum.domain.User;
+import edu.nwu.museum.service.UserPermissionService;
+import edu.nwu.museum.service.UserRoleService;
+import edu.nwu.museum.service.UserService;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

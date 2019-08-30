@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.TemplateMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Template">
+<mapper namespace="edu.nwu.museum.dao.TemplateMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Template">
     <id column="template_id" jdbcType="VARCHAR" property="templateId"/>
     <result column="template_name" jdbcType="VARCHAR" property="templateName"/>
     <result column="template_type" jdbcType="INTEGER" property="templateType"/>
@@ -10,7 +10,7 @@
     <result column="template_status" jdbcType="INTEGER" property="templateStatus"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Template">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Template">
     SELECT
       template_id templateId,
       template_name templateName,
@@ -21,7 +21,7 @@
     FROM template
   </select>
 
-  <select id="find" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Template">
+  <select id="find" parameterType="java.lang.String" resultType="edu.nwu.museum.domain.Template">
     SELECT
       template_id templateId,
       template_name templateName,
@@ -33,7 +33,7 @@
     WHERE template_id = #{templateId}
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Template">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Template">
     INSERT INTO template (
       template_id,
       template_name,
@@ -51,7 +51,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Template">
+  <update id="update" parameterType="edu.nwu.museum.domain.Template">
     UPDATE template
     SET template_id = #{templateId},
         template_name = #{templateName},

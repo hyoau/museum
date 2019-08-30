@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.FavouriteMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Favourite">
+<mapper namespace="edu.nwu.museum.dao.FavouriteMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Favourite">
     <id column="seq_no" jdbcType="INTEGER" property="seqNo"/>
     <result column="user_id" jdbcType="VARCHAR" property="userId"/>
     <result column="antique_id" jdbcType="VARCHAR" property="antiqueId"/>
@@ -9,7 +9,7 @@
     <result column="topic_id" jdbcType="VARCHAR" property="topicId"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Favourite">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Favourite">
     SELECT
       seq_no seqNo,
       user_id userId,
@@ -19,7 +19,7 @@
     FROM favourite
   </select>
 
-  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.backstage.domain.Favourite">
+  <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.Favourite">
      SELECT
       seq_no seqNo,
       user_id userId,
@@ -30,7 +30,7 @@
     WHERE seq_no = #{seqNo}
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Favourite">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Favourite">
     INSERT INTO favourite(
     seq_no,
     user_id,
@@ -46,7 +46,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Favourite">
+  <update id="update" parameterType="edu.nwu.museum.domain.Favourite">
     UPDATE favourite
     SET seq_no = #{seqNo},
         user_id = #{userId},

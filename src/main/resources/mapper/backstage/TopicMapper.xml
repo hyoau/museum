@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.TopicMapper">
-  <resultMap id="BaseResultMap" type="edu.nwu.museum.backstage.domain.Topic">
+<mapper namespace="edu.nwu.museum.dao.TopicMapper">
+  <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Topic">
     <id column="topic_id" jdbcType="VARCHAR" property="topicId"/>
     <result column="museum_id" jdbcType="VARCHAR" property="museumId"/>
     <result column="topic_name" jdbcType="VARCHAR" property="topicName"/>
@@ -16,7 +16,7 @@
     <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
   </resultMap>
 
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Topic">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Topic">
     SELECT
       topic_id topicId,
       museum_id museumId,
@@ -33,7 +33,7 @@
     FROM t_topic
   </select>
 
-  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Topic">
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.domain.Topic">
     SELECT
       topic_id topicId,
       museum_id museumId,
@@ -51,7 +51,7 @@
     WHERE topic_id = #{topicId}
   </select>
 
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Topic">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Topic">
     INSERT INTO t_topic (
       topic_id,
       museum_id,
@@ -81,7 +81,7 @@
     )
   </insert>
 
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Topic">
+  <update id="update" parameterType="edu.nwu.museum.domain.Topic">
     UPDATE t_topic
     SET topic_id = #{topicId},
         museum_id = #{museumId},

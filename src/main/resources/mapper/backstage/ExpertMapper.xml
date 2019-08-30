@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.nwu.museum.backstage.dao.ExpertMapper">
-  <resultMap type="edu.nwu.museum.backstage.domain.Expert" id="ExpertMap">
+<mapper namespace="edu.nwu.museum.dao.ExpertMapper">
+  <resultMap type="edu.nwu.museum.domain.Expert" id="ExpertMap">
     <id column="expert_id" property="expertId" jdbcType="VARCHAR"/>
     <result column="expert_name" property="expertName" jdbcType="VARCHAR"/>
     <result column="expert_icon" property="expertAvatar" jdbcType="VARCHAR"/>
@@ -10,7 +10,7 @@
   </resultMap>
 
   <!--查询所有专家信息-->
-  <select id="findAll" resultType="edu.nwu.museum.backstage.domain.Expert">
+  <select id="findAll" resultType="edu.nwu.museum.domain.Expert">
     select expert_id expertId,
       expert_name expertName,
       expert_icon expertAvatar,
@@ -20,7 +20,7 @@
   </select>
 
   <!--根据ID查询专家信息-->
-  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.backstage.domain.Expert">
+  <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.domain.Expert">
     select expert_id expertId,
       expert_name expertName,
       expert_icon expertAvatar,
@@ -31,7 +31,7 @@
   </select>
 
   <!--添加专家-->
-  <insert id="insert" parameterType="edu.nwu.museum.backstage.domain.Expert">
+  <insert id="insert" parameterType="edu.nwu.museum.domain.Expert">
     insert into expert (
       expert_id,
       expert_name,
@@ -49,7 +49,7 @@
   </insert>
 
   <!--修改专家信息-->
-  <update id="update" parameterType="edu.nwu.museum.backstage.domain.Expert">
+  <update id="update" parameterType="edu.nwu.museum.domain.Expert">
     update expert
     set expert_id = #{ expertId },
       expert_name = #{ expertName },
