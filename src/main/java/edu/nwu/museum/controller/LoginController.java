@@ -16,17 +16,17 @@ import org.apache.shiro.subject.Subject;
 public class LoginController {
   @RequestMapping("/login")
   public String login() {
-    return "Login";
+    return "请输入用户id与密码进行登录";
   }
 
   @RequestMapping("/")
   public String redirectIndex() {
-    return "Index";
+    return "返回首页";
   }
 
   @RequestMapping("/test")
   public String test() {
-    return "Test";
+    return "测试页面";
   }
 
   @CrossOrigin
@@ -37,15 +37,15 @@ public class LoginController {
     Subject subject = SecurityUtils.getSubject();
     try {
       subject.login(token);
-      return "认证成功";
+      return "登录成功";
     } catch (UnknownAccountException e) {
-      return "认证失败";
+      return "登录失败";
     } catch (IncorrectCredentialsException e) {
-      return "认证失败";
+      return "登录失败";
     } catch (LockedAccountException e) {
-      return "认证失败";
+      return "登录失败";
     } catch (AuthenticationException e) {
-      return "认证失败";
+      return "登录失败";
     }
   }
 }
