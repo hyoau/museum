@@ -1,5 +1,6 @@
 package edu.nwu.museum.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,9 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.subject.Subject;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+@Slf4j
 @RestController
 public class LoginController {
   @RequestMapping("/login")
@@ -27,6 +30,17 @@ public class LoginController {
   @RequestMapping("/test")
   public String test() {
     return "测试页面";
+  }
+
+  @RequestMapping(value="/logout")
+  public String logout(){
+    //使用权限管理工具进行用户的退出，跳出登录，给出提示信息
+    Subject subject = SecurityUtils.getSubject();
+    if (subject.isAuthenticated()) {
+      log.info("Logout success.");
+      subject.logout();
+    }
+    return "登出成功";
   }
 
   @CrossOrigin

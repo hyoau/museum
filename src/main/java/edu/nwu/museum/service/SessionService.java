@@ -19,8 +19,11 @@ public class SessionService {
   }
 
   public boolean forceLogout(String sessionId) {
-    Session session = sessionDAO.readSession(sessionId);
-    session.setTimeout(0);
+    try {
+      Session session = sessionDAO.readSession(sessionId);
+      session.setTimeout(0);
+    } catch (Throwable throwable) {}
+
     return true;
   }
 }
