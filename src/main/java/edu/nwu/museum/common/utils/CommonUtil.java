@@ -4,7 +4,7 @@ import edu.nwu.museum.common.domain.CommonConstant;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * FEBS工具类
+ * 加密工具类
  */
 @Slf4j
 public class CommonUtil {

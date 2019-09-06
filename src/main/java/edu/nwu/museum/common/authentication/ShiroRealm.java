@@ -30,6 +30,11 @@ public class ShiroRealm extends AuthorizingRealm {
   private UserRoleService userRoleService;
   @Autowired
   private UserPermissionService userPermissionService;
+
+  @Override
+  public boolean supports(AuthenticationToken token) {
+    return token instanceof JWTToken;
+  }
   /**
    * 获取用户角色和权限
    */

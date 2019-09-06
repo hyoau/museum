@@ -13,11 +13,11 @@ import org.apache.commons.lang3.StringUtils;
 
 @Slf4j
 public class JWTUtil {
-  private static final long EXPIRE_TIME = SpringContextUtil.getBean(MuseumProperties.class).getShiro().getJwtTimeOut() * 1000;
+  // 过期时间五分钟
+  private static final long EXPIRE_TIME = 5*60*1000;
 
   /**
    * 校验 token是否正确
-   *
    * @param token  密钥
    * @param secret 用户的密码
    * @return 是否正确
@@ -26,8 +26,7 @@ public class JWTUtil {
     try {
       Algorithm algorithm = Algorithm.HMAC256(secret);
       JWTVerifier verifier = JWT.require(algorithm)
-          .withClaim("username", username)
-          .build();
+          .withClaim("username", username).build();
       verifier.verify(token);
       log.info("token is valid");
       return true;
@@ -39,7 +38,6 @@ public class JWTUtil {
 
   /**
    * 从 token中获取用户名
-   *
    * @return token中包含的用户名
    */
   public static String getUsername(String token) {
@@ -53,10 +51,9 @@ public class JWTUtil {
   }
 
   /**
-   * 生成 token
-   *
+   * 生成 token，暂定 5min 后过期
    * @param username 用户名
-   * @param secret   用户的密码
+   * @param secret 用户的密码
    * @return token
    */
   public static String sign(String username, String secret) {
