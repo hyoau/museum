@@ -5,8 +5,6 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import edu.nwu.museum.common.properties.MuseumProperties;
-import edu.nwu.museum.common.utils.SpringContextUtil;
 import java.util.Date;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -22,11 +20,11 @@ public class JWTUtil {
    * @param secret 用户的密码
    * @return 是否正确
    */
-  public static boolean verify(String token, String username, String secret) {
+  public static boolean verify(String token, String userid, String secret) {
     try {
       Algorithm algorithm = Algorithm.HMAC256(secret);
       JWTVerifier verifier = JWT.require(algorithm)
-          .withClaim("username", username).build();
+          .withClaim("userid", userid).build();
       verifier.verify(token);
       log.info("token is valid");
       return true;
@@ -37,13 +35,13 @@ public class JWTUtil {
   }
 
   /**
-   * 从 token中获取用户名
-   * @return token中包含的用户名
+   * 从 token中获取用户 id
+   * @return token中包含的 id
    */
-  public static String getUsername(String token) {
+  public static String getUserId(String token) {
     try {
       DecodedJWT jwt = JWT.decode(token);
-      return jwt.getClaim("username").asString();
+      return jwt.getClaim("userid").asString();
     } catch (JWTDecodeException e) {
       log.error("error：{}", e.getMessage());
       return null;
@@ -52,17 +50,17 @@ public class JWTUtil {
 
   /**
    * 生成 token，暂定 5min 后过期
-   * @param username 用户名
+   * @param userid 用户 id
    * @param secret 用户的密码
    * @return token
    */
-  public static String sign(String username, String secret) {
+  public static String sign(String userid, String secret) {
     try {
-      username = StringUtils.lowerCase(username);
+      userid = StringUtils.lowerCase(userid);
       Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
       Algorithm algorithm = Algorithm.HMAC256(secret);
       return JWT.create()
-          .withClaim("username", username)
+          .withClaim("userid", userid)
           .withExpiresAt(date)
           .sign(algorithm);
     } catch (Exception e) {

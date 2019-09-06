@@ -31,12 +31,16 @@ public class ShiroRealm extends AuthorizingRealm {
   @Autowired
   private UserPermissionService userPermissionService;
 
+  // 大坑！必须重写此方法，不然 Shiro 会报错！
   @Override
   public boolean supports(AuthenticationToken token) {
     return token instanceof JWTToken;
   }
+
   /**
-   * 获取用户角色和权限
+   * 只有当需要检测用户权限的时候才会调用此方法，例如 checkRole, checkPermission 之类的
+   * @param principal
+   * @return simpleAuthorizationInfo
    */
   @Override
   protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
