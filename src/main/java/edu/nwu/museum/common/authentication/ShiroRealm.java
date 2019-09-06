@@ -44,16 +44,15 @@ public class ShiroRealm extends AuthorizingRealm {
    */
   @Override
   protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal) {
-    User user = (User) SecurityUtils.getSubject().getPrincipal();
-    String userId = user.getUserId();
+    String userId = JWTUtil.getUserId(principal.toString());
+    User user = userService.findById(userId);
 
-    System.out.println("用户" + userId + "获取权限-----ShiroRealm.doGetAuthorizationInfo");
     SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
 
     // 获取用户角色集
     List<Role> roleList = userRoleService.findByUserId(userId);
     Set<String> roleSet = new HashSet<String>();
-    for (Role r : roleList) {
+    for (Role r: roleList) {
       roleSet.add(r.getName());
     }
     simpleAuthorizationInfo.setRoles(roleSet);
@@ -72,26 +71,25 @@ public class ShiroRealm extends AuthorizingRealm {
    * 登录认证
    */
   @Override
-  protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-    // 获取用户输入的id和密码
-    String userId = (String) token.getPrincipal();
-    String password = new String((char[]) token.getCredentials());
+  protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authToken) throws AuthenticationException {
+    // 获取密钥
+    String token = (String) authToken.getCredentials();
+    // 解密获得 userId, 用于和数据库进行对比
+    String userId = JWTUtil.getUserId(token);
 
-    System.out.println("用户" + userId + "认证-----ShiroRealm.doGetAuthenticationInfo");
+    if (userId == null) {
+      throw new AuthenticationException("Token invalid.");
+    }
 
-    // 通过用户名到数据库查询用户信息
     User user = userService.findById(userId);
 
     if (user == null) {
-      throw new UnknownAccountException("用户Id或密码错误！");
+      throw new UnknownAccountException("This user does not exist.");
     }
-    if (!password.equals(user.getPassword())) {
-      throw new IncorrectCredentialsException("用户ID或密码错误！");
+    if (! JWTUtil.verify(token, userId, user.getPassword())) {
+      throw new AuthenticationException("Wrong password.");
     }
-    if (user.getUserStatus().equals("0")) {
-      throw new LockedAccountException("账号已被锁定,请联系管理员！");
-    }
-    SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, password, getName());
+    SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(token, token, "MyRealm");
     return info;
   }
 }
