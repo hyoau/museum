@@ -20,11 +20,11 @@ public class JWTUtil {
    * @param secret 用户的密码
    * @return 是否正确
    */
-  public static boolean verify(String token, String userid, String secret) {
+  public static boolean verify(String token, String userId, String secret) {
     try {
       Algorithm algorithm = Algorithm.HMAC256(secret);
       JWTVerifier verifier = JWT.require(algorithm)
-          .withClaim("userid", userid).build();
+          .withClaim("userId", userId).build();
       verifier.verify(token);
       log.info("token is valid");
       return true;
@@ -41,7 +41,7 @@ public class JWTUtil {
   public static String getUserId(String token) {
     try {
       DecodedJWT jwt = JWT.decode(token);
-      return jwt.getClaim("userid").asString();
+      return jwt.getClaim("userId").asString();
     } catch (JWTDecodeException e) {
       log.error("error：{}", e.getMessage());
       return null;
@@ -50,17 +50,17 @@ public class JWTUtil {
 
   /**
    * 生成 token，暂定 5min 后过期
-   * @param userid 用户 id
+   * @param userId 用户 id
    * @param secret 用户的密码
    * @return token
    */
-  public static String sign(String userid, String secret) {
+  public static String sign(String userId, String secret) {
     try {
-      userid = StringUtils.lowerCase(userid);
+      userId = StringUtils.lowerCase(userId);
       Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
       Algorithm algorithm = Algorithm.HMAC256(secret);
       return JWT.create()
-          .withClaim("userid", userid)
+          .withClaim("userId", userId)
           .withExpiresAt(date)
           .sign(algorithm);
     } catch (Exception e) {
