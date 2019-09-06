@@ -45,7 +45,7 @@ public class LoginController {
 
   @CrossOrigin
   @RequestMapping(value = "/login", method = RequestMethod.POST)
-  public Response login(@RequestParam("userid") String userId,
+  public Response login(@RequestParam("userId") String userId,
       @RequestParam("password") String password) {
     User user = userService.findById(userId);
     if(user.getPassword().equals(password)) {
