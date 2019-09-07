@@ -15,7 +15,7 @@ public class JWTUtil {
   private static final long EXPIRE_TIME = 5*60*1000;
 
   /**
-   * 校验 token是否正确
+   * 校验 token 是否正确
    * @param token  密钥
    * @param secret 用户的密码
    * @return 是否正确
