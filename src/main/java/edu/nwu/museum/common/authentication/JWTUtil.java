@@ -29,13 +29,13 @@ public class JWTUtil {
       log.info("token is valid");
       return true;
     } catch (Exception e) {
-      log.info("token is invalid{}", e.getMessage());
+      log.info("token is invalid {}", e.getMessage());
       return false;
     }
   }
 
   /**
-   * 从 token中获取用户 id
+   * 获得 token 中的信息无需 secret 解密也能获得
    * @return token中包含的 id
    */
   public static String getUserId(String token) {

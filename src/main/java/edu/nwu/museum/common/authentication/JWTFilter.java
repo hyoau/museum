@@ -74,23 +74,6 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     return super.preHandle(request, response);
   }
 
-  @Override
-  protected boolean sendChallenge(ServletRequest request, ServletResponse response) {
-    log.debug("Authentication required: sending 401 Authentication challenge response.");
-    HttpServletResponse httpResponse = WebUtils.toHttp(response);
-    httpResponse.setStatus(HttpStatus.UNAUTHORIZED.value());
-    httpResponse.setCharacterEncoding("utf-8");
-    httpResponse.setContentType("application/json; charset=utf-8");
-    final String message = "未认证，请在前端系统进行认证";
-    try (PrintWriter out = httpResponse.getWriter()) {
-      String responseJson = "{\"message\":\"" + message + "\"}";
-      out.print(responseJson);
-    } catch (IOException e) {
-      log.error("sendChallenge error：", e);
-    }
-    return false;
-  }
-
   /**
    * 将非法请求跳转到 /401
    */
