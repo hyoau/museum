@@ -1,14 +1,12 @@
 package edu.nwu.museum.common.authentication;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
-import org.apache.shiro.web.util.WebUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
