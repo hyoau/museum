@@ -34,7 +34,7 @@ public class LoginController {
 
   @RequestMapping(value = "/logout")
   public String logout(){
-    //使用权限管理工具进行用户的退出，跳出登录，给出提示信息
+    // 使用权限管理工具进行用户的退出，跳出登录，给出提示信息
     Subject subject = SecurityUtils.getSubject();
     if (subject.isAuthenticated()) {
       log.info("Logout success.");
