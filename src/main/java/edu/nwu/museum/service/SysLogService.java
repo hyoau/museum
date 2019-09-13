@@ -19,7 +19,7 @@ public class SysLogService {
   public void saveSysLog(SysLog sysLog) {
     StringBuffer sql = new StringBuffer(" insert into t_sys_log ");
     sql.append(" (id, user_id, operation, time, method, params, ip, create_time) ");
-    sql.append(" values(0, :userId, :operation, :time, :method, :params, :ip, :create_time) ");
+    sql.append(" values(0, :userId, :operation, :time, :method, :params, :ip, :createTime) ");
 
     NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(this.jdbcTemplate.getDataSource());
     namedParameterJdbcTemplate.update(sql.toString(), new BeanPropertySqlParameterSource(sysLog));
