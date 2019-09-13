@@ -1,5 +1,6 @@
 package edu.nwu.museum.controller;
 
+import edu.nwu.museum.common.annotation.Log;
 import edu.nwu.museum.common.authentication.JWTUtil;
 import edu.nwu.museum.common.authentication.Response;
 import edu.nwu.museum.common.exception.UnauthorizedException;
@@ -32,6 +33,7 @@ public class LoginController {
   @Autowired
   private UserService userService;
 
+  @Log("logout")
   @RequestMapping(value = "/logout")
   public String logout(){
     // 使用权限管理工具进行用户的退出，跳出登录，给出提示信息
@@ -43,6 +45,7 @@ public class LoginController {
     return "登出成功";
   }
 
+  @Log("login")
   @CrossOrigin
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public Response login(@RequestParam("userId") String userId,
@@ -55,6 +58,7 @@ public class LoginController {
     }
   }
 
+  @Log("article")
   @RequestMapping(value = "/article", method = RequestMethod.GET)
   public Response article() {
     Subject subject = SecurityUtils.getSubject();

@@ -3,7 +3,6 @@ package edu.nwu.museum.common.utils;
 import javax.servlet.http.HttpServletRequest;
 
 public class IPUtil {
-
   private static final String UNKNOWN = "unknown";
 
   protected IPUtil() {
