@@ -73,7 +73,7 @@ public class LogAspect {
     sysLog.setUserId("Meow");
     sysLog.setTime(new Timestamp(time));
     sysLog.setCreateTime(new Timestamp(System.currentTimeMillis()));
-    // Save
+
     sysLogService.saveSysLog(sysLog);
   }
 }
