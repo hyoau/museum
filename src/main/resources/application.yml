@@ -14,7 +14,8 @@ spring:
   resources:
     static-locations: /META-INF/resources/,classpath:/resources/, classpath:/static/
 
-#mybatis设置
 mybatis:
   mapper-locations: classpath:/mapper/*/*.xml
   # type-aliases-package: edu.nwu.Museum.backstage.domain
+
+
