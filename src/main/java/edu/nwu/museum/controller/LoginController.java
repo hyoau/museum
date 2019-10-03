@@ -46,13 +46,14 @@ public class LoginController {
   }
 
   @Log("login")
-  @CrossOrigin
-  @RequestMapping(value = "/login", method = RequestMethod.POST)
-  public Response login(@RequestParam("userId") String userId,
+  @CrossOrigin("*")
+  @RequestMapping(value = "/user/login", method = RequestMethod.POST)
+  public Response login(@RequestParam("username") String userId,
       @RequestParam("password") String password) {
+    System.out.println("有妖气~");
     User user = userService.findById(userId);
     if(user.getPassword().equals(password)) {
-      return new Response(200, "Login success.", JWTUtil.sign(userId, password));
+      return new Response(200, "LOGIN SUCCESS", JWTUtil.sign(userId, password));
     } else {
       throw new UnauthorizedException();
     }

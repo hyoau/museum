@@ -10,13 +10,13 @@ public class Response {
   // 返回信息
   private String msg;
 
-  // 返回的数据
-  private Object data;
+  // 返回 Token
+  private Object token;
 
-  public Response(int code, String msg, Object data) {
+  public Response(int code, String msg, Object token) {
     this.code = code;
     this.msg = msg;
-    this.data = data;
+    this.token = token;
   }
 
   public int getCode() {
@@ -35,11 +35,11 @@ public class Response {
     this.msg = msg;
   }
 
-  public Object getData() {
-    return data;
+  public Object getToken() {
+    return token;
   }
 
-  public void setData(Object data) {
-    this.data = data;
+  public void setToken(Object token) {
+    this.token = token;
   }
 }
