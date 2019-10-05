@@ -1,31 +1,27 @@
 package edu.nwu.museum.controller;
 
 import edu.nwu.museum.common.annotation.Log;
-import edu.nwu.museum.common.authentication.JWTUtil;
 import edu.nwu.museum.common.authentication.Response;
 import edu.nwu.museum.common.exception.UnauthorizedException;
 import edu.nwu.museum.domain.User;
 import edu.nwu.museum.service.UserService;
+import java.util.HashMap;
+import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.subject.Subject;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Slf4j
 @RestController
@@ -45,17 +41,35 @@ public class LoginController {
     return "登出成功";
   }
 
-  @Log("login")
   @CrossOrigin("*")
   @RequestMapping(value = "/user/login", method = RequestMethod.POST)
-  public Response login(@RequestParam("username") String userId,
-      @RequestParam("password") String password) {
-    System.out.println("有妖气~");
+  public Response login(@RequestBody LoginForm loginForm) {
+    String userId = loginForm.getUsername();
+    String password = loginForm.getPassword();
     User user = userService.findById(userId);
     if(user.getPassword().equals(password)) {
-      return new Response(200, "LOGIN SUCCESS", JWTUtil.sign(userId, password));
+      log.info("Login 验证成功");
+      Map token = new HashMap();
+      token.put("token", "admin-token");
+      return new Response(20000, "LOGIN SUCCESS", token);
     } else {
       throw new UnauthorizedException();
+    }
+  }
+
+  @CrossOrigin("*")
+  @RequestMapping(value = "/user/info", method = RequestMethod.GET)
+  public Response getInfo(@RequestParam("token") String token) {
+    String[] roles = {"admin"};
+    UserInfo adminInfo = new UserInfo(
+        roles,
+        "I am a super administrator",
+        "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif",
+        "Super Admin");
+    if(token.equals("admin-token")) {
+      return new Response(20000, "LOGIN SUCCESS", adminInfo);
+    } else {
+      return new Response(50008, "Login failed, unable to get user details.", null);
     }
   }
 
