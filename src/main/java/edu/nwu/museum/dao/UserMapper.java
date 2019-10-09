@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserMapper {
+  List<User> paginate(Integer offset);
+
   List<User> findAll();
 
   User findById(String userId);

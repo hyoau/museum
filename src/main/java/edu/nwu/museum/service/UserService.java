@@ -30,4 +30,8 @@ public class UserService {
   public void deleteById(String userId) {
     userMapper.deleteById(userId);
   }
+
+  public List<User> paginate(Integer offset) {
+    return userMapper.paginate(offset*10);
+  }
 }

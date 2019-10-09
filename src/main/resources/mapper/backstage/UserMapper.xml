@@ -43,6 +43,29 @@
     FROM t_user
   </select>
 
+  <select id="paginate" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.User">
+    SELECT
+      user_id userId,
+      user_name userName,
+      password password,
+      user_tel userTel,
+      email email,
+      dept_id deptId,
+      user_avatar userAvatar,
+      user_sex userSex,
+      user_status userStatus,
+      address address,
+      birthday birthday,
+      museum_id museumId,
+      real_name realName,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater
+    FROM t_user
+    LIMIT 10 OFFSET #{offset}
+  </select>
+
   <select id="findById" parameterType="java.lang.String" resultType="edu.nwu.museum.domain.User">
     SELECT
       user_id userId,
