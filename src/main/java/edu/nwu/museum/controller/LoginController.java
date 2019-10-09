@@ -8,14 +8,12 @@ import edu.nwu.museum.service.UserService;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -74,6 +72,17 @@ public class LoginController {
     } else {
       return new Response(50008, "Login failed, unable to get user details.", null);
     }
+  }
+
+  @CrossOrigin("*")
+  @RequestMapping(value = "/user/list", method = RequestMethod.GET)
+  public Response getUserList(@RequestParam("offset") Integer offset) {
+    ArrayList<User> users = new ArrayList<>(userService.paginate(offset));
+    HashMap<String, Object> data = new HashMap<>();
+    for (User user: users) {
+      data.put("users", users);
+    }
+    return new Response(20000, "SUCCESS", data);
   }
 
   @CrossOrigin("*")
