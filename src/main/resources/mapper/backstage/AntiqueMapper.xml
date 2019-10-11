@@ -70,6 +70,42 @@
     from t_antique
   </select>
 
+  <select id="paginate" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.Antique">
+    SELECT antique_id antiqueId,
+      seq_no seqNo,
+      antique_name antiqueName,
+      antique_type antiqueType,
+      antique_dynasty antiqueDynasty,
+      antique_area antiqueArea,
+      antique_texture antiqueTexture,
+      antique_usage antiqueUsage,
+      antique_completion antiqueCompletion,
+      antique_length antiqueLength,
+      antique_width antiqueWidth,
+      antique_height antiqueHeight,
+      antique_weight antiqueWeight,
+      antique_count antiqueCount,
+      museum_id museumId,
+      author_id authorId,
+      antique_like_count antiqueLikeCount,
+      antique_favourite_count antiqueFavouriteCount,
+      antique_collection_department antiqueCollectionDepartment,
+      antique_source antiqueSource,
+      antique_collection_date antiqueCollectionDate,
+      antique_registration_num antiqueRegistrationNum,
+      antique_identification_date antiqueIdentificationDate,
+      antique_level antiqueLevel,
+      antique_appraiser antiqueAppraiser,
+      antique_protection_level antiqueProtectionLevel,
+      create_date createDate,
+      creator creator,
+      update_date updateDate,
+      updater updater,
+      del_flag delFlag
+    FROM t_antique
+    LIMIT 10 OFFSET #{offset}
+  </select>
+
   <select id="findById" resultType="edu.nwu.museum.domain.Antique">
     select antique_id antiqueId,
       seq_no seqNo,

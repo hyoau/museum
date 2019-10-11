@@ -1,4 +1,4 @@
-package edu.nwu.museum.controller.frontstage;
+package edu.nwu.museum.controller.front;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;

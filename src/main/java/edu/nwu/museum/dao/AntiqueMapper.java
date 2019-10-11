@@ -9,11 +9,13 @@ import org.springframework.stereotype.Repository;
 public interface AntiqueMapper {
   List<Antique> findAll();
 
-  Antique findById(@Param("antiqueId") String antiqueId, @Param("seqNo") Integer seqNo);
+  Antique findById(String antiqueId, Integer seqNo);
 
   void insert(Antique antique);
 
   void update(Antique antique);
 
-  int deleteById(@Param("antiqueId") String antiqueId, @Param("seqNo") Integer seqNo);
+  int deleteById(String antiqueId, Integer seqNo);
+
+  List<Antique> paginate(Integer offset);
 }

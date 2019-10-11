@@ -20,13 +20,11 @@ public class ShiroConfig {
   @Bean("securityManager")
   public DefaultWebSecurityManager getManager() {
     DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
-    // 使用自己的realm
+    // set customized realm
     manager.setRealm(shiroRealm());
 
-    /*
-     * 关闭shiro自带的session，详情见文档
-     * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
-     */
+    // close session in Shiro
+    // http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
     DefaultSubjectDAO subjectDAO = new DefaultSubjectDAO();
     DefaultSessionStorageEvaluator defaultSessionStorageEvaluator = new DefaultSessionStorageEvaluator();
     defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
@@ -45,7 +43,7 @@ public class ShiroConfig {
   public ShiroFilterFactoryBean factory(DefaultWebSecurityManager securityManager) {
     ShiroFilterFactoryBean factoryBean = new ShiroFilterFactoryBean();
 
-    // 添加自己的过滤器并且取名为jwt
+    // set customized filter and set name 'jwt'
     Map<String, Filter> filterMap = new HashMap<>();
     filterMap.put("jwt", new JWTFilter());
     factoryBean.setFilters(filterMap);
@@ -64,13 +62,13 @@ public class ShiroConfig {
   }
 
   /**
-   * 下面的代码是添加注解支持
+   * Boilerplate code.
    */
   @Bean
   @DependsOn("lifecycleBeanPostProcessor")
   public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator() {
     DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
-    // 强制使用cglib，防止重复代理和可能引起代理出错的问题
+    // force cglib to prevent duplicate agents and problems that may cause agent errors
     // https://zhuanlan.zhihu.com/p/29161098
     defaultAdvisorAutoProxyCreator.setProxyTargetClass(true);
     return defaultAdvisorAutoProxyCreator;
