@@ -16,7 +16,8 @@
 
   <!--查询所有资讯信息-->
   <select id="findAll" resultType="edu.nwu.museum.domain.News">
-    select news_id newsId,
+    select
+      news_id newsId,
       news_title newsTitle,
       news_type newsType,
       news_speaker newsSpeaker,
@@ -27,6 +28,22 @@
       create_time createTime,
       creator creator
     from news
+  </select>
+
+  <select id="paginate" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.News">
+    SELECT
+      news_id newsId,
+      news_title newsTitle,
+      news_type newsType,
+      news_speaker newsSpeaker,
+      news_time newsTime,
+      museum_id museumId,
+      news_image newsImage,
+      news_text newsText,
+      create_time createTime,
+      creator creator
+    FROM news
+    LIMIT 10 OFFSET #{offset}
   </select>
 
   <!--根据ID查询资讯信息-->
