@@ -1,0 +1,1401 @@
+/*---通用开始---------------------------------------------------*/
+body, div, span, a, input, li, ul, ol, img, h1, h2, h3, h4, i, em, b, p, del {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+  border: 0 none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #b2261a;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+i, em {
+  font-style: normal;
+}
+
+body {
+  font: 12px/100% "微软雅黑";
+  /* background-color: #fff; */
+  background-color: #ccc;
+}
+
+.w {
+  width: 1260px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+/*---通用结束---------------------------------------------------*/
+/*----top栏开始------*/
+/* 顶部导航栏开始 */
+#topNavHL {
+  height: 49px;
+  position: relative;
+}
+
+#topNavHL .ww {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+}
+
+#topNavHL #logoHL img {
+  width: 116px;
+}
+
+#topNavHL #logoHL {
+  position: absolute;
+  top: 8px;
+}
+
+#topNavHL .ww .navHL {
+  position: absolute;
+  margin-left: 308px;
+}
+
+#topNavHL .navHL li {
+  float: left;
+  font-size: 13px;
+  height: 49px;
+  line-height: 49px;
+  padding: 0 27px;
+}
+
+#topNavHL .navHL li a {
+  color: #909090;
+}
+
+#topNavHL .navHL li:hover a {
+  color: rgb(209, 192, 168);
+}
+
+#topNavHL #loginHL {
+  float: right;
+  height: 100%;
+
+}
+
+#topNavHL #loginHL ul {
+  float: left;
+  margin-top: 17px;
+  width: 225px;
+}
+
+#topNavHL #loginHL .person {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../picture/ico_tools_search.png") no-repeat 0 0/15px;
+}
+
+#topNavHL #loginHL li:first-child:hover .person {
+  background-position: 0 -18px;
+}
+
+#topNavHL #loginHL .language {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../picture/zhong1.png") no-repeat 0 0;
+  background-size: 15px;
+}
+
+#topNavHL #loginHL li:nth-child(3):hover .language {
+  background-position: 0 -20px;
+}
+
+#topNavHL #loginHL .search {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../picture/ico_tools_user.png") no-repeat 0 0;
+  background-size: 15px;
+}
+
+#topNavHL #loginHL li:last-child:hover .search {
+  background-position: 0 -20px;
+}
+
+#topNavHL #loginHL li {
+  display: inline-block;
+}
+
+#topNavHL #loginHL .icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #909090;
+  margin-left: 13px;
+}
+
+#topNavHL #loginHL li:nth-child(even) {
+  background-color: #ddd;
+  width: 2px;
+  height: 17px;
+  margin-right: 13px;
+  margin-left: 15px;
+}
+
+#topNavHL #loginHL .hideNav {
+  width: 34px;
+  height: 34px;
+  background: url("../picture/menu2-1.png") no-repeat;
+  background-size: 34px;
+  float: right;
+  margin-top: 7px;
+}
+
+#topNavHL #loginHL .hideNav:hover {
+  background-position: 0 -34px;
+}
+
+#topNavHL #loginHL .hideNav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*隐藏的导航栏开始  */
+/* 以下是共有的样式 */
+#topNavHL .hideBar {
+  width: 1350px;
+  height: 49px;
+  position: absolute;
+  top: 49px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(153, 124, 82, 0.7);
+  z-index: 5;
+
+  line-height: 49px;
+  display: none;
+}
+
+/* 默认隐藏 */
+#topNavHL .tri img {
+  width: 20px;
+  opacity: 0.8;
+  left: -43px;
+  position: relative;
+
+
+}
+
+#topNavHL .hideBar .tri {
+  position: absolute;
+  top: -31px;
+
+}
+
+#topNavHL .hideBar li {
+  float: left;
+}
+
+#topNavHL .hideBar li a {
+  color: white;
+}
+
+#topNavHL .hideBar li a:hover {
+  color: rgb(222, 195, 155);
+}
+
+#topNavHL .hideBar li:nth-child(even) {
+  width: 6px;
+  height: 16px;
+  background: url("../images/img6.png");
+  margin: 0 20px;
+  margin-top: 17px;
+}
+
+/* 隐藏的 导览 栏开始 */
+/* #topNavHL .daolangHL{
+    display: block;
+} */
+
+#topNavHL .daolangHL ul {
+  margin-left: 250px;
+}
+
+#topNavHL .daolangHL .tri {
+  left: 459px;
+}
+
+/* 隐藏的 导览 栏结束 */
+/* 隐藏的 展览 栏开始 */
+/* #topNavHL .zhanlangHL{
+    display: block;
+} */
+
+#topNavHL .zhanlangHL ul {
+  margin-left: 392px;
+}
+
+#topNavHL .zhanlangHL .tri {
+  left: 541px;
+}
+
+/* 隐藏的 展览 栏结束 */
+/* 隐藏的 教育 栏开始 */
+/* #topNavHL .jiaoyuHL{
+    display: block;
+} */
+
+#topNavHL .jiaoyuHL ul {
+  margin-left: 387px;
+}
+
+#topNavHL .jiaoyuHL .tri {
+  left: 622px;
+}
+
+/* 隐藏的 教育 栏结束 */
+/* 隐藏的 探索 栏开始 */
+/* #topNavHL .tansuoHL{
+    display: block;
+} */
+
+#topNavHL .tansuoHL ul {
+  margin-left: 387px;
+}
+
+#topNavHL .tansuoHL .tri {
+  left: 702px;
+}
+
+/* 隐藏的 探索 栏结束 */
+/* 隐藏的 学术 栏开始 */
+/* #topNavHL .xueshuHL{
+    display: block;
+} */
+
+#topNavHL .xueshuHL ul {
+  margin-left: 387px;
+}
+
+#topNavHL .xueshuHL .tri {
+  left: 785px;
+}
+
+/* 隐藏的 学术 栏结束 */
+/* 隐藏的 文创 栏开始 */
+/* #topNavHL .wenchuangHL{
+    display: block;
+} */
+
+#topNavHL .wenchuangHL ul {
+  margin-left: 647px;
+}
+
+#topNavHL .wenchuangHL .tri {
+  left: 865px;
+}
+
+/* 隐藏的 文创 栏结束 */
+/* 隐藏的 关于 栏开始 */
+/* #topNavHL .guanyuHL{
+    display: block;
+} */
+
+#topNavHL .guanyuHL ul {
+  margin-left: 762px;
+}
+
+#topNavHL .guanyuHL .tri {
+  left: 945px;
+}
+
+/* 隐藏的 关于 栏结束 */
+/* 隐藏的导航栏结束 */
+
+/* 顶部导航栏结束 */
+
+
+/*-----主体部分开始-----*/
+.body {
+  width: 1349px;
+  height: 4395px;
+
+}
+
+.winchance {
+  background: url(../images/game1.jpg);
+  overflow: hidden;
+}
+
+.banner {
+  width: 1349px;
+  height: 545px;
+  position: relative;
+  z-index: 3;
+}
+
+.banner img {
+  width: 1349px;
+  height: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.winchance .box {
+  width: 1230px;
+  height: 3790px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -20px;
+
+}
+
+
+.winchance .box .h1 {
+  color: #fff;
+  font-size: 26px;
+  width: 100%;
+  height: 73px;
+  background: url(../images/game2.png) no-repeat;
+
+}
+
+.winchance .box .box1 {
+  width: 1230px;
+  height: 3644px;
+  background: url(../images/game6.png);
+  padding: 70px 60px 0;
+  box-sizing: border-box;
+
+}
+
+
+/*-----中间盒子外框架结束*/
+/*-----中间盒子内部内容开始----*/
+
+/*-----第一个轮播图开始-----*/
+.winchance .box .periodical .focus {
+  width: 1110px;
+  height: 420px;
+  position: relative;
+
+}
+
+.winchance .box .periodical .frame {
+  width: 1110px;
+  height: 420px;
+  position: relative;
+
+}
+
+.winchance .periodical .focus .image.now {
+
+  display: block;
+
+}
+
+
+/*now {*/
+
+/*}*/
+.winchance .periodical .focus .image {
+  float: left;
+  vertical-align: middle;
+  opacity: 0;
+  /*display: none;*/
+  left: -60px;
+  position: absolute;
+  z-index: 3;
+  /*opacity: 0;*/
+
+
+}
+
+
+.winchance .periodical .focus .text {
+  margin-left: 430px;
+  width: 550px;
+  margin-top: 15px;
+  opacity: 0;
+  right: 20px;
+  position: absolute;
+  z-index: 3;
+  /*float: right;*/
+
+}
+
+.winchance .periodical .focus .text .public-title {
+  position: relative;
+  padding: 0 30px;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 36px;
+  height: 40px;
+  margin-bottom: 15px;
+
+}
+
+.focus .text .public-title .s1 {
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 100%;
+  background: url(../images/game7.png) no-repeat center;
+}
+
+.focus .text .public-title .s2 {
+  background: url(../images/game8.png) no-repeat center;
+  position: absolute;
+  display: block;
+  width: 22px;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+
+.winchance .periodical .focus p {
+  display: block;
+  width: 550px;
+  height: 100px;
+  font-size: 16px;
+  color: #707070;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.winchance .periodical .focus .nav {
+  position: absolute;
+  bottom: 115px;
+  left: 430px;
+}
+
+.winchance .periodical .focus .nav a {
+  display: inline-block;
+  background: url(../images/game25.png) no-repeat left center;
+  width: 27px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.winchance .periodical .focus .button {
+  position: absolute;
+  bottom: 35px;
+  left: 430px;
+}
+
+.winchance .periodical .focus .button a {
+  display: inline-block;
+  width: 202px;
+  height: 48px;
+  background: url(../images/game10.png) no-repeat;
+  text-align: center;
+  font-size: 20px;
+  line-height: 48px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.winchance .periodical .focus .icon {
+  width: 189px;
+  height: 268px;
+  background: url(../images/game24.png) no-repeat center;
+  position: absolute;
+  right: -60px;
+  top: 27px;
+}
+
+/*-----第一个轮播图结束------*/
+
+/*-----第二个轮播图开始-----*/
+.winchance .protects .focus {
+  position: relative;
+  padding-top: 105px;
+}
+
+.winchance .protects .focus .frame {
+  position: relative;
+  z-index: 9;
+  height: 445px;
+  overflow: visible;
+}
+
+.winchance .protects .focus .child {
+  float: left;
+  width: 100%;
+  height: 445px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.winchance .protects .focus .child.now {
+  display: block;
+}
+
+.winchance .protects .focus .icon1 {
+  width: 369px;
+  height: 753px;
+  position: absolute;
+  right: -60px;
+  top: -110px;
+
+
+}
+
+.winchance .protects .focus .image {
+  width: 472px;
+  height: 426px;
+  overflow: hidden;
+  padding-top: 130px;
+  float: right;
+  position: relative;
+  z-index: 2;
+
+
+}
+
+.winchance .protects .focus .public-title {
+  color: #263d6f;
+  margin-bottom: 15px;
+  position: relative;
+  padding: 0 30px;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 36px;
+  height: 40px;
+}
+
+
+.public-title .s1 {
+  background: url(../images/game7.png) no-repeat center;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 100%;
+}
+
+.winchance .protects .focus .icon {
+  width: 188px;
+  height: 328px;
+  background: url(../images/game13-1.png) no-repeat center;
+  position: absolute;
+  right: 370px;
+  top: 165px;
+}
+
+.winchance .protects .focus .nav {
+  position: absolute;
+  bottom: 90px;
+  left: 30px;
+  z-index: 11;
+}
+
+.winchance .protects .focus .nav a {
+  display: inline-block;
+  background: url(../images/game25.png) no-repeat left center;
+  width: 27px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.winchance .box1 .protects .text {
+  margin-left: 30px;
+  width: 520px;
+  margin-top: 15px;
+  left: -40px;
+  position: absolute;
+
+
+}
+
+.winchance .box1 .protects .text p {
+  font-size: 16px;
+  color: #707070;
+  line-height: 25px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.winchance .protects .focus .button {
+  position: absolute;
+  bottom: 6px;
+  left: 30px;
+  /*z-index: 12;*/
+}
+
+.winchance .protects .focus .button a {
+  display: inline-block;
+  width: 158px;
+  height: 48px;
+  background: url(../images/game10-1.png) no-repeat;
+  text-align: center;
+  font-size: 20px;
+  line-height: 48px;
+  vertical-align: middle;
+  margin: 5px 0;
+  margin-right: 20px;
+}
+
+.winchance .protects {
+  position: relative;
+  margin-bottom: 170px;
+}
+
+/*---第三部分---*/
+
+.winchance .item3 {
+  position: relative;
+  height: 570px;
+}
+
+.winchance .item3 .icon1 {
+  background: url(../images/game14-1.png) no-repeat;
+  width: 290px;
+  height: 202px;
+  position: absolute;
+  top: 10px;
+  left: 75px;
+}
+
+.winchance .item3 .icon2 {
+  background: url(../images/game14.png) no-repeat;
+  width: 416px;
+  height: 482px;
+  position: absolute;
+  top: -30px;
+  left: -60px;
+
+}
+
+.winchance .item3 .piclist {
+  height: 570px;
+  width: 833px;
+  position: absolute;
+  top: 0;
+  left: 255px;
+}
+
+.winchance .item3 .piclist .i1 {
+  top: 0;
+  left: 140px;
+}
+
+.winchance .item3 .piclist .i2 {
+  top: 245px;
+  left: 0;
+}
+
+.winchance .item3 .piclist .i3 {
+  top: 245px;
+  left: 280px;
+}
+
+.winchance .item3 .piclist .i4 {
+  top: 245px;
+  left: 560px;
+}
+
+.winchance .item3 .piclist .img {
+  width: 271px;
+  height: 315px;
+  position: absolute;
+}
+
+.winchance .item3 .piclist .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/game15.png) no-repeat center;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.winchance .item3 .text {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 420px;
+  text-align: center;
+}
+
+
+.winchance .item3 .text .public-title {
+  color: #5c1417;
+}
+
+.public-title {
+  position: relative;
+  padding: 0 30px;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 36px;
+  height: 40px;
+}
+
+
+.public-title .s1 {
+  background: url(../images/game7.png) no-repeat center;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 100%;
+}
+
+.public-title .s2 {
+  background: url(../images/game8.png) no-repeat center;
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 100%;
+}
+
+
+.winchance .item3 .text p {
+  color: #474747;
+  font-size: 20px;
+  padding-top: 5px;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+
+}
+
+.winchance .item3 .text .button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.winchance .item3 .text .button a {
+  display: inline-block;
+  width: 202px;
+  height: 48px;
+  background: url(../images/game10.png) no-repeat;
+  font-size: 20px;
+  color: #474747;
+  line-height: 48px;
+}
+
+/*---第三部分结束---*/
+/*---第四部分皮肤开始---*/
+.winchance .item3-1 {
+  background: url(../images/game43.png) no-repeat left top;
+  min-height: 523px;
+  width: 1225px;
+  margin-left: -60px;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.winchance .item3-1 .text {
+  width: 510px;
+  padding-left: 460px;
+  padding-top: 90px;
+}
+
+.winchance .item3-1 .public-title {
+  color: #415f69;
+  position: relative;
+  padding: 0 30px;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 36px;
+  height: 40px;
+}
+
+.winchance .item3-1 .text .gengduo {
+  font-size: 20px;
+  color: #070608;
+  margin-top: 10px;
+  height: 30px;
+  font: 20px "微软雅黑";
+}
+
+.winchance .item3-1 .text .desc1 {
+  font-size: 16px;
+  color: #707070;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+
+.winchance .item3-1 .text .button {
+  text-align: left;
+  margin-top: 34px;
+  padding-left: 50px;
+}
+
+.winchance .item3-1 .text .button a {
+  display: inline-block;
+  width: 202px;
+  height: 48px;
+  background: url(../images/game10.png) no-repeat;
+  font-size: 20px;
+  color: #474747;
+  line-height: 48px;
+  text-align: center;
+}
+
+.winchance .item3-1 .imglist {
+  /* background: #fff; */
+  padding: 12px;
+  margin: 0 46px;
+  margin-top: 70px;
+  z-index: 6;
+  position: relative;
+}
+
+
+.winchance .item3-1 .imglist .item:first-child {
+  margin-left: 0;
+}
+
+.winchance .item3-1 .imglist .item {
+  float: left;
+  width: 364px;
+  height: 248px;
+  overflow: hidden;
+  margin-left: 8px;
+  position: relative;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
+}
+
+.winchance .item3-1 .imglist .item img {
+  width: 100%;
+}
+
+img {
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.winchance .item3-1 .imglist .item .a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/mask50.png);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.winchance .item3-1 .gif1 {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+  top: 80px;
+  left: 90px;
+}
+
+.winchance .item3-1 .gif2 {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 241px;
+  right: 106px;
+}
+
+/*---第四部分皮肤结束---*/
+/*---第五部分游戏开始---*/
+.winchance .item4 {
+  position: relative;
+  height: 550px;
+  margin-bottom: 30px;
+}
+
+.winchance .item4 .icon {
+  width: 291px;
+  height: 179px;
+  position: absolute;
+  background: url(../images/game20-1.png) no-repeat;
+  left: 590px;
+  top: 0;
+}
+
+.winchance .item4 .child {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.winchance .item4 .text {
+  margin-top: 80px;
+  margin-left: 35px;
+
+  position: absolute;
+}
+
+.winchance .item4 .public-title {
+  color: #8c6038;
+  font-size: 34px;
+  margin-bottom: 15px;
+  position: relative;
+  padding: 0 30px;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 36px;
+  height: 40px;
+}
+
+.winchance .item4 .text p {
+  color: #080608;
+  font-size: 20px;
+  height: 60px;
+  line-height: 30px;
+}
+
+.winchance .item4 .img {
+  position: absolute;
+  width: 907px;
+  height: 518px;
+  top: 0;
+  right: -60px;
+}
+
+.winchance .item4 .nav {
+  position: absolute;
+  bottom: 280px;
+  left: 35px;
+}
+
+.winchance .item4 .button {
+  margin-left: 35px;
+  position: absolute;
+  bottom: 195px;
+  left: 0;
+}
+
+.winchance .item4 .button a {
+  display: inline-block;
+  width: 202px;
+  height: 48px;
+  background: url(../images/game10.png) no-repeat;
+  font-size: 20px;
+  color: #474747;
+  line-height: 48px;
+  text-align: center;
+}
+
+/*---第五部分游戏结束---*/
+
+
+/*---第六部分最大轮播图开始---*/
+.winchance .item5 {
+  height: 580px;
+  position: relative;
+  background: url(../images/game30.png) repeat 0 0;
+}
+
+.winchance .item5 .icon1 {
+  background: url(../images/game22.png) no-repeat;
+  width: 481px;
+  height: 364px;
+  position: absolute;
+  bottom: 0;
+  right: -61px;
+}
+
+.winchance .item5 .icon {
+  background: url(../images/game21.png) no-repeat;
+  width: 100px;
+  height: 334px;
+  position: absolute;
+  top: 100px;
+  right: -60px;
+}
+
+.winchance .item5 .icon2 {
+  /*background: url(../images/game22-1.png) no-repeat;*/
+  width: 230px;
+  height: 409px;
+  position: absolute;
+  top: 0;
+  left: -61px;
+}
+
+.winchance .item5 .icon3 {
+  background: url(../images/game42.png) no-repeat;
+  width: 14px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 370px;
+  margin-top: -35px;
+}
+
+.winchance .item5 .arc {
+  padding-top: 50px;
+  width: 335px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+}
+
+.winchance .item5 .arcbox {
+  position: absolute;
+  width: 500px;
+  height: 440px;
+  left: -170px;
+  top: 55px;
+  background: url(../images/game22-1.png) no-repeat center;
+  background-position-y: -25px;
+}
+
+
+.winchance .item5 .arcbox .img {
+  width: 95px;
+  height: 105px;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  left: 349.984px;
+  top: 301.313px;
+  /*display: none;*/
+}
+
+
+.winchance .item5 .button1 {
+  position: absolute;
+  width: 13px;
+  height: 495px;
+  left: -20px;
+  top: 25px;
+}
+
+.winchance .item5 .button1 .prev {
+  top: 0;
+  left: 0;
+}
+
+.winchance .item5 .button1 .a {
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 42px;
+  background: url(../images/game39-1.png) no-repeat;
+}
+
+.winchance .item5 .button1 .next {
+  bottom: 0;
+  left: 0;
+  background-image: url(../images/game39-1.png);
+}
+
+
+.winchance .item5 .imgtextwarp {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  height: 100%;
+  width: 720px;
+}
+
+.winchance .item5 .imgtextwarp .w1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.winchance .item5 .imgtextwarp .w1.now {
+  display: block;
+}
+
+.winchance .item5 .imglist {
+  width: 280px;
+  height: 480px;
+  position: absolute;
+  top: 35px;
+  left: 50px;
+
+
+}
+
+.winchance .item5 .text {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 350px;
+  /*opacity: 0;*/
+  /*transform: translateX(100px);*/
+  /*transition: all 1s;*/
+  /*-webkit-transform: translateX(100px);*/
+  /*-webkit-transition: all 1s;*/
+}
+
+/*动画落叶*/
+.winchance .item5.now {
+  animation-name: bg;
+  /* animation-delay: 2s; */
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* -webkit-animation-name: bg; */
+  /* -webkit-animation-delay: 2s; */
+  /* -webkit-animation-duration: 2s; */
+  /* -webkit-animation-timing-function: linear; */
+  /* -webkit-animation-iteration-count: infinite; */
+}
+
+@keyframes bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 459px;
+  }
+}
+
+
+.winchance .item5 .text .textw {
+  width: 100%;
+}
+
+.winchance .item5 .text .public-title {
+  color: #93785b;
+  position: relative;
+  padding: 0 30px;
+  font-size: 34px;
+  display: inline-block;
+  line-height: 36px;
+  height: 40px;
+}
+
+.public-title .s1 {
+  background: url(../images/game7.png) no-repeat center;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 100%;
+}
+
+.public-title .s2 {
+  background: url(../images/game8.png) no-repeat center;
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 100%;
+}
+
+
+.winchance .item5 .text p {
+  font-size: 16px;
+  color: #707070;
+  margin-top: 18px;
+  line-height: 24px;
+}
+
+.winchance .item5 .text .button .a1 {
+  background-position: left top;
+  margin-bottom: 10px;
+}
+
+.winchance .item5 .text .button a {
+  display: block;
+  width: 151px;
+  height: 45px;
+  background: url(../images/game41.png) no-repeat;
+}
+
+.winchance .item5 .text .button {
+  position: relative;
+  margin-top: 50px;
+}
+
+
+/*---第六部分轮播图结束---*/
+
+
+/*---body的最后部分---*/
+.winchance .box .h2 {
+  color: #fff;
+  font-size: 26px;
+  width: 100%;
+  height: 73px;
+
+  background: url(../images/game3.png) no-repeat;
+
+}
+
+
+/*-----主体部分结束-----*/
+/*-----页脚部分开始-----*/
+
+
+/* footer板块开始 */
+#footer {
+  height: 236px;
+  background-color: #272727;
+  color: white;
+  position: relative;
+}
+
+#footer .total {
+  position: absolute;
+  left: 531px;
+  top: 37px;
+}
+
+#footer .stats li {
+  width: 20px;
+  height: 28px;
+  background-color: #404040;
+  float: left;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 6px;
+}
+
+#footer .stats ul {
+  position: absolute;
+  top: 30px;
+  left: 613px;
+}
+
+#footer .webInfo {
+  position: absolute;
+  top: 83px;
+}
+
+#footer .webInfo li {
+  float: left;
+  margin-right: 14px;
+}
+
+#footer .webInfo li a {
+  color: white;
+}
+
+#footer .webInfo li:first-child {
+  margin-left: 404px;
+}
+
+#footer .icp p {
+  position: absolute;
+  left: 326px;
+  top: 109px;
+}
+
+#footer .icp .webDev {
+  position: absolute;
+  left: 875px;
+  top: 109px;
+}
+
+#footer .icp .webDev a {
+  color: white;
+}
+
+#footer .suggestion {
+  text-align: center;
+  line-height: 32px;
+  position: absolute;
+  top: 140px;
+  left: 637px;
+}
+
+#footer .suggestion a {
+  display: block;
+  width: 80px;
+  height: 32px;
+  color: white;
+  border: 1px solid white;
+}
+
+#footer .qrCode a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url("../images/ico_hand.png");
+}
+
+#footer .qrCode {
+  position: absolute;
+  top: 65px;
+  left: 1035px;
+}
+
+#footer .qrCode .hand {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../images/ico_hand2.png");
+  position: absolute;
+  top: 25px;
+  left: 22px;
+}
+
+#footer .qrCodeImg {
+  position: absolute;
+  top: -400px;
+  right: 156px;
+  display: none;
+}
+
+/* footer板块结束 */

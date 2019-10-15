@@ -1,0 +1,781 @@
+/* ��ʼ�����뿪ʼ */
+
+body, a, tr, td, ul, li, ol, dl, dt, h1, h2, h3, h4, h5, h6, span, div, img, input, p, b, u, i {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 14px/100% "΢���ź�";
+}
+
+/* aĬ������ȥ���»��� */
+a {
+  text-decoration: none;
+  color: #474747;
+}
+
+/* a��ǩ�������ֱ�ɫ */
+/*a:hover {*/
+/*color: #9e7b4b;*/
+/*}*/
+
+/* ȥ��Ĭ����ʾ����Ϊ */
+i, em, b, strong, u, del, s {
+  font-style: normal;
+}
+
+/* ȥ��li��ǩ��ߵĵ� */
+ul {
+  list-style: none;
+}
+
+/* �������������Ӱ�� */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ���ĵ���ʽ */
+.w {
+  width: 1260px;
+  margin: 0 auto;
+}
+
+/* ��ʼ��������� */
+
+/*ͷ�����뿪ʼ*/
+
+.top {
+  height: 48px;
+  border-bottom: 1px solid #e3e3e3;
+
+}
+
+.logo {
+  float: left;
+  margin-top: 6px;
+}
+
+.logo img {
+  width: 115px;
+}
+
+.nav {
+  float: left;
+  margin-left: 170px;
+}
+
+.nav li {
+  float: left;
+  margin-left: 55px;
+  line-height: 48px;
+}
+
+.tool {
+  float: right;
+}
+
+.tool .login {
+  display: inline-block;
+}
+
+.tool .login .ico {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../images/ico_tools_search.png") no-repeat;
+  background-size: 16px;
+  margin-right: 8px;
+}
+
+.tool .line {
+  width: 1px;
+  height: 17px;
+  background-color: #dddddd;
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+
+}
+
+.tool .language {
+  display: inline-block;
+}
+
+.tool .language .zhong {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../images/zhong1.png") no-repeat;
+  background-size: 16px;
+  margin-right: 8px;
+}
+
+.tool .search {
+  display: inline-block;
+
+}
+
+.tool .search .scbtn {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url("../images/ico_tools_user.png") no-repeat;
+  background-size: 16px;
+  margin-right: 8px;
+}
+
+.tool .navbar {
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  background: url("../images/menu2-1.png") no-repeat;
+  background-size: 34px;
+  margin-top: 5px;
+
+}
+
+/*ͷ���������*/
+
+/*������뿪ʼ*/
+
+.wrap {
+  height: 44px;
+  line-height: 44px;
+}
+
+.wrap span {
+  margin: 0px 10px;
+
+}
+
+.Palace {
+  text-align: center;
+  height: 50px;
+}
+
+.Palace .lishi {
+  font-size: 26px;
+  vertical-align: middle;
+}
+
+.Palace img {
+  height: 34px;
+  vertical-align: middle;
+}
+
+.build {
+  height: 590px;
+  background-color: #792120;
+  position: relative;
+}
+
+.build .text {
+  position: absolute;
+  left: 70px;
+  top: 110px;
+  color: white;
+  width: 920px;
+}
+
+.build .text img {
+  height: 35px;
+  vertical-align: middle;
+}
+
+.build .text span {
+  font-size: 27px;
+  vertical-align: middle;
+}
+
+.build .text p {
+  line-height: 22px;
+  margin-top: 20px;
+  text-indent: 2em;
+}
+
+.build .text a {
+  color: white;
+  font-size: 20px;
+  background: url("../images/img7.png") no-repeat center top / 7px 15px;
+  width: 90px;
+  height: 55px;
+  display: inline-block;
+  padding-top: 35px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.build .text .map {
+  background: url("../images/s58292c37b1476.png") no-repeat;
+  padding-top: 110px;
+}
+
+.build .icon {
+  position: absolute;
+  right: 65px;
+  top: 155px;
+  z-index: 2;
+}
+
+.build .pic {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+/*����һ����*/
+
+/*�������ʼ*/
+
+.object {
+  margin-top: 50px;
+  margin-bottom: 850px;
+}
+
+.object .leftshang {
+  float: left;
+  height: 240px;
+  width: 630px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.object .leftshang .cangpin {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+}
+
+.object .leftshang .text {
+  position: absolute;
+  left: 230px;
+  top: 65px;
+  width: 360px;
+}
+
+.object .leftshang .text img {
+  height: 35px;
+  vertical-align: middle;
+}
+
+.object .leftshang .text span {
+  font-size: 27px;
+  vertical-align: middle;
+}
+
+.object .leftshang .text p {
+  line-height: 22px;
+  margin-top: 20px;
+  text-indent: 2em;
+}
+
+.object .rightshang {
+  height: 240px;
+  width: 630px;
+  float: left;
+}
+
+.object .leftxia {
+  height: 480px;
+  width: 630px;
+  float: left;
+  background-color: #2a2620;
+  position: relative;
+}
+
+.object .leftxia .foxiang {
+  position: absolute;
+  left: 35px;
+  top: 78px;
+}
+
+.object .leftxia .text {
+  color: white;
+  left: 300px;
+  top: 100px;
+  position: absolute;
+  text-align: center;
+}
+
+.object .leftxia .text span {
+  font-size: 50px;
+  line-height: 100px;
+}
+
+.object .leftxia .text img {
+  margin: 20px 0px;
+}
+
+.object .rightxia {
+  color: white;
+}
+
+.object .rightxia .tu1 {
+  float: left;
+  height: 240px;
+  width: 315px;
+  background-color: #761e1d;
+  position: relative;
+}
+
+.object .rightxia .tu1 .shi {
+  position: absolute;
+  left: 55px;
+  top: 45px;
+  width: 200px;
+  line-height: 20px;
+}
+
+.object .rightxia .tu2 {
+  float: left;
+  height: 240px;
+  width: 315px;
+  overflow: hidden;
+
+}
+
+.object .rightxia .tu2 img {
+  transition: all 2s;
+}
+
+.object .rightxia .tu2:hover img {
+  transform: scale3d(1.15, 1.15, 1);
+}
+
+.object .rightxia .tu3 {
+  float: left;
+  height: 240px;
+  width: 315px;
+  overflow: hidden;
+}
+
+.object .rightxia .tu3 img {
+  transition: all 2s;
+}
+
+.object .rightxia .tu3:hover img {
+  transform: scale3d(1.15, 1.15, 1);
+}
+
+.object .rightxia .tu4 {
+  float: left;
+  height: 240px;
+  width: 315px;
+  background-color: #263d52;
+  position: relative;
+}
+
+.object .rightxia .tu4 .shi {
+  position: absolute;
+  left: 55px;
+  top: 45px;
+  width: 200px;
+  line-height: 20px;
+}
+
+/*��������ʼ*/
+
+.shu {
+  height: 560px;
+  position: relative;
+  font-size: 20px;
+
+}
+
+.shu .one {
+  width: 157.5px;
+  height: 100%;
+  background-color: #e3d7c7;
+  float: left;
+  text-align: center;
+}
+
+.shu .one .text {
+  margin-top: 80px;
+}
+
+.shu .two {
+  width: 157.5px;
+  height: 100%;
+  background-color: #fdf6e4;
+  float: left;
+  text-align: center;
+}
+
+.shu .two .text {
+  margin-top: 80px;
+}
+
+.shu .three {
+  width: 157.5px;
+  height: 100%;
+  background-color: #e5d8c5;
+  float: left;
+  text-align: center;
+}
+
+.shu .three .text {
+  margin-top: 80px;
+}
+
+.shu .four {
+  width: 157.5px;
+  height: 100%;
+  background-color: #faf9e7;
+  float: left;
+  text-align: center;
+}
+
+.shu .four .text {
+  margin-top: 80px;
+}
+
+.shu .five {
+  width: 157.5px;
+  height: 100%;
+  background-color: #e5d9c9;
+  float: left;
+  text-align: center;
+}
+
+.shu .five .text {
+  margin-top: 80px;
+}
+
+.shu .six {
+  width: 157.5px;
+  height: 100%;
+  background-color: #f8f4e8;
+  float: left;
+  text-align: center;
+}
+
+.shu .six .text {
+  margin-top: 80px;
+}
+
+.shu .seven {
+  width: 157.5px;
+  height: 100%;
+  background-color: #e6ddcc;
+  float: left;
+  text-align: center;
+}
+
+.shu .seven .text {
+  margin-top: 80px;
+}
+
+.shu .eight {
+  width: 157.5px;
+  height: 100%;
+  background-color: #f2efe8;
+  float: left;
+  text-align: center;
+}
+
+.shu .eight .text {
+  margin-top: 80px;
+}
+
+.shu .tup1 {
+  position: absolute;
+  left: 180px;
+  bottom: 0px;
+}
+
+.shu .tup2 {
+  position: absolute;
+  left: 620px;
+  top: 280px;
+}
+
+/*����������*/
+
+/*�����Ŀ�ʼ*/
+
+.chaodai {
+  height: 270px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.chaodai .text {
+
+  width: 880px;
+  height: 100%;
+  position: absolute;
+  left: 190px;
+
+}
+
+.chaodai .text .img {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chaodai .text p {
+  text-indent: 2em;
+  line-height: 24px;
+}
+
+.gongting {
+  height: 180px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.gongting a {
+
+  margin-left: 50px;
+
+}
+
+/*�����Ľ���*/
+
+/*�����忪ʼ*/
+
+.wenwu {
+  height: 492px;
+  margin-bottom: 50px;
+}
+
+.wenwu .text {
+  height: 100%;
+  width: 440px;
+  background-color: #25394c;
+  float: left;
+  color: white;
+}
+
+.wenwu .text .inner {
+  width: 310px;
+  margin-left: 70px;
+  margin-top: 60px;
+
+}
+
+.wenwu .text .inner img {
+  width: 170px;
+  padding-left: 60px;
+}
+
+.wenwu .text .inner p {
+  text-indent: 2em;
+  line-height: 24px;
+}
+
+.wenwu .tupin {
+  float: left;
+  height: 100%;
+  width: 820px;
+  position: relative;
+}
+
+.wenwu .tupin li {
+  position: absolute;
+  /*display: none;*/
+}
+
+
+.wenwu .arrow-left,
+.wenwu .arrow-right {
+  font-family: "SimSun", "����";
+  width: 30px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.wenwu .arrow {
+  display: none;
+}
+
+.wenwu:hover .arrow {
+  display: block;
+}
+
+
+.wenwu .arrow-left:hover,
+.wenwu .arrow-right:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.wenwu .arrow-left {
+  left: 0;
+}
+
+.wenwu .arrow-right {
+  right: 0;
+}
+
+
+/*���������*/
+
+/*��������ʼ*/
+.zhuanti {
+  height: 352px;
+
+}
+
+.zhuanti .qiwu {
+  float: left;
+  margin-right: 11px;
+}
+
+.zhuanti .shuhua {
+  float: left;
+  margin-right: 11px;
+}
+
+.zhuanti .shuhua img {
+  height: 351px;
+}
+
+.zhuanti .wenhua {
+  float: left;
+  margin-right: 11px;
+}
+
+.zhuanti .wenwu {
+  float: left;
+  margin-right: 11px;
+}
+
+.zhuanti .zhanlan {
+  float: left;
+  margin-right: 11px;
+}
+
+/*����������*/
+
+/*�ײ����뿪ʼ*/
+
+/* footer��鿪ʼ */
+#footer {
+  height: 236px;
+  background-color: #272727;
+  color: white;
+  position: relative;
+}
+
+#footer .total {
+  position: absolute;
+  left: 531px;
+  top: 37px;
+}
+
+#footer .stats li {
+  width: 20px;
+  height: 28px;
+  background-color: #404040;
+  float: left;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 6px;
+}
+
+#footer .stats ul {
+  position: absolute;
+  top: 30px;
+  left: 613px;
+}
+
+#footer .webInfo {
+  position: absolute;
+  top: 83px;
+}
+
+#footer .webInfo li {
+  float: left;
+  margin-right: 14px;
+}
+
+#footer .webInfo li a {
+  color: white;
+}
+
+#footer .webInfo li:first-child {
+  margin-left: 404px;
+}
+
+#footer .icp p {
+  position: absolute;
+  left: 326px;
+  top: 109px;
+}
+
+#footer .icp .webDev {
+  position: absolute;
+  left: 875px;
+  top: 109px;
+}
+
+#footer .icp .webDev a {
+  color: white;
+}
+
+#footer .suggestion {
+  text-align: center;
+  line-height: 32px;
+  position: absolute;
+  top: 140px;
+  left: 637px;
+}
+
+#footer .suggestion a {
+  display: block;
+  width: 80px;
+  height: 32px;
+  color: white;
+  border: 1px solid white;
+}
+
+#footer .qrCode a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url("../images/ico_hand.png");
+}
+
+#footer .qrCode {
+  position: absolute;
+  top: 65px;
+  left: 1035px;
+}
+
+#footer .qrCode .hand {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../images/ico_hand2.png");
+  position: absolute;
+  top: 25px;
+  left: 22px;
+}
+
+#footer .qrCodeImg {
+  position: absolute;
+  top: -400px;
+  right: 156px;
+  display: none;
+}
+
+/* footer������ */

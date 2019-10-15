@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>教育 - 故宫博物馆</title>
+  <link href="css/events.css" rel="stylesheet">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/events.js"></script>
+</head>
+
+<body>
+<!-- 顶部导航栏开始 -->
+<div id="topNavHL">
+  <div class="w">
+    <div id="logoHL">
+      <a href="javascript:void(0)">
+        <img alt="故宫博物馆" src="images/s5ae967bee5bd2.png">
+      </a>
+    </div>
+    <ul class="navHL">
+      <li>
+        <a href="javascript:void(0)">首页</a>
+      </li>
+      <li class="daolang">
+        <a href="javascript:void(0)">导览</a>
+      </li>
+      <li class="zhanlang">
+        <a href="javascript:void(0)">展览</a>
+      </li>
+      <li class="jiaoyu">
+        <a href="javascript:void(0)">教育</a>
+      </li>
+      <li class="tansuo">
+        <a href="javascript:void(0)">探索</a>
+      </li>
+      <li class="xueshu">
+        <a href="javascript:void(0)">学术</a>
+      </li>
+      <li class="wenchuang">
+        <a href="javascript:void(0)">文创</a>
+      </li>
+      <li class="guanyu">
+        <a href="javascript:void(0)">关于</a>
+      </li>
+    </ul>
+
+    <div id="loginHL">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:void(0)">
+            <span class="person"></span>
+            <i class="icon"></i>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="language"></span>
+            <i class="icon"></i>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="search"></span>
+            <i class="icon"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="hideNav">
+        <a href="javascript:void(0)"></a>
+      </div>
+    </div>
+
+  </div>
+  <!-- 隐藏的导航栏开始 -->
+  <div class="hideBar daolangHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">开放时间</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">票务服务</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">交通路线</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">游览须知</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">全景故宫</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar zhanlangHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">近期展览</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">专馆</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">原状陈列</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">赴外展览</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar jiaoyuHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">教育新闻</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫博物院教育中心</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">国际博协培训中心</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫志愿者</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar tansuoHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">建筑</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">藏品</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">古籍</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">宫廷历史</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文物医院</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文化专题</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">名画记</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">藏品总目</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar xueshuHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">学术活动</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">专家名录</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫研究院</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫学院</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">其它学术机构</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar wenchuangHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">故宫出版</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文创产品</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫壁纸</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫APP</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫游戏</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar guanyuHL">
+    <div class="tri">
+      <img alt="" src="images/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">故宫出版</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文创产品</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫壁纸</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫APP</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫游戏</a>
+      </li>
+    </ul>
+  </div>
+  <!-- 隐藏的导航栏结束 -->
+</div>
+<!-- 顶部导航栏结束 -->
+<!-- banner部分开始 -->
+<div class="pageWide clearfix" id="bannerHL">
+  <div class="shadow">
+    <img alt="" class="left" src="images/public-icon3.png">
+    <span>教育新闻</span>
+    <img alt="" class="right" src="images/public-icon4.png">
+  </div>
+</div>
+<!-- banner部分结束 -->
+<!-- 新闻版块开始 -->
+<div class="pageWide" id="newsHL">
+  <div class="w">
+    <div class="news1">
+      <a href="javascript:void(0)">
+        <span class="date">06-28</span>
+        <span class="des">张扬个性,传承文化--海定双榆...</span>
+        <span class="photo"></span>
+      </a>
+    </div>
+    <div class="news2">
+      <a href="javascript:void(0)">
+        <span class="date">06-15</span>
+        <span class="des">相约半夏--故宫教育中心宜兴...</span>
+        <span class="photo">
+                        <!-- <img src="images/s5b447d90293bb_544_393_7_52.jpg" alt=""> -->
+                    </span>
+      </a>
+    </div>
+    <div class="news3">
+      <a href="javascript:void(0)">
+        <span class="date">06-14</span>
+        <span class="des">远洋澳地--故宫教育活动再赴悉...</span>
+        <span class="photo">
+                        <!-- <img src="images/s5b44812e8fc33_726_524_7_47.jpg" alt=""> -->
+                    </span>
+      </a>
+    </div>
+    <div class="news4">
+      <a href="javascript:void(0)">
+        <span class="date">06-09</span>
+        <span class="des">故宫宣教部开展三大主题活动迎接...</span>
+        <span class="photo">
+                        <!-- <img src="images/s5b44816e6dba6_728_525_7_61.jpg" alt=""> -->
+                    </span>
+      </a>
+    </div>
+    <p class="moreBtn">
+      <a href="javascript:void(0)">更多教育新闻</a>
+    </p>
+  </div>
+</div>
+<!-- 新闻版块结束 -->
+<!-- 教育中心版块开始 -->
+<div class="w" id="eduCenterHL">
+  <div class="title">
+    <img alt="" class="left" src="images/public-icon3.png">
+    <span>故宫博物院教育中心</span>
+    <img alt="" class="right" src="images/public-icon4.png">
+  </div>
+  <div class="info">
+    <p>
+      故宫博物院教育中心位于故宫熙和门南北两侧，面积约800平方米。经过一年多的项目规划、工程改造和室内设计，目前教育中心改造工程已经完成，现包括综合性教学空间4个、开放型阅览空间2个，可同时容纳200余人，此外还配套有故宫志愿者工作站和志愿者阅览室，这将有利于志愿服务和教育服务的结合开展。</p>
+    <p>
+      故宫教育中心面向全社会正式开放。它将成为故宫博物院的教育平台和互动窗口，充分发挥各方面优势，举办针对各年龄段公众的文化课程和教育活动，举行讲座，举办培训，利用丰富的教育资源，让故宫教育惠及更多社会人群。</p>
+    <div class="moreBtn">
+      <a href="javascript:void(0)">查看详情</a>
+    </div>
+  </div>
+</div>
+<!-- 教育中心版块结束 -->
+<!-- 这是轮播图上方的翻页按键 -->
+<div class="pageBtnTopHL pageWide">
+  <div class="btnLeft">
+    <a href="javascript:void(0)"></a>
+  </div>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="btnRight">
+    <a href="javascript:void(0)"></a>
+  </div>
+</div>
+<!-- 轮播图版块开始 -->
+<div id="lunbotuWindowHL">
+  <div id="lunbotuHL">
+    <div class="lunbotu1">
+      <div class="mainContent">
+        <div class="row1 clearfix">
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>佳果呈祥</i>
+              <span>我们喜欢花朵，更期待果实。粉嘟嘟的桃子、金灿灿的佛手、红宝石似的石榴、绿油油的葫芦、紫水晶般的葡萄，还有那红通通的柿子……这些果实色彩缤纷、清香诱人，可供观赏、品尝，有些还可入药。更有趣的是，我们的祖先还赋予了这些果实丰富...</span>
+            </a>
+            <span class="info">
+                                课程对象：7-9岁学生
+                                <br> 知识模块：“果实”背后的吉祥寓意，与佳果相关的藏品，绘制佳果图案，制作葫芦挂瓶。
+                            </span>
+          </div>
+        </div>
+        <div class="row2 clearfix">
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>数九消寒</i>
+              <span>“一九二九不出手，三九四九冰上走……”这首民间流传已久的“九九歌”相信大家都很熟悉。在中国，很早就有“数九寒冬”的说法，每年冬至节气这一天，白昼最短，黑夜最长，这天之后便将迎来一年中最冷的日子。古时人们的御寒能力非常有限,...</span>
+            </a>
+            <span class="info">
+                                课程对象：10至12岁学生
+                                <br> 知识模块：冬至的起源，消寒图的由来，消寒图的样式，手工绘制消寒图。
+                            </span>
+          </div>
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+        </div>
+        <div class="row3 clearfix">
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>一窗一世界——故宫里的窗</i>
+              <span>朋友们，当你们走进故宫时，会被蜿蜒流淌的内金水河所吸引，会被雄伟壮观的三大殿所震撼，会为精美绝伦的文物展品而驻足，会在精巧古雅的御花园里赞叹古人营造技艺的精湛。但是或许您从来没有注意过故宫里的窗。...</span>
+            </a>
+            <span class="info">
+                                课程对象：13-15岁学生
+                                <br> 知识模块：窗的出现与发展，窗的种类与功能，窗棂的主要图案与寓意，手工制作窗棂台灯。
+                            </span>
+          </div>
+        </div>
+        <div class="row4 clearfix">
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>最好的“皇”金</i>
+              <span>进入故宫，你会发现这是一个色彩缤纷的世界。琉璃瓦的黄色、宫墙的红色和建筑装饰的蓝色绿色……它们共同构成了紫禁城绚丽的色彩。在这些颜色中，最夺目的便是那一抹耀眼的金色。除了屋顶大面积的应用，紫禁城的金色还来源于彩画中的勾勒之...</span>
+            </a>
+            <span class="info">
+                                课程对象：13-15岁学生
+                                <br> 知识模块：故宫中的金色元素、金的定义与使用历史、金器的制造与装饰工艺、一只金杯的前世与今生，动手创作金瓯永固杯。
+                            </span>
+          </div>
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+        </div>
+      </div>
+      <!--飘动的图片开始  -->
+      <div class="vase"></div>
+      <div class="circleRight1">
+        <img alt="" src="images/hd1img11.png">
+      </div>
+      <div class="pencils">
+        <img alt="" src="images/s5a7ab3730eea1.png">
+      </div>
+      <div class="circleLeft">
+        <img alt="" src="images/hd1img12.png">
+      </div>
+      <div class="box"></div>
+      <div class="circleRight2">
+        <img alt="" src="images/hd1img13.png">
+      </div>
+      <div class="ding"></div>
+      <!-- 飘动的图片结束 -->
+    </div>
+    <!-- 这里添加轮播图2 -->
+    <div class="lunbotu2">
+      <div class="mainContent">
+        <div class="row1 clearfix">
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>朝珠DIY</i>
+              <span>这是一张清朝皇帝的朝服像。不知大家有没有注意到皇帝脖子上戴的那串珠子？你知道这串珠子叫什么吗？它是项链吗？是佛珠吗？都不是，它叫朝珠。朝珠是清代帝后大臣在穿朝服时所佩戴的珠串，是体现清代冠服制度的一份重要元素。一串朝珠有多...</span>
+            </a>
+            <span class="info">
+                                课程对象：5至10岁
+                                <br> 知识模块：朝珠内涵、佩戴讲究、朝珠制作。
+                            </span>
+          </div>
+        </div>
+        <div class="row2 clearfix">
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>“巧刻乾隆印，玩转橡皮章”</i>
+              <span>你收藏过什么宝贝吗？你知道历代皇家收藏都有什么奇珍异宝吗？当你在欣赏一件艺术品的时候，你又怎么判断这件作品是被谁收入囊中呢？中国历史上，晋唐以来的统治者们将书法和绘画视为重要的皇家收藏艺术品，并且以...</span>
+            </a>
+            <span class="info">
+                                课程对象：12岁以上学生及成人
+                                <br> 知识模块：学习印章的定义、结构、分类、历史， 收藏的历史，收藏印的定义，《石渠宝笈》与 “乾隆五玺”相关知识。动手刻制橡皮章。
+                            </span>
+          </div>
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+        </div>
+        <div class="row3 clearfix">
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>宫廷里的遂心“如意”</i>
+              <span>“爆竹声声除旧岁，平安如意贺新年”。每逢迎新，“如意”一词总是亲朋好友们相互拜会使用最为频繁的祝福用语。人们赋予“如意”一词美好的吉祥寓意，同时，也赋予“如意”美丽的形象。...</span>
+            </a>
+            <span class="info">
+                                课程对象：5至10岁
+                                <br> 知识模块：朝珠内涵、佩戴讲究、朝珠制作。
+                            </span>
+          </div>
+        </div>
+        <div class="row4 clearfix">
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>“八旗娃娃放肆萌”布艺人偶DIY</i>
+              <span>摊开一张北京地图，有没有一些“奇怪”的地名吸引你？很多名字貌似都带了点神秘的色彩，比如，火器营，正白旗，牛碌坟，红旗村，等等。这些地名到底是什么意思？ 其实，他们都与清朝的八旗制度有着紧密的关系。...</span>
+            </a>
+            <span class="info">
+                                课程对象：8-12岁学生
+                                <br> 知识模块：八旗制度的内容， 八旗制度的起源、发展 与方位规则，京师八旗的驻防方位与编制。
+                            </span>
+          </div>
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+        </div>
+      </div>
+      <!--飘动的图片开始  -->
+      <div class="vase"></div>
+      <div class="circleRight1">
+        <img alt="" src="images/hd1img11.png">
+      </div>
+      <div class="pencils">
+        <img alt="" src="images/s5a7ab3730eea1.png">
+      </div>
+      <div class="circleLeft">
+        <img alt="" src="images/hd1img12.png">
+      </div>
+      <div class="box"></div>
+      <div class="circleRight2">
+        <img alt="" src="images/hd1img13.png">
+      </div>
+      <div class="ding"></div>
+      <!-- 飘动的图片结束 -->
+    </div>
+    <!-- 轮播图2结束 -->
+    <!-- 把轮播图1复制在这里 -->
+    <div class="lunbotu3">
+      <div class="mainContent">
+        <div class="row1 clearfix">
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>佳果呈祥</i>
+              <span>我们喜欢花朵，更期待果实。粉嘟嘟的桃子、金灿灿的佛手、红宝石似的石榴、绿油油的葫芦、紫水晶般的葡萄，还有那红通通的柿子……这些果实色彩缤纷、清香诱人，可供观赏、品尝，有些还可入药。更有趣的是，我们的祖先还赋予了这些果实丰富...</span>
+            </a>
+            <span class="info">
+                                课程对象：7-9岁学生
+                                <br> 知识模块：“果实”背后的吉祥寓意，与佳果相关的藏品，绘制佳果图案，制作葫芦挂瓶。
+                            </span>
+          </div>
+        </div>
+        <div class="row2 clearfix">
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>数九消寒</i>
+              <span>“一九二九不出手，三九四九冰上走……”这首民间流传已久的“九九歌”相信大家都很熟悉。在中国，很早就有“数九寒冬”的说法，每年冬至节气这一天，白昼最短，黑夜最长，这天之后便将迎来一年中最冷的日子。古时人们的御寒能力非常有限,...</span>
+            </a>
+            <span class="info">
+                                课程对象：10至12岁学生
+                                <br> 知识模块：冬至的起源，消寒图的由来，消寒图的样式，手工绘制消寒图。
+                            </span>
+          </div>
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+        </div>
+        <div class="row3 clearfix">
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>一窗一世界——故宫里的窗</i>
+              <span>朋友们，当你们走进故宫时，会被蜿蜒流淌的内金水河所吸引，会被雄伟壮观的三大殿所震撼，会为精美绝伦的文物展品而驻足，会在精巧古雅的御花园里赞叹古人营造技艺的精湛。但是或许您从来没有注意过故宫里的窗。...</span>
+            </a>
+            <span class="info">
+                                课程对象：13-15岁学生
+                                <br> 知识模块：窗的出现与发展，窗的种类与功能，窗棂的主要图案与寓意，手工制作窗棂台灯。
+                            </span>
+          </div>
+        </div>
+        <div class="row4 clearfix">
+          <div class="content">
+            <a href="javascript:void(0)">
+              <i>最好的“皇”金</i>
+              <span>进入故宫，你会发现这是一个色彩缤纷的世界。琉璃瓦的黄色、宫墙的红色和建筑装饰的蓝色绿色……它们共同构成了紫禁城绚丽的色彩。在这些颜色中，最夺目的便是那一抹耀眼的金色。除了屋顶大面积的应用，紫禁城的金色还来源于彩画中的勾勒之...</span>
+            </a>
+            <span class="info">
+                                课程对象：13-15岁学生
+                                <br> 知识模块：故宫中的金色元素、金的定义与使用历史、金器的制造与装饰工艺、一只金杯的前世与今生，动手创作金瓯永固杯。
+                            </span>
+          </div>
+          <div class="photo">
+            <a href="javascript:void(0)"></a>
+          </div>
+        </div>
+      </div>
+      <!--飘动的图片开始  -->
+      <div class="vase"></div>
+      <div class="circleRight1">
+        <img alt="" src="images/hd1img11.png">
+      </div>
+      <div class="pencils">
+        <img alt="" src="images/s5a7ab3730eea1.png">
+      </div>
+      <div class="circleLeft">
+        <img alt="" src="images/hd1img12.png">
+      </div>
+      <div class="box"></div>
+      <div class="circleRight2">
+        <img alt="" src="images/hd1img13.png">
+      </div>
+      <div class="ding"></div>
+      <!-- 飘动的图片结束 -->
+    </div>
+    <!-- 复制轮播图1结束 -->
+  </div>
+</div>
+<!-- 轮播图版块结束 -->
+<!-- 这是轮播图下方的翻页按键 -->
+<div class="pageBtnBottomHL pageWide">
+  <div class="btnLeft">
+    <a href="javascript:void(0)"></a>
+  </div>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="btnRight">
+    <a href="javascript:void(0)"></a>
+  </div>
+</div>
+<!--儿童体验店版块开始 -->
+<div class="w" id="kidStoreHL">
+  <div class="title">
+    <img alt="" class="left" src="images/public-icon3.png">
+    <span>故宫文创儿童体验店</span>
+    <img alt="" class="right" src="images/public-icon4.png">
+  </div>
+  <p>欢迎小朋友们来体验</p>
+  <div class="picLeft">
+    <img alt="" src="images/s59029fe545960.jpg">
+  </div>
+  <div class="picRight">
+    <img alt="" src="images/s59029ff98ed26.jpg">
+  </div>
+  <div class="circle">
+    <a href="javascript:void(0)">
+      <img alt="" src="images/s59029ff98e717.png">
+    </a>
+  </div>
+  <div class="girlPic">
+    <img src="images/s59029fd5b1a7a.png">
+  </div>
+</div>
+<!--儿童体验店版块结束  -->
+<!--志愿者板块开始  -->
+<div class="w" id="volunteerHL">
+  <div class="serviceInfo">
+    <div class="title clearfix">
+      <img alt="" class="left" src="images/public-icon3.png">
+      <span>故宫志愿者</span>
+      <img alt="" class="right" src="images/public-icon4.png">
+    </div>
+    <div class="moreBtn">详<br>情
+      <a href="javascript:void(0)"></a>
+    </div>
+    <h2 class="header1">我们是故宫志愿者</h2>
+    <p class="intro1">
+      2004年12月5日，故宫博物院面向社会公开招募第一批志愿者，先后有600余人投身到故宫的志愿服务工作中来。目前，故宫志愿者在册人数稳定在200人左右，其中十余年来不间断服务的有40余人，占现有志愿者总数的20%；有30余名志愿者累计服务时长超过1000小时，占总人数的15%。故宫志愿者中，在职人员与高校学生分别占50%和15%，男女比例为1：1.5，是一支人员结构合理、专业素质过硬、可持续发展的团队。</p>
+    <p class="intro2">
+      如今，故宫志愿者团队在稳定发展的同时，力求创新、与时俱进。时值故宫开放区域逐步扩大、专馆展览逐年增多，为配合新的需求，我们会不定期面向社会招募志愿服务人才，欢迎加入到我们的队伍中来！</p>
+    <h2 class="header2">我们在这里</h2>
+    <p class="places">珍宝馆、钟表馆、陶瓷馆、书画馆、雕塑馆。</p>
+    <h2 class="header3">我们的服务时间</h2>
+    <p class="time1">周二（暑期周一）至周日（国家法定节假日除外）</p>
+    <p class="time2">每日9:30—11:30，13:30—15:30。</p>
+  </div>
+
+  <div class="person">
+    <h2 class="header1">我们已经准备好了</h2>
+    <div class="personList1 clearfix">
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s5903063b0095d.png">
+      </a>
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s590402f2d2f6b.png">
+      </a>
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s5904089dabd14.png">
+      </a>
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s590409bca7cb3.png">
+      </a>
+    </div>
+    <p class="nameRow1">
+      <span>曹敏丽</span>
+      <span>高斌侠</span>
+      <span>霍慢忆</span>
+      <span>金宝岩</span>
+    </p>
+
+    <div class="personList2 clearfix">
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s590409e020594.png">
+      </a>
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s59040a404b651.png">
+      </a>
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s59040a849eb94.png">
+      </a>
+      <a href="javascript:void(0)">
+        <img alt="" src="images/s59040ac6b3476.png">
+      </a>
+    </div>
+    <p class="nameRow2">
+      <span>李其功</span>
+      <span>刘毅新</span>
+      <span>苏力</span>
+      <span>王佐诗</span>
+    </p>
+  </div>
+</div>
+<!-- 志愿者板块结束 -->
+<!-- 底部banner板块开始 -->
+<div class="pageWide" id="bannerBottomHL">参与问卷调查，让我们知道您的想法
+  <div class="button">
+    <a href="javascript:void(0)">问卷调查</a>
+  </div>
+</div>
+<!-- 底部banner板块结束 -->
+<!-- footer板块开始 -->
+<div class="pageWide" id="footer">
+  <div class="stats">
+    <div class="total">网站访问量</div>
+    <ul>
+      <li>2</li>
+      <li>3</li>
+      <li>2</li>
+      <li>5</li>
+      <li>0</li>
+      <li>7</li>
+      <li>5</li>
+      <li>0</li>
+    </ul>
+  </div>
+  <div class="webInfo clearfix">
+    <ul>
+      <li>
+        <a href="javascript:void(0)">网站地图</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">相关链接</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">影像授权</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">隐私政策</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">版权声明</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">常见问题 </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">联系我们</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">调查问卷 </a>
+      </li>
+    </ul>
+  </div>
+  <div class="icp">
+    <p>COPYRIGHT © 2015 故宫博物院. ALL RIGHTS RESERVED &nbsp京ICP备05067311号-1</p>
+    <div class="webDev">
+      <a href="javascript:void(0)">网站建设:</a>
+      &nbsp&nbsp
+      <a href="javascript:void(0)">北京分形科技</a>
+    </div>
+  </div>
+  <div class="suggestion">
+    <a href="javascript:void(0)">浏览建议</a>
+  </div>
+  <div class="qrCode">
+    <a href="javascript:void(0)"></a>
+    <a class="hand" href="javascript:void(0)"></a>
+  </div>
+  <div class="qrCodeImg">
+    <img src="images/s5951d5fde520f.jpg">
+  </div>
+</div>
+<!-- footer板块结束 -->
+
+
+</body>
+
+</html>

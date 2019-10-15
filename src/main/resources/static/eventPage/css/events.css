@@ -1,0 +1,1198 @@
+h1, h2, h3, h4, h5, p, ul, li, input, ol, dl, i, b, em, tr, th, td, body {
+  margin: 0;
+  padding: 0;
+}
+
+i, b, em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a, u {
+  color: black;
+  text-decoration: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+body {
+  font: 14px/100% "微软雅黑";
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.w {
+  margin: 0 auto;
+  width: 1260px;
+}
+
+.pageWide {
+  margin: 0 auto;
+  width: 1350px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* 初始化设置完毕 */
+/* 顶部导航栏开始 */
+#topNavHL {
+  height: 49px;
+  position: relative;
+}
+
+#topNavHL .w {
+  position: relative;
+  height: 100%;
+}
+
+#topNavHL #logoHL img {
+  width: 116px;
+}
+
+#topNavHL #logoHL {
+  position: absolute;
+  top: 8px;
+}
+
+#topNavHL .w .navHL {
+  position: absolute;
+  margin-left: 308px;
+}
+
+#topNavHL .navHL li {
+  float: left;
+  font-size: 13px;
+  height: 49px;
+  line-height: 49px;
+  padding: 0 27px;
+}
+
+#topNavHL .navHL li a {
+  color: #909090;
+}
+
+#topNavHL .navHL li:hover a {
+  color: rgb(209, 192, 168);
+}
+
+#topNavHL #loginHL {
+  float: right;
+  height: 100%;
+
+}
+
+#topNavHL #loginHL ul {
+  float: left;
+  margin-top: 17px;
+  width: 225px;
+}
+
+#topNavHL #loginHL .person {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/ico_tools_search.png") no-repeat 0 0/15px;
+}
+
+#topNavHL #loginHL li:first-child:hover .person {
+  background-position: 0 -18px;
+}
+
+#topNavHL #loginHL .language {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/zhong1.png") no-repeat 0 0;
+  background-size: 15px;
+}
+
+#topNavHL #loginHL li:nth-child(3):hover .language {
+  background-position: 0 -20px;
+}
+
+#topNavHL #loginHL .search {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/ico_tools_user.png") no-repeat 0 0;
+  background-size: 15px;
+}
+
+#topNavHL #loginHL li:last-child:hover .search {
+  background-position: 0 -20px;
+}
+
+#topNavHL #loginHL li {
+  display: inline-block;
+}
+
+#topNavHL #loginHL .icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #909090;
+  margin-left: 13px;
+}
+
+#topNavHL #loginHL li:nth-child(even) {
+  background-color: #ddd;
+  width: 2px;
+  height: 17px;
+  margin-right: 13px;
+  margin-left: 15px;
+}
+
+#topNavHL #loginHL .hideNav {
+  width: 34px;
+  height: 34px;
+  background: url("../images/menu2-1.png") no-repeat;
+  background-size: 34px;
+  float: right;
+  margin-top: 7px;
+}
+
+#topNavHL #loginHL .hideNav:hover {
+  background-position: 0 -34px;
+}
+
+#topNavHL #loginHL .hideNav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*隐藏的导航栏开始  */
+/* 以下是共有的样式 */
+#topNavHL .hideBar {
+  width: 1350px;
+  height: 49px;
+  position: absolute;
+  top: 49px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(153, 124, 82, 0.7);
+  z-index: 1;
+
+  line-height: 49px;
+  display: none;
+}
+
+/* 默认隐藏 */
+#topNavHL .tri img {
+  width: 20px;
+  opacity: 0.8;
+}
+
+#topNavHL .hideBar .tri {
+  position: absolute;
+  top: -31px;
+}
+
+#topNavHL .hideBar li {
+  float: left;
+}
+
+#topNavHL .hideBar li a {
+  color: white;
+}
+
+#topNavHL .hideBar li a:hover {
+  color: rgb(222, 195, 155);
+}
+
+#topNavHL .hideBar li:nth-child(even) {
+  width: 6px;
+  height: 16px;
+  background: url("../images/img6.png");
+  margin: 0 20px;
+  margin-top: 17px;
+}
+
+/* 隐藏的 导览 栏开始 */
+/* #topNavHL .daolangHL{
+    display: block;
+} */
+
+#topNavHL .daolangHL ul {
+  margin-left: 250px;
+}
+
+#topNavHL .daolangHL .tri {
+  left: 459px;
+}
+
+/* 隐藏的 导览 栏结束 */
+/* 隐藏的 展览 栏开始 */
+/* #topNavHL .zhanlangHL{
+    display: block;
+} */
+
+#topNavHL .zhanlangHL ul {
+  margin-left: 392px;
+}
+
+#topNavHL .zhanlangHL .tri {
+  left: 541px;
+}
+
+/* 隐藏的 展览 栏结束 */
+/* 隐藏的 教育 栏开始 */
+/* #topNavHL .jiaoyuHL{
+    display: block;
+} */
+
+#topNavHL .jiaoyuHL ul {
+  margin-left: 387px;
+}
+
+#topNavHL .jiaoyuHL .tri {
+  left: 622px;
+}
+
+/* 隐藏的 教育 栏结束 */
+/* 隐藏的 探索 栏开始 */
+/* #topNavHL .tansuoHL{
+    display: block;
+} */
+
+#topNavHL .tansuoHL ul {
+  margin-left: 387px;
+}
+
+#topNavHL .tansuoHL .tri {
+  left: 702px;
+}
+
+/* 隐藏的 探索 栏结束 */
+/* 隐藏的 学术 栏开始 */
+/* #topNavHL .xueshuHL{
+    display: block;
+} */
+
+#topNavHL .xueshuHL ul {
+  margin-left: 387px;
+}
+
+#topNavHL .xueshuHL .tri {
+  left: 785px;
+}
+
+/* 隐藏的 学术 栏结束 */
+/* 隐藏的 文创 栏开始 */
+/* #topNavHL .wenchuangHL{
+    display: block;
+} */
+
+#topNavHL .wenchuangHL ul {
+  margin-left: 647px;
+}
+
+#topNavHL .wenchuangHL .tri {
+  left: 865px;
+}
+
+/* 隐藏的 文创 栏结束 */
+/* 隐藏的 关于 栏开始 */
+/* #topNavHL .guanyuHL{
+    display: block;
+} */
+
+#topNavHL .guanyuHL ul {
+  margin-left: 762px;
+}
+
+#topNavHL .guanyuHL .tri {
+  left: 945px;
+}
+
+/* 隐藏的 关于 栏结束 */
+/* 隐藏的导航栏结束 */
+
+/* 顶部导航栏结束 */
+/* banner部分开始 */
+#bannerHL {
+  height: 624px;
+  background: url("../images/s5a9cae33c9b84.jpg") center top;
+  position: relative;
+}
+
+#bannerHL .shadow {
+  width: 100%;
+  height: 190px;
+  position: absolute;
+  bottom: 0;
+  background: url("../images/hd1img1.png") center top;
+}
+
+#bannerHL .shadow .left {
+  position: absolute;
+  bottom: 36px;
+  left: 590px;
+  width: 23px;
+}
+
+#bannerHL .shadow .right {
+  position: absolute;
+  bottom: 36px;
+  right: 590px;
+  width: 23px;
+}
+
+#bannerHL .shadow span {
+  font-size: 26px;
+  position: absolute;
+  bottom: 46px;
+  left: 624px;
+}
+
+/* banner部分结束 */
+
+/* 新闻版块开始 */
+#newsHL {
+  margin-top: 28px;
+  position: relative;
+  height: 424px;
+}
+
+#newsHL .w div {
+  width: 279px;
+  height: 303px;
+  float: left;
+  position: relative;
+  margin-right: 48px;
+}
+
+#newsHL .w div:hover .des {
+  color: rgb(162, 134, 96);
+}
+
+#newsHL .w .news4 {
+  margin-right: 0;
+}
+
+#newsHL .date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #909090;
+  display: block;
+  padding: 15px 0;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+#newsHL .des {
+  font-size: 16px;
+  padding-top: 16px;
+  display: block;
+  position: absolute;
+  top: 48px;
+}
+
+#newsHL .photo {
+  position: absolute;
+  top: 118px;
+  width: 279px;
+  height: 187px;
+  background: url("../images/s5b447d9028bc6_612_442_7_103.jpg") no-repeat center center/100%;
+}
+
+#newsHL .news2 .photo {
+  background: url("../images/s5b447d90293bb_544_393_7_52.jpg") no-repeat center center/100%;
+}
+
+#newsHL .news3 .photo {
+  background: url("../images/s5b44812e8fc33_726_524_7_47.jpg") no-repeat center center/100%;
+}
+
+#newsHL .news4 .photo {
+  background: url("../images/s5b44816e6dba6_728_525_7_61.jpg") no-repeat center center/100%;
+}
+
+#newsHL .w .moreBtn {
+  width: 126px;
+  height: 40px;
+  position: absolute;
+  top: 385px;
+  left: 614px;
+  text-align: center;
+  line-height: 40px;
+  background: url("../images/btn1.png") no-repeat center center/126px 40px;
+}
+
+/* 新闻版块结束 */
+/* 教育中心版块开始 */
+#eduCenterHL {
+  position: relative;
+  height: 563px;
+}
+
+#eduCenterHL .title .left {
+  position: absolute;
+  top: 142px;
+  left: 480px;
+  width: 23px;
+}
+
+#eduCenterHL .title .right {
+  position: absolute;
+  top: 142px;
+  right: 480px;
+  width: 23px;
+}
+
+#eduCenterHL .title span {
+  font-size: 26px;
+  position: absolute;
+  top: 152px;
+  left: 512px;
+}
+
+#eduCenterHL .info {
+  width: 1260px;
+  height: 370px;
+  position: absolute;
+  top: 186px;
+  background: url("../images/hd1img4.png") center center;
+}
+
+#eduCenterHL .info p {
+  width: 840px;
+  font-size: 15px;
+  line-height: 22px;
+  color: white;
+  text-indent: 30px;
+  position: absolute;
+  left: 100px;
+}
+
+#eduCenterHL .info p:first-child {
+  top: 100px;
+}
+
+#eduCenterHL .info p:nth-child(2) {
+  top: 175px;
+}
+
+#eduCenterHL .info .moreBtn {
+  width: 122px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  background: url("../images/hd1img5.png") center/122px;
+  position: absolute;
+  top: 257px;
+  left: 570px;
+}
+
+#eduCenterHL .info .moreBtn a {
+  color: white;
+}
+
+/* 教育中心版块结束 */
+/* 这是轮播图上方的翻页按键 */
+.pageBtnTopHL {
+  position: relative;
+}
+
+.pageBtnTopHL .btnLeft a {
+  display: block;
+  width: 18px;
+  height: 30px;
+  background: url("../images/hd1imgnav.png");
+  position: absolute;
+  left: 633px;
+  top: 67px;
+}
+
+.pageBtnTopHL .btnRight a {
+  display: block;
+  width: 18px;
+  height: 30px;
+  background: url("../images/hd1imgnav.png") right top;
+  position: absolute;
+  left: 702px;
+  top: 67px;
+}
+
+.pageBtnTopHL .circle1,
+.pageBtnTopHL .circle2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(154, 118, 70);
+  position: absolute;
+  top: 80px;
+  left: 665px;
+}
+
+.pageBtnTopHL .circle2 {
+  left: 679px;
+}
+
+/* 轮播图版块开始 */
+#lunbotuWindowHL {
+  height: 1494px;
+  width: 1350px;
+  margin: 0 auto;
+  margin-top: 157px;
+  position: relative;
+  /*background-color: grey;*/
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* 盒子的总宽度为三个轮播图的宽度和 */
+#lunbotuHL {
+  width: 4050px;
+  height: 1434px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+/* 串联轮播图 */
+#lunbotuHL .lunbotu1,
+#lunbotuHL .lunbotu2,
+#lunbotuHL .lunbotu3 {
+  float: left;
+  width: 1350px;
+}
+
+/* 测试用,待删 */
+/*#lunbotuHL .lunbotu1{*/
+/*background-color: yellowgreen;*/
+/*} */
+/*#lunbotuHL .lunbotu2{*/
+/*background-color: pink;*/
+/*}*/
+/*#lunbotuHL .lunbotu3{*/
+/*background-color: blue;*/
+/*}*/
+/* 待删的结束 */
+
+
+/* 定位代码要添加轮播图3进来------------------------ */
+#lunbotuHL .lunbotu1,
+#lunbotuHL .lunbotu2,
+#lunbotuHL .lunbotu3 {
+  position: relative;
+}
+
+#lunbotuHL .mainContent {
+  width: 797px;
+  height: 1434px;
+  margin: 0 auto;
+  /* margin-top: 60px; */
+}
+
+/* 第一个轮播图的第一行 */
+#lunbotuHL .row1 .photo a {
+  display: block;
+  width: 369px;
+  height: 241px;
+  background: url("../images/s5a7ab3cf04067.jpg");
+  float: left;
+}
+
+#lunbotuHL .lunbotu2 .row1 .photo a {
+  background: url("../images/s5902a1e7e2e3d.jpg");
+}
+
+#lunbotuHL .row1 .content {
+  width: 369px;
+  height: 255px;
+  float: right;
+}
+
+#lunbotuHL .content a i {
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: rgb(159, 123, 75);
+  margin-bottom: 21px;
+}
+
+#lunbotuHL .content a span {
+  font-size: 16px;
+  line-height: 25px;
+  text-indent: 32px;
+}
+
+#lunbotuHL .content .info {
+  color: rgb(159, 123, 75);
+  font-size: 16px;
+  line-height: 25px;
+  display: block;
+  margin-top: 16px;
+}
+
+/* 第一个轮播图的第二行 */
+#lunbotuHL .row2 {
+  margin-top: 165px;
+  margin-bottom: 85px;
+}
+
+#lunbotuHL .row2 .content {
+  width: 369px;
+  height: 255px;
+  float: left;
+
+}
+
+#lunbotuHL .row2 .photo a {
+  display: block;
+  width: 369px;
+  height: 241px;
+  background: url("../images/s5a7ab669f1220.jpg");
+  background-size: 369px;
+  float: right;
+}
+
+#lunbotuHL .lunbotu2 .row2 .photo a {
+  background: url("../images/s5902a25521305.jpg");
+}
+
+/* 第一个轮播图的第三行 */
+#lunbotuHL .row3 .content {
+  width: 369px;
+  height: 255px;
+  float: right;
+
+}
+
+#lunbotuHL .row3 .photo a {
+  display: block;
+  width: 369px;
+  height: 241px;
+  background: url("../images/s5a7ab1c88c81b.jpg");
+  background-size: 369px;
+  float: left;
+}
+
+#lunbotuHL .lunbotu2 .row3 .photo a {
+  background: url("../images/s5902a2a8501ce.jpg");
+}
+
+/* 第一个轮播图的第四行 */
+#lunbotuHL .row4 {
+  margin-top: 134px;
+  margin-bottom: 94px;
+}
+
+#lunbotuHL .row4 .content {
+  width: 369px;
+  height: 255px;
+  float: left;
+
+}
+
+#lunbotuHL .row4 .photo a {
+  display: block;
+  width: 369px;
+  height: 241px;
+  background: url("../images/s5a7ab2a74c516.jpg");
+  background-size: 369px;
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+#lunbotuHL .lunbotu2 .row4 .photo a {
+  background: url("../images/s5902a3326af27.jpg");
+}
+
+/* 以下是轮播图里飘动的图片 */
+#lunbotuHL .vase {
+  width: 165px;
+  height: 319px;
+  background: url("../images/s5a7ab3cf03c5a.png") center center;
+  position: absolute;
+  top: -55px;
+  left: 450px;
+  opacity: 0;
+}
+
+#lunbotuHL .circleRight1 {
+  position: absolute;
+  right: 45px;
+  top: 188px;
+}
+
+#lunbotuHL .pencils {
+  position: absolute;
+  right: 55px;
+  top: 360px;
+}
+
+#lunbotuHL .circleLeft {
+  position: absolute;
+  left: 46px;
+  top: 566px;
+}
+
+#lunbotuHL .box {
+  width: 261px;
+  height: 335px;
+  background: url("../images/s5a7ab1f91dcfd.png") center center;
+  position: absolute;
+  top: 724px;
+  left: 0;
+  opacity: 0;
+}
+
+#lunbotuHL .circleRight2 {
+  position: absolute;
+  right: 90px;
+  top: 872px;
+}
+
+#lunbotuHL .ding {
+  width: 282px;
+  height: 370px;
+  background: url("../images/s5a7ab2af8fea6.png") center center;
+  position: absolute;
+  top: 1050px;
+  right: 90px;
+  z-index: 0;
+  opacity: 0;
+}
+
+/* 轮播图版块结束 */
+/* 这是轮播图下方的翻页按键 */
+.pageBtnBottomHL {
+  position: relative;
+}
+
+.pageBtnBottomHL .btnLeft a {
+  display: block;
+  width: 18px;
+  height: 30px;
+  background: url("../images/hd1imgnav.png");
+  position: absolute;
+  left: 633px;
+  top: 94px;
+}
+
+.pageBtnBottomHL .btnRight a {
+  display: block;
+  width: 18px;
+  height: 30px;
+  background: url("../images/hd1imgnav.png") right top;
+  position: absolute;
+  left: 702px;
+  top: 94px;
+}
+
+.pageBtnBottomHL .circle1,
+.pageBtnBottomHL .circle2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(154, 118, 70);
+  position: absolute;
+  top: 107px;
+  left: 665px;
+}
+
+.pageBtnBottomHL .circle2 {
+  left: 679px;
+}
+
+/* 儿童体验店版块开始 */
+#kidStoreHL {
+  position: relative;
+  margin-top: 180px;
+  height: 327px;
+}
+
+#kidStoreHL .title .left {
+  position: absolute;
+  left: 457px;
+  width: 23px;
+}
+
+#kidStoreHL .title .right {
+  position: absolute;
+  left: 780px;
+  width: 23px;
+}
+
+#kidStoreHL .title span {
+  font-size: 28px;
+  line-height: 30px;
+  position: absolute;
+  top: 2px;
+  left: 505px;
+}
+
+#kidStoreHL p {
+  position: absolute;
+  top: 50px;
+  width: 1260px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+#kidStoreHL .picLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#kidStoreHL .picLeft img {
+  width: 630px;
+}
+
+#kidStoreHL .picRight {
+  width: 629px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#kidStoreHL .circle {
+  position: absolute;
+  left: 575px;
+  bottom: 58px;
+  width: 110px;
+  height: 110px;
+
+}
+
+#kidStoreHL .circle img {
+  transition: all 1s;
+}
+
+#kidStoreHL .circle:hover img {
+  transform: rotateY(-360deg);
+}
+
+#kidStoreHL .girlPic {
+  position: absolute;
+  left: 250px;
+  top: -77px;
+  opacity: 0;
+}
+
+/* 儿童体验店版块结束 */
+/* 志愿者板块开始 */
+#volunteerHL {
+  height: 488px;
+  margin-top: 88px;
+}
+
+#volunteerHL .serviceInfo {
+  width: 752px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+#volunteerHL .person {
+  width: 407px;
+  height: 100%;
+  float: right;
+}
+
+#volunteerHL .serviceInfo .title {
+  width: 238px;
+  margin-left: 11px;
+
+}
+
+#volunteerHL .title img, #volunteerHL .title span {
+  float: left;
+}
+
+#volunteerHL .title .left {
+  width: 23px;
+}
+
+#volunteerHL .title .right {
+  width: 23px;
+}
+
+#volunteerHL .title span {
+  font-size: 34px;
+  line-height: 34px;
+  padding: 0 11px;
+}
+
+#volunteerHL .serviceInfo .moreBtn {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 48px;
+  height: 26px;
+}
+
+#volunteerHL .serviceInfo .moreBtn a {
+  background: url("../images/more1.png") center center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgb(112, 112, 112);
+  position: absolute;
+  top: 0;
+  right: 17px;
+}
+
+#volunteerHL .serviceInfo .moreBtn a:hover {
+  transform: rotate(-180deg);
+  transition: all 1s;
+}
+
+#volunteerHL .serviceInfo h2 {
+  font-size: 24px;
+  color: rgb(154, 118, 70);
+  margin-top: 38px;
+  font-weight: normal;
+}
+
+#volunteerHL .serviceInfo .intro1,
+#volunteerHL .serviceInfo .intro2 {
+  line-height: 22px;
+  text-indent: 29px;
+}
+
+#volunteerHL .serviceInfo .intro1 {
+  margin-top: 18px;
+}
+
+#volunteerHL .serviceInfo .header2 {
+  margin-top: 43px;
+  margin-bottom: 21px;
+}
+
+#volunteerHL .serviceInfo .header3 {
+  margin-top: 66px;
+  margin-bottom: 21px;
+}
+
+#volunteerHL .serviceInfo .time1,
+#volunteerHL .serviceInfo .time1 {
+  line-height: 22px;
+}
+
+#volunteerHL .person .header1 {
+  font-size: 24px;
+  color: rgb(154, 118, 70);
+  margin-top: 70px;
+  margin-bottom: 22px;
+  font-weight: normal;
+}
+
+#volunteerHL .person .personList1 a {
+  float: left;
+  width: 86px;
+  height: 86px;
+  margin-right: 20px;
+}
+
+#volunteerHL .person .personList1 a:last-child {
+  margin-right: 0;
+}
+
+#volunteerHL .person .nameRow1 {
+  margin-top: 12px;
+}
+
+#volunteerHL .person .nameRow1 span {
+  padding: 0 22px;
+  margin-right: 16px;
+}
+
+#volunteerHL .person .nameRow1 span:last-child {
+  margin-right: 0;
+}
+
+#volunteerHL .person .personList2 a {
+  float: left;
+  width: 86px;
+  height: 86px;
+  margin-right: 20px;
+  margin-top: 33px;
+}
+
+#volunteerHL .person .personList2 a:last-child {
+  margin-right: 0;
+}
+
+#volunteerHL .person .nameRow2 {
+  margin-top: 12px;
+}
+
+#volunteerHL .person .nameRow2 span {
+  padding: 0 22px;
+  margin-right: 16px;
+}
+
+#volunteerHL .person .nameRow2 span:last-child {
+  margin-right: 0;
+}
+
+/* 志愿者板块结束 */
+/* 底部banner板块开始 */
+#bannerBottomHL {
+  height: 382px;
+  margin-top: 114px;
+  text-align: center;
+  line-height: 382px;
+  background: url("../images/s5902a161d9083.jpg") center center;
+  font-size: 36px;
+  color: white;
+
+}
+
+#bannerBottomHL .button {
+  width: 152px;
+  height: 48px;
+  background: url("../images/hd1img19.png");
+  margin: 0 auto;
+  margin-top: -145px;
+  line-height: 49px;
+  font-size: 20px;
+}
+
+#bannerBottomHL .button a {
+  display: block;
+  width: 152px;
+  height: 48px;
+  font-size: 18px;
+  color: white;
+  background: url("../images/hd1img20.png") no-repeat 20px center;
+  padding-left: 18px;
+}
+
+/* 底部banner板块结束 */
+/* footer板块开始 */
+#footer {
+  height: 236px;
+  background-color: #272727;
+  color: white;
+  position: relative;
+}
+
+#footer .total {
+  position: absolute;
+  left: 531px;
+  top: 37px;
+}
+
+#footer .stats li {
+  width: 20px;
+  height: 28px;
+  background-color: #404040;
+  float: left;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 6px;
+}
+
+#footer .stats ul {
+  position: absolute;
+  top: 30px;
+  left: 613px;
+}
+
+#footer .webInfo {
+  position: absolute;
+  top: 83px;
+}
+
+#footer .webInfo li {
+  float: left;
+  margin-right: 14px;
+}
+
+#footer .webInfo li a {
+  color: white;
+}
+
+#footer .webInfo li:first-child {
+  margin-left: 404px;
+}
+
+#footer .icp p {
+  position: absolute;
+  left: 326px;
+  top: 109px;
+}
+
+#footer .icp .webDev {
+  position: absolute;
+  left: 875px;
+  top: 109px;
+}
+
+#footer .icp .webDev a {
+  color: white;
+}
+
+#footer .suggestion {
+  text-align: center;
+  line-height: 32px;
+  position: absolute;
+  top: 140px;
+  left: 637px;
+}
+
+#footer .suggestion a {
+  display: block;
+  width: 80px;
+  height: 32px;
+  color: white;
+  border: 1px solid white;
+}
+
+#footer .qrCode a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background: url("../images/ico_hand.png");
+}
+
+#footer .qrCode {
+  position: absolute;
+  top: 65px;
+  left: 1035px;
+}
+
+#footer .qrCode .hand {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../images/ico_hand2.png");
+  position: absolute;
+  top: 25px;
+  left: 22px;
+}
+
+#footer .qrCodeImg {
+  position: absolute;
+  top: -400px;
+  right: 156px;
+  display: none;
+}
+
+/* footer板块结束 */

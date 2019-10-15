@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>数字博物馆</title>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="webkit" name="renderer">
+  <meta content="width=1920" name="viewport"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="故宫，故宫博物院" name="keywords"/>
+  <meta content="故宫博物院青少网站" name="description"/>
+
+  <link href="base.css" rel="stylesheet" type="text/css">
+  <link href="index.css" rel="stylesheet" type="text/css">
+
+  <link href="leaflet.css" rel="stylesheet" type="text/css"/>
+  <!--<link href="leaflet.draw.css" type="text/css" rel="stylesheet"/>-->
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/leaflet.js"></script>
+  <script src="js/comm.js"></script>
+  <script src="js/jquery.js"></script>
+  <link href="animate.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body class="gb">
+
+<header class="header">
+  <div class="searchwraper">
+    <div class="search clearfix">
+      <form action="#" method="post">
+        <input name='keyword' placeholder="站内搜索" type="text">
+        <button></button>
+      </form>
+    </div>
+  </div>
+
+  <nav>
+    <a class="logo" href="javascript:void (0)"></a>
+    <ul class="yahei" id="nav">
+      <li><a href="javascript:void(0)">首页</a></li>
+      <li><a href="javascript:void(0)">故宫动态</a></li>
+      <li><a href="javascript:void(0)">我要逛故宫</a></li>
+      <li class="blank">&nbsp;</li>
+      <li><a href="javascript:void(0)">紫禁学堂</a>
+        <ul><i><em></em></i>
+          <li><a href="javascript:void(0)">故宫藏宝</a></li>
+          <li><a href="javascript:void(0)">故宫小百科</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:void(0)">故宫大冒险</a>
+        <ul><i><em></em></i>
+          <li><a href="javascript:void(0)">微剧场</a></li>
+          <li><a href="javascript:void(0)">游戏区</a></li>
+          <li><a href="javascript:void(0)">收藏馆</a></li>
+          <li><a href="javascript:void(0)">精彩壁纸</a></li>
+        </ul>
+      </li>
+      <li class="search"><a href="javascript:void(0)" title="站内搜索"></a></li>
+    </ul>
+    <a class="bell"></a>
+  </nav>
+</header>
+
+<div style="display: none"><img src="picture/weixinlogo.jpg"></div>
+
+<link href="animate.css" rel="stylesheet" type="text/css">
+
+<div class="focusarea winter">
+  <div class="centerbg" onclick="window.open('/art/index')"
+       style="height: 800px;width:1920px;position: absolute;top:0;left: 50%;margin-left:-960px;overflow: hidden;">
+    <div class="p_1" style="right: 0;top: 388px;z-index: 1"><img
+        alt="" src="picture/1.png"></div>
+    <div class="p_2" style="left: 389px;top: 281px;z-index: 5"><img
+        alt="" src="picture/2.png"></div>
+    <div class="p_3" style="left: 217px;top: 0;z-index: 1"><img
+        alt="" src="picture/3.png"></div>
+    <div class="p_4" style="left: 56px;top: 409px;z-index: 3"><img
+        alt="" src="picture/4.png"></div>
+    <div class="p_5" style="right: 276px;top: 0"><img
+        alt="" src="picture/5.png"></div>
+    <div class="p_6" style="right: 323px;top: 84px"><img
+        alt="" src="picture/6.png"></div>
+    <div class="p_7" style="right: 0;top: 0"><img
+        alt="" src="picture/7.png"></div>
+    <div class="p_8" style="left: 0;top: 206px"><img
+        alt="" src="picture/8.png"></div>
+    <div class="p_9" style="right: 216px;top: 640px"><img
+        alt="" src="picture/9.png"></div>
+    <div class="p_10" style="right: 339px;top: 203px"><img
+        alt="" src="picture/10.png"></div>
+    <div class="p_11" style="left: 660px;top: 340px"><img
+        alt="" src="picture/11.png"></div>
+    <div class="p_12" style="right: 0;top: 136px"><img
+        alt="" src="picture/12.png"></div>
+    <div class="p_13" style="right: 347px;top: 400px"><img
+        alt="" src="picture/13.png"></div>
+    <div class="p_14" style="left: 879px;top: 540px;z-index: 3;"><img
+        alt="" src="picture/14.png"></div>
+    <div class="p_15" style="right: 18px;top: 0;z-index: 1;"><img
+        alt="" src="picture/15.png"></div>
+    <div class="p_16" style="left: 0;top: 69px;z-index: 1"><img
+        alt="" src="picture/16.png"></div>
+    <div class="p_17" style="left: 61px;top: 164px;z-index: 2"><img
+        alt="" src="picture/17.png"></div>
+    <div class="p_18" style="left: 0;top: 0"><img
+        alt="" src="picture/18.png"></div>
+    <div class="p_19" style="right: 100px;top: 76px"><img
+        alt="" src="picture/19.png"></div>
+    <div class="p_20" style="left: 638px;top: 508px"><img
+        alt="" src="picture/20.png"></div>
+    <div class="p_21" style="left: 674px;top: 169px;z-index: 2"><img
+        alt="" src="picture/21.png"></div>
+    <div class="p_22" style="right: 432px;top: 565px;z-index: 3"><img
+        alt="" src="picture/22.png"></div>
+    <div class="p_23" style="left: 798px;top: 0;z-index: 2"><img
+        alt="" src="picture/23.png"></div>
+    <div class="p_24" style="left: 0;top: 369px"><img
+        alt="" src="picture/24.png"></div>
+  </div>
+</div>
+
+
+<article class="content">
+  <div class="penbg"><img src="picture/title-1.png"></div>
+  <div class="mainwrap">
+    <div class="promotearea clearfix">
+      <ul class="clearfix left">
+
+
+        <li class="clearfix">
+          <div class="line left"></div>
+          <div class="news left">
+            <i>2018.06.18</i>
+            <a class="newstitle" href="javascript:void(0)"
+               target="_blank">故宫博物院举办系列活动迎接“文化和自然遗产日”</a>
+
+            <p> 2018年6月9日，是我国“文化和自然遗产日”，今年的主题是“文化遗产的传播与传承”，宣传口号是“加强文物保护利用”“坚定文化自信 传承中华文明”“保护文物人人有责
+              守望家园你我同行”“呵护文化遗产
+              讲好中国故事”等，旨在积极探索一条符合国情的文物保护利用之路，从而更好提升新时代文物工作传播力、影响力，形成全社会广泛参与文物保护利用传承的良好氛围。</p>
+          </div>
+        </li>
+
+
+        <li class="clearfix">
+          <div class="line left"></div>
+          <div class="news left">
+            <i>2018.05.25</i>
+            <a class="newstitle" href="javascript:void(0)" target="_blank">关于预约参观《清明上河图3.0》高科技互动艺术展演的公告</a>
+
+            <p>
+              由故宫博物院与凤凰卫视联合创制的《清明上河图3.0》高科技互动艺术展演，将于2018年5月29日（星期二）正式接待观众参观。即日起，观众可通过故宫博物院门票预售系统（gugong.228.com.cn）进行参观预约。
+            </p>
+          </div>
+        </li>
+
+
+        <li class="clearfix">
+          <div class="line left"></div>
+          <div class="news left">
+            <i>2018.05.18</i>
+            <a class="newstitle" href="javascript:void(0)" target="_blank">用“新方法”连接“新公众”——故宫博物院开展系列活动迎接“5•18国际博物馆日”</a>
+
+            <p>
+              国际博物馆日当天,故宫博物院举办了大型艺术创作、小学生入队仪式与实践拓展、遗产保护体验、志愿者咨询讲解和民乐公益演出共五大主题宣教活动，为观众奉上一场场精彩的文化大餐，也让故宫博物院成为公众与多元文化连接的纽带。</p>
+          </div>
+        </li>
+
+      </ul>
+      <div class="line left"></div>
+    </div>
+    <div class="centerimg"><img src="picture/taihedian.jpg"></div>
+    <div class="soundwrap">
+      <ul class="clearfix">
+
+        <li>
+          <div class="news">
+            <a href="javascript:void(0)" target="_blank">
+              <img src="picture/12b27350d49e4a53a414fdfda943fe5d.jpg">
+
+              <h3>紫禁学堂--紫禁城里过春节</h3>
+
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="news">
+            <a href="javascript:void(0)" target="_blank">
+              <img src="picture/ebb61d4cb7ba4359a8364e489809bdfe.jpg">
+
+              <h3>紫禁学堂--郑和下西洋</h3>
+              <!--<span>紫禁学堂--郑和下西洋 </span>-->
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <div class="news">
+            <a href="javascript:void(0)" target="_blank">
+              <img src="picture/63b91949c6f441f0a60dee23935850ab.jpg">
+
+              <h3>紫禁学堂--紫禁城的入门须知</h3>
+              <!--<span>紫禁城的入门须知 </span>-->
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="map">
+    <div class="mapwrap mapmain">
+      <div class="tools">
+        <ul>
+          <li class="zoom">
+            <span class="zoomin"></span>
+            <span class="zoomout"></span>
+          </li>
+        </ul>
+      </div>
+      <!--<div class="mapswitch">-->
+      <!--<ul>-->
+      <!--<li class="guide_1">-->
+      <!--<div class="switch"></div>-->
+      <!--</li>-->
+      <!--</ul>-->
+      <!--</div>-->
+      <div class="spriteguide">
+        <div class="sprite storystarter"></div>
+        <div class="mapguide">
+          <ul>
+            <li class="guide_1 route1sprite_U transition"></li>
+            <li class="guide_2 route2sprite_U transition"></li>
+            <li class="guide_3 route3sprite_U transition" style="display: none;"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="leaflet-container leaflet-fade-anim" id="mapcontainer"
+           style="height: 531px; position: relative;"
+           tabindex="0">
+        <div class="leaflet-map-pane" style="transform: translate3d(364px, -84px, 0px);">
+          <div class="leaflet-tile-pane">
+            <div class="leaflet-layer">
+              <div class="leaflet-tile-container"></div>
+              <div class="leaflet-tile-container leaflet-zoom-animated"><img
+                  class="leaflet-tile leaflet-tile-loaded"
+                  src="images/lv5/4,3.jpg"
+                  style="height: 256px; width: 256px; left: 323px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,4.jpg"
+                  style="height: 256px; width: 256px; left: 579px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,3.jpg"
+                  style="height: 256px; width: 256px; left: 323px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,4.jpg"
+                  style="height: 256px; width: 256px; left: 579px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,5.jpg"
+                  style="height: 256px; width: 256px; left: 835px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,4.jpg"
+                  style="height: 256px; width: 256px; left: 579px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,4.jpg"
+                  style="height: 256px; width: 256px; left: 579px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,3.jpg"
+                  style="height: 256px; width: 256px; left: 323px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,3.jpg"
+                  style="height: 256px; width: 256px; left: 323px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,2.jpg"
+                  style="height: 256px; width: 256px; left: 67px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,2.jpg"
+                  style="height: 256px; width: 256px; left: 67px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,5.jpg"
+                  style="height: 256px; width: 256px; left: 835px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,2.jpg"
+                  style="height: 256px; width: 256px; left: 67px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,5.jpg"
+                  style="height: 256px; width: 256px; left: 835px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,5.jpg"
+                  style="height: 256px; width: 256px; left: 835px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,2.jpg"
+                  style="height: 256px; width: 256px; left: 67px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,6.jpg"
+                  style="height: 256px; width: 256px; left: 1091px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,6.jpg"
+                  style="height: 256px; width: 256px; left: 1091px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,1.jpg"
+                  style="height: 256px; width: 256px; left: -189px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,1.jpg"
+                  style="height: 256px; width: 256px; left: -189px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,6.jpg"
+                  style="height: 256px; width: 256px; left: 1091px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,1.jpg"
+                  style="height: 256px; width: 256px; left: -189px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,1.jpg"
+                  style="height: 256px; width: 256px; left: -189px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,6.jpg"
+                  style="height: 256px; width: 256px; left: 1091px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,0.jpg"
+                  style="height: 256px; width: 256px; left: -445px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/4,7.jpg"
+                  style="height: 256px; width: 256px; left: 1347px; top: 60px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,0.jpg"
+                  style="height: 256px; width: 256px; left: -445px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/5,7.jpg"
+                  style="height: 256px; width: 256px; left: 1347px; top: 316px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,0.jpg"
+                  style="height: 256px; width: 256px; left: -445px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/3,7.jpg"
+                  style="height: 256px; width: 256px; left: 1347px; top: -196px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,0.jpg"
+                  style="height: 256px; width: 256px; left: -445px; top: 572px;"><img
+                  class="leaflet-tile leaflet-tile-loaded" src="images/lv5/6,7.jpg"
+                  style="height: 256px; width: 256px; left: 1347px; top: 572px;"></div>
+            </div>
+          </div>
+          <div class="leaflet-objects-pane">
+            <div class="leaflet-shadow-pane"></div>
+            <div class="leaflet-overlay-pane"></div>
+            <div class="leaflet-marker-pane">
+              <img class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                   src="pos/jinshuiqiao.png"
+                   style="margin-left: 295px; margin-top: -290px; width: 38px; height: 95px; transform: translate3d(240px, 476px, 0px); z-index: 1475;"
+                   tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/wumen.png"
+                style="margin-left: 420px; margin-top: -320px; width: 38px; height: 95px; transform: translate3d(-10px, 492px, 0px); z-index: 1491;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/taihemen.png"
+                style="margin-left: 20px; margin-top: -125px; width: 38px; height: 95px; transform: translate3d(816px, 220px, 0px); z-index: 1219;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/wuyingdian.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(284px, -236px, 0px); z-index: 763;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/wenhuadian.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(1422px, 788px, 0px); z-index: 1787;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/taihedian.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(1872px, -72px, 0px); z-index: 927;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/baohedian.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(2456px, -224px, 0px); z-index: 775;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/qianqinggong.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(3282px, -368px, 0px); z-index: 631;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/donghuamen.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(1634px, 1492px, 0px); z-index: 2491;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/jianting.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(2784px, 320px, 0px); z-index: 1319;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/jiaotaidian.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(3366px, -436px, 0px); z-index: 563;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/kunninggong.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(3462px, -520px, 0px); z-index: 479;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/ningshougong.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(3934px, 448px, 0px); z-index: 1447;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/yanxigong.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(3814px, 28px, 0px); z-index: 1027;"
+                tabindex="0"><img
+                class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable"
+                src="pos/yangxindian.png"
+                style="margin-left: -22px; margin-top: -94px; width: 38px; height: 95px; transform: translate3d(2812px, -616px, 0px); z-index: 383;"
+                tabindex="0">
+
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(4062px, 371px, 0px); z-index: 371;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/museum.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(3502px, 119px, 0px); z-index: 119;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/museum.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(3132px, -473px, 0px); z-index: -473;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(1460px, 734px, 0px); z-index: 734;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/museum.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(3810px, -253px, 0px); z-index: -253;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/museum.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(4470px, 387px, 0px); z-index: 387;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/museum.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(2186px, -847px, 0px); z-index: -847;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/museum.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(2172px, -983px, 0px); z-index: -983;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(1638px, -767px, 0px); z-index: -767;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(2448px, -499px, 0px); z-index: -499;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(3043px, -676px, 0px); z-index: -676;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(3802px, -228px, 0px); z-index: -228;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+              <div
+                  class="leaflet-marker-icon animatemarkerwrap leaflet-zoom-animated leaflet-clickable"
+                  style="margin-left: -22px; margin-top: -202px; width: 100px; height: 202px; transform: translate3d(1786px, 1396px, 0px); z-index: 1396;"
+                  tabindex="0">
+                <div class="animatemarker"><img src="images/exhibition.png"></div>
+              </div>
+            </div>
+            <div class="leaflet-popup-pane"></div>
+          </div>
+        </div>
+        <div class="leaflet-control-container">
+          <div class="leaflet-top leaflet-left"></div>
+          <div class="leaflet-top leaflet-right"></div>
+          <div class="leaflet-bottom leaflet-left"></div>
+          <div class="leaflet-bottom leaflet-right"></div>
+        </div>
+      </div>
+      <div class="maptop"><img src="picture/maptop.png"></div>
+      <div class="maptop mapbottom"><img src="picture/mapbottom.png"></div>
+    </div>
+    <script type="text/javascript">
+      //人物动态效果
+      $(function () {
+        var num = 0;
+        setInterval(function () {
+          if (num == 6) {
+            num = 0;
+            $(".sprite .storystarter").animate({"backgroundPositionY": 0}, 0);
+          }
+          var y = num * 192;
+          $(".sprite.storystarter").animate({"backgroundPositionY": -y}, 0);
+          num++;
+        }, 300);
+      })
+    </script>
+    <script>
+
+      //map地图动态
+      $(function () {
+        var southWest = L.latLng(60.12443624549497, -176.4404296875),
+            northEast = L.latLng(89.98513089342998, -9.580078125),
+            bounds = L.latLngBounds(southWest, northEast);
+        var markers;
+        var map = L.map('mapcontainer', {
+          scrollWheelZoom: false,
+          zoomControl: false,
+          attributionControl: false,
+          worldCopyJump: true,
+          maxBounds: bounds
+        }).setView([76.5, -135], 5);
+
+        $(".zoomin").click(function () {
+          map.zoomIn();
+        });
+        $(".zoomout").click(function () {
+          map.zoomOut();
+        });
+//        L.tileLayer('http://young.dpm.org.cn:80/statics/map/lv{z}/{y},{x}.jpg', {
+        L.tileLayer('images/lv6/{y},{x}.jpg', {
+          maxZoom: 6,
+          minZoom: 3,
+          tileSize: 256,
+          continuousWorld: true
+        }).addTo(map);
+        map.on("click", function (e) {
+          console && console.log(e.latlng);
+        });
+        //跳到指定位置点
+        setTimeout(function () {
+          try {
+            var posstr = window.location.href.substring(
+                window.location.href.lastIndexOf('#')).replace('#pos_', '');
+            var loc = eval('(' + posstr + ')');
+            map.setView([loc.lat, loc.lng], 5, {reset: false, animate: true, pan: {duration: 2}});
+          } catch (e) {
+            console.log(e)
+          }
+        }, 800)
+
+        $(".mapmain").click(function () {
+          if (navigator.userAgent.match(/(iPad|iPhone|iPod|Android|ios)/i)) {
+            $("#mapcontainer").css({"height": $(window).innerHeight() / 2});
+            $("html,body").animate({scrollTop: $(".maptop").offset().top - 100}, 500);
+          } else {
+            $("#mapcontainer").css({"height": $(window).innerHeight()});
+            $("html,body").animate({scrollTop: $(".maptop").offset().top}, 500);
+          }
+          map.invalidateSize(true);
+        })
+      })
+    </script>
+
+    <div class="mapwrap taihe">
+      <div class="relative roundwrapper" style="width:700px; margin:0 auto;height: 869px">
+        <div class="gtext "><img src="picture/gugong.png"></div>
+        <div class="ty-2">
+          <div></div>
+        </div>
+        <div class="ty-3 mRound"><a href="javascript:void(0)" target="_blank"><img
+            src="picture/ty-6.png"></a></div>
+        <div class="ty-4 mRound"><a href="javascript:void(0)" target="_blank"><img
+            src="picture/ty-7.png"></a></div>
+        <div class="ty-5 mRound"><a href="javascript:void(0)" target="_blank"><img
+            src="picture/ty-8.png"></a></div>
+        <div class="ty-5 mRound"><a href="javascript:void(0)" target="_blank"><img
+            src="picture/ty-9.png"></a></div>
+        <div class="ty-5 mRound"><a href="javascript:void(0)" target="_blank"><img
+            src="picture/ty-10.png"></a></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var app = {
+          init: function () {
+            this.move();
+            this.step = 0.3;
+          },
+          css: function (ele, styles) {
+            for (var attr in styles) {
+              ele['style'][attr] = styles[attr];
+            }
+          },
+          round: function (ele, idx) {
+            var deg = 0;
+            var speed = 30;
+            var timer = null;
+            var _this = this;
+            //var w = ele.offsetWidth;
+            //var h = ele.offsetHeight;
+            var x = $(".roundwrapper").width() / 2, y = $(".roundwrapper").height() / 2, r = 230;
+            var a, b;
+
+            clearInterval(timer);
+            timer = setInterval(function () {
+              deg += _this.step;
+              a = Math.sin(deg * Math.PI / 180 + Math.PI / 180 * 360 / $('.mRound').length * idx)
+                  * r;
+              b = Math.cos(deg * Math.PI / 180 + Math.PI / 180 * 360 / $('.mRound').length * idx)
+                  * r;
+
+              _this.css(ele, {
+                left: (x - 80) + b + 'px',
+                top: (y - 60) + a + 'px'
+              })
+            }, speed);
+          },
+          move: function () {
+            var aBox = $('.mRound');
+            var _this = this;
+            var body = document.body;
+            var left, top, r, ele, w;
+            $(".roundwrapper").hover(function () {
+              _this.step = 0;
+            }, function () {
+              _this.step = 0.3;
+            });
+            [].slice.call(aBox).forEach(function (e) {
+              _this.round(e, $(e).index());
+            })
+          }
+        }
+
+        app.init();
+
+        $(".taihe").mousemove(function (e) {
+          e = e || window.event;
+          (e.clientX || e.touches[0].clientX) > ($(this).offset().left + $(this).innerWidth() / 2)
+              ? $(".ty-2").addClass("r") : $(".ty-2").removeClass("r");
+        })
+      })
+    </script>
+  </div>
+  <div class="mainwrap">
+    <div class="centerimg more"><img src="picture/more.jpg"></div>
+    <div class="clearfix">
+      <div class="left download">
+        <div class="clearfix">
+          <div class="left"><a href="javascript:void(0)" target="_blank"><img
+              src="picture/t1.png"></a></div>
+          <div class="left">
+            <ul class="clearfix">
+              <li class="left"><a href="javascript:void(0)"
+                                  target="_blank"> <img src="picture/app-0001.jpg">
+                <span>紫禁城祥瑞Pro</span>
+              </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img src="picture/app_03.jpg"> <span>皇帝的一天</span> </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img
+                  src="picture/46c18f71e0ce4c179ff67adabb9baa1b.png"> <span>故宫展览</span>
+              </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img src="picture/app_05.jpg"> <span>胤禛美人图</span> </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img src="picture/app_07.jpg"> <span>紫禁城祥瑞</span> </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img src="picture/f9c0571b6977461b9dd411523ce192e9.jpeg"> <span>韩熙载夜宴图</span>
+              </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img src="picture/8f7a2893f692474c92a4636c25fea7b2.png"> <span>清代皇帝服饰</span>
+              </a></li>
+
+              <li class="left"><a href="javascript:void(0)" target="_blank"> <img
+                  src="picture/f1bb9c7235024b72ad22200c58cf01d9.png"> <span>故宫陶瓷馆</span> </a></li>
+
+              <li class="left"><a
+                  href="javascript:void(0)"
+                  target="_blank"> <img
+                  src="picture/389b3d505f3b4f228a1422489918c18e.jpg"> <span>每日故宫</span>
+              </a></li>
+
+            </ul>
+            <div class="line2"><img src="picture/line2.jpg"></div>
+          </div>
+        </div>
+        <div class="clearfix" style="padding-top:35px;">
+          <div class="left"><img src="picture/t2.png"></div>
+          <div class="left">
+            <ul class="clearfix ulink">
+              <li class="left">
+                <a class="clearfix" href="javascript:void(0)" target="_blank">
+                  <div class="left"><img
+                      src="picture/icon-1.png"></div>
+                  <span>故宫淘宝</span></a>
+              </li>
+              <li class="left">
+                <a class="clearfix" href="javascript:void(0)" target="_blank">
+                  <div class="left"><img
+                      src="picture/icon-2.png"></div>
+                  <span>故宫商城</span></a>
+              </li>
+              <li class="left">
+                <a class="clearfix" href="javascript:void(0)" target="_blank">
+                  <div class="left"><img
+                      src="picture/icon-3.png"></div>
+                  <span>故宫出版旗舰店</span></a>
+              </li>
+              <li class="left">
+                <a class="clearfix" href="javascript:void(0)" target="_blank">
+                  <div class="left"><img
+                      src="picture/icon-4.png"></div>
+                  <span>故宫文创旗舰店</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right clearfix scan">
+        <div class="left"><img src="picture/t3.png"></div>
+        <div class="code left"><i class="c-1"></i> <i class="c-2"></i></div>
+        <div class="weibo"><img src="picture/weibo.png"></div>
+        <div class="weixin"><img src="picture/weixin.png"></div>
+      </div>
+
+
+    </div>
+  </div>
+</article>
+<div class="foottop">
+  <div class="bottombg"></div>
+</div>
+
+<div class="gamelayer box">
+  <div id="bgstoryboard"></div>
+  <div class="start_box"></div>
+  <div class="start_title"></div>
+  <div class="start_sprite"></div>
+  <div class="start_close" id="storyclosebtn"></div>
+  <div class="start_autoplay" id="storyautoplaybtn"></div>
+  <div class="helperbtn" id="helperbtn"></div>
+  <div id="frontstoryboard"></div>
+</div>
+<div id="route1bgsound" style="width:0px;height:0px;display:none;"></div>
+<div id="route2bgsound" style="display:none;"></div>
+<div id="route3bgsound" style="display:none;"></div>
+
+<div class="masklayer totalPlayStop"></div>
+
+<div class="pop">
+  <a class="close totalPlayStop" href="javascript:void(0)" title="关闭"></a>
+
+  <div class="saudio paudio ajaxpaudio" data="0" style="right: 70px;top: 298px;display: none;"
+       title="朗读本段"></div>
+  <div class="popwraper">
+    <div class="ency"></div>
+    <div class="encypic"></div>
+    <div class="popcontent">
+      <h3></h3>
+
+      <p></p>
+    </div>
+    <div class="more"><a href="javascript:void(0)" target="_blank">更多故宫小知识 ></a></div>
+  </div>
+</div>
+
+<footer class="footer" style='position:relative;'>
+  <div class="mainwrap">
+    <div class="cr">
+      <div class="footerhouse"></div>
+      <div class="relink">故宫其他站点
+        <ul>
+
+          <li><a href="javascript:void(0)" target="_blank">故宫官网</a></li>
+
+          <li><a href="javascript:void(0)" target="_blank">故宫出版社</a></li>
+
+          <li><a href="javascript:void(0)" target="_blank">中国古代书画研究系统</a></li>
+
+          <li><a href="javascript:void(0)" target="_blank">故宫商城</a></li>
+
+          <li><a href="javascript:void(0)" target="_blank">故宫博物院藏品总目</a></li>
+
+          <li><a href="javascript:void(0)" target="_blank">北京故宫文物保护基金会</a></li>
+
+        </ul>
+
+      </div>
+      <div class="link"> · <a href="javascript:void(0)" target="_blank">隐私政策</a> · <a
+          href="javascript:void(0)" target="_blank">联系我们</a> · <a
+          href="javascript:void(0)" target="_blank">版权声明</a> ·
+      </div>
+      <div class="copyrights">© 故宫博物院版权所有 <!--<span class="statis">10270336</span>--></div>
+    </div>
+  </div>
+</footer>
+<div style='display:none;'></div>
+
+<!--右侧工具栏返回顶部分享等-->
+<div id="rightscrollnav">
+  <a class="promotion_1" href="/art/index" target="_blank"></a>
+  <ul>
+    <li class="returntop"></li>
+    <li class="focusus" title="关注我们">
+      <div><i><em></em></i><span class="weixin">官方微博</span><span class="weibo">官方微信</span></div>
+    </li>
+    <li class="share" title="分享"></li>
+  </ul>
+</div>
+</body>
+</html>

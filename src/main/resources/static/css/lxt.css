@@ -1,0 +1,556 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cnm1 {
+  position: relative;
+  margin: 0px auto;
+  width: 310px;
+  overflow: hidden;
+}
+
+.cnm2 {
+  position: relative;
+  margin: 0px auto;
+  width: 310px;
+  overflow: hidden;
+}
+
+.cnm1 p {
+  position: absolute;
+  top: 0px;
+  width: 310px;
+  height: 370px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.cnm2 p {
+  position: absolute;
+  top: 0px;
+  width: 310px;
+  height: 370px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.cnm3 {
+  position: relative;
+  margin: 0px auto;
+  width: 310px;
+  overflow: hidden;
+}
+
+.cnm3 p {
+  position: absolute;
+  top: 0px;
+  width: 310px;
+  height: 370px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------- */
+
+
+.box1 {
+  margin-top: 30px;
+  width: 306px;
+  height: 360px;
+  float: left;
+  background-size: 100%;
+  /*position: ��absolute;*/
+  background-image: url(images/home_block2_box_bg1440.jpg);
+
+}
+
+
+.w {
+  height: 370px;
+  width: 1260px;
+  margin: 0 auto;
+}
+
+.title {
+
+  position: relative;
+  top: -22px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.title img {
+  height: auto;
+  max-width: none;
+  vertical-align: top;
+  width: 24px;
+  margin: 0 12px 0 21px;
+
+}
+
+.s1 {
+  font-size: 26px;
+  line-height: 36px;
+  height: 36px;
+  color: #fff;
+
+}
+
+.s2 {
+  font-size: 26px;
+  line-height: 36px;
+  height: 36px;
+  color: #fff;
+  position: relative;
+  left: 11px;
+}
+
+
+b {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  line-height: 1;
+  color: #fff;
+  position: relative;
+  left: -20px;
+  top: 0px;
+
+  font-weight: normal;
+}
+
+.one {
+
+  position: relative;
+  left: 10px;
+  top: 8px;
+
+
+}
+
+.boxg {
+  width: 40px;
+  height: 40px;
+  background-image: url(images/jian1366.png);
+  position: relative;
+  left: 245px;
+  top: 47px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+}
+
+.sz {
+  width: 235px;
+  height: 45px;
+  background-image: url(images/txtbg.png);
+  position: relative;
+  background-size: 100%;
+  margin: 0px auto;
+  top: 14px;
+
+}
+
+.show {
+  text-align: center;
+  position: relative;
+  left: 35px;
+  top: 10px;
+
+}
+
+.move {
+
+  width: 140px;
+  height: 45px;
+  position: relative;
+  background-image: url(images/btn10.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  left: 89px;
+  top: 75px;;
+}
+
+.wz {
+  font-size: 17px;
+  color: #fff;
+  position: relative;
+  left: 68px;
+  top: 11px;
+}
+
+.cnm1 {
+  margin-left: 30px;
+  margin-top: 30px;
+  height: 360px;
+  width: 306px;
+  background-size: 100%;
+  background-image: url(images/s5b348fc2dfc96.jpg);
+  float: left;
+  background-repeat: no-repeat;
+}
+
+.cnm2 {
+  margin-top: 30px;
+  height: 360px;
+  width: 306px;
+  background-image: url(images/s5b34936f99c00.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.cnm3 {
+  margin-top: 30px;
+  background-size: 100%;
+  height: 360px;
+  width: 306px;
+  background-image: url(images/s5b34903870fa1.jpg);
+  background-repeat: no-repeat;
+  float: left;
+}
+
+
+/* -----------------------�ڶ�--------------------------------- */
+
+
+.block3 {
+
+}
+
+.active {
+  margin-top: 24px;
+  width: 912px;
+  height: 383px;
+  background-image: url(images/home_block3_box_bg.jpg);
+  float: left;
+  position: relative;
+
+}
+
+.active img {
+  width: 24px;
+}
+
+
+.active .lxt {
+  height: auto;
+  /* max-width: none; */
+  vertical-align: top;
+  font-size: 26px;
+  height: 36px;
+  line-height: 36px;
+  position: relative;
+  top: 60px;
+  left: 50px;
+  color: #fff;
+}
+
+/* --�����-- */
+.museum {
+  height: 332px;
+  width: 1112px;
+  float: left;
+  position: relative;
+  top: 90px;
+  left: 48px;
+}
+
+.li1, .li2, .li3, .li4 {
+  width: 370px;
+  height: 124px;
+  float: left;
+  color: #ffd6d6;
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: 12px;
+  margin-right: 60px;
+  opacity: 0.8;
+  /*background: url(image/liststyle.png) left no-repeat;*/
+
+}
+
+.li1 {
+  position: relative;
+  top: 10px;
+}
+
+.rightph img {
+
+  height: 380px;
+  width: 315px;
+
+}
+
+/* -----------------------------����----------- */
+
+.buttom1 {
+  top: 80px;
+  height: 222px;
+  width: 252px;
+  background-image: url(images/s5835a5845f08b.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  left: -912px;
+  text-align: center;
+
+
+}
+
+.buttom3 {
+
+  height: 222px;
+  width: 252px;
+  background-image: url(images/s5835a57aca965.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  left: 247px;
+  top: -142px;
+  text-align: center;
+}
+
+.buttom2 {
+
+  height: 222px;
+  width: 252px;
+  background-image: url(images/s5835a58eb4421.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  left: 247px;
+  top: -142px;
+  text-align: center;
+}
+
+.buttom5 {
+
+  height: 222px;
+  width: 252px;
+  background-image: url(images/s5835a57aca965.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  left: 247px;
+  top: -142px;
+  text-align: center;
+}
+
+.buttom4 {
+
+  height: 222px;
+  width: 252px;
+  background-image: url(images/s5835a58eb4421.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  float: left;
+  left: 247px;
+  top: -142px;
+  text-align: center;
+}
+
+.b1, .b2, .b3, .b4, .b5 {
+
+
+  display: block;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+
+/* --------best---------------------------------------------------- */
+.best {
+  position: relative;
+  height: 203px;
+  margin-top: -40px;
+
+  background-color: #272727;
+
+}
+
+.laji {
+
+  position: absolute;
+  left: 42%;
+  top: 45px;
+  font: 8px/1.5 "Microsoft YaHei", Arial, Tahoma, Helvetica, sans-serif;
+  margin-right: 8px;
+  color: #fff;
+
+}
+
+.nav_foot {
+  position: absolute;
+  left: 589px;;
+  top: 88px;
+  color: #fff;
+  font-size: 8px;
+}
+
+.copyright {
+  position: absolute;
+  left: 35%;
+  top: 54%;
+  font-size: 10px;
+  color: #fff;
+
+}
+
+.btns {
+  width: 77px;
+  height: 30px;
+  background-image: url(images/btn10.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 14px;
+  position: absolute;
+  left: 48%;
+  top: 70%;
+  color: #fff;
+
+}
+
+.inner i {
+  background-color: #404040;
+  font-size: 12px;
+  padding: 4px;
+  margin-left: 10px;
+  font-style: normal;
+}
+
+/* ----------------------------------------------����Ч��-------------------------------------------- */
+.rightph {
+  display: inline-block;
+
+  margin: 24px auto;
+  overflow: hidden;
+  margin-left: 30px;
+  /*���س����߽��*/
+}
+
+/*ͼƬ���ɱ仯*/
+.rightph img {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.rightph img:hover {
+
+  transform: scale(1.2);
+}
+
+.buttom1 {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.buttom1 :hover {
+
+  transform: scale(1.2);
+}
+
+
+.buttom1 img {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.buttom1 img:hover {
+
+  transform: scale(1.2);
+}
+
+.buttom2 img {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.buttom2 img:hover {
+
+  transform: scale(1.2);
+}
+
+.buttom3 img {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.buttom3 img:hover {
+
+  transform: scale(1.2);
+}
+
+.buttom4 img {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.buttom4 img:hover {
+
+  transform: scale(1.2);
+}
+
+.buttom5 img {
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+/*����Ƶ�ͼƬ�Ŵ�1.2��*/
+.buttom5 img:hover {
+
+  transform: scale(1.2);
+}
+
+.cnm1 p, .cnm2 p, .cnm3 p {
+  color: #fff;
+  padding-left: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  display: none;
+}
+
+
+.wz:hover {
+  opacity: 0.5;
+}
+
+.show:hover {
+  opacity: 0.5;
+}
+
+.btns:hover {
+  opacity: 0.5;
+}

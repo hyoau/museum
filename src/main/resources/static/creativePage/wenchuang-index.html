@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="css/wc1-css.css" rel="stylesheet">
+  <link href="css/jCircle.css" rel="stylesheet">
+</head>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/jCircle.min.js"></script>
+<!--<script src="css/jCircle.css"></script>-->
+
+<body>
+<!--top栏开始-->
+<div id="topNavHL">
+  <div class="ww">
+    <div id="logoHL">
+      <a href="javascript:void(0)">
+        <img alt="故宫博物馆" src="picture/s5ae967bee5bd2.png">
+      </a>
+    </div>
+    <ul class="navHL">
+      <li>
+        <a href="javascript:void(0)">首页</a>
+      </li>
+      <li class="daolang">
+        <a href="javascript:void(0)">导览</a>
+      </li>
+      <li class="zhanlang">
+        <a href="javascript:void(0)">展览</a>
+      </li>
+      <li class="jiaoyu">
+        <a href="javascript:void(0)">教育</a>
+      </li>
+      <li class="tansuo">
+        <a href="javascript:void(0)">探索</a>
+      </li>
+      <li class="xueshu">
+        <a href="javascript:void(0)">学术</a>
+      </li>
+      <li class="wenchuang">
+        <a href="javascript:void(0)">文创</a>
+      </li>
+      <li class="guanyu">
+        <a href="javascript:void(0)">关于</a>
+      </li>
+    </ul>
+
+    <div id="loginHL">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:void(0)">
+            <span class="person"></span>
+            <i class="icon"></i>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="language"></span>
+            <i class="icon"></i>
+          </a>
+        </li>
+        <li></li>
+        <li>
+          <a href="javascript:void(0)">
+            <span class="search"></span>
+            <i class="icon"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="hideNav">
+        <a href="javascript:void(0)"></a>
+      </div>
+    </div>
+
+  </div>
+  <!-- 隐藏的导航栏开始 -->
+  <div class="hideBar daolangHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">开放时间</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">票务服务</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">交通路线</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">游览须知</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">全景故宫</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar zhanlangHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">近期展览</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">专馆</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">原状陈列</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">赴外展览</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar jiaoyuHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">教育新闻</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫博物院教育中心</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">国际博协培训中心</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫志愿者</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar tansuoHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">建筑</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">藏品</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">古籍</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">宫廷历史</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文物医院</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文化专题</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">名画记</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">藏品总目</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar xueshuHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">学术活动</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">专家名录</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫研究院</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫学院</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">其它学术机构</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar wenchuangHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">故宫出版</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文创产品</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫壁纸</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫APP</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫游戏</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hideBar guanyuHL">
+    <div class="tri">
+      <img alt="" src="picture/arrow1.png">
+    </div>
+    <ul>
+      <li>
+        <a href="javascript:void(0)">故宫出版</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">文创产品</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫壁纸</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫APP</a>
+      </li>
+      <li></li>
+      <li>
+        <a href="javascript:void(0)">故宫游戏</a>
+      </li>
+    </ul>
+  </div>
+  <!-- 隐藏的导航栏结束 -->
+</div>
+
+
+<!--主体部分开始-->
+
+<div class="body winchance">
+  <!--主体广告开始-->
+  <div class="banner">
+    <img alt="" src="images/s5925048a5fb61.png">
+  </div>
+  <!--主体广告结束-->
+  <!--主体大盒子开始-->
+  <div class="box">
+
+    <div class="h1"></div>
+
+    <div class="box1">
+      <!--主体第一个部分卖书轮播图开始-->
+      <div class="periodical">
+        <div class="focus">
+          <div class="frame">
+            <div class="child" style="display:block; ">
+              <div class="image">
+                <a href="#">
+                  <img alt="思文永在" src="picture/s5b3b3ae5e8a64.png"
+                       style="width: 342px;height: 413px;">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">思文永在</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    这部回忆录的成书过程中，除了作者梁柏有女士之外，还有多位梁氏后人参与其中，有些甚至是高龄命笔，数易其稿。完全可以这样说，正是因为这个与国家命运同呼吸、共患难的家族强大的凝聚力与责任感，才有了《思文永在》这部回忆录的出版。</p>
+                </a>
+              </div>
+            </div>
+            <div class="child" style="display:none">
+              <div class="image">
+                <a href="#">
+                  <img alt="北京梦华录 套装4册" src="picture/s5b3b3ae5e9b09.png"
+                       style="width: 342px;height: 413px;">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">北京梦华录 套装4册</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    是一位世纪老人——
+                    盛锡珊对生活了九十余年的北京城的隆重献礼，老人以他特有的如椽铁笔，将记忆中的城市风貌还原在方寸之间，任由自己徜徉在一张张记忆的画面中，充满了感情，充满了爱…… </p>
+                </a>
+              </div>
+            </div>
+            <div class="child" style="display:none">
+              <div class="image">
+                <a href="#">
+                  <img alt="百年原是梦：和珅的悲喜人生" src="picture/s5b3b39af87170.png"
+                       style="width: 342px;height: 413px;">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">百年原是梦：和珅的悲喜人生</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    《百年原是梦(和珅的悲喜人生)》将依据档案记录、历史学家的研究成果，以及丰富的历史文物图片，相对轻松的语言，尽量揭示出和珅的“庐山真面目”……</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav">
+            <a class href="javascript:;"></a>
+            <a class href="javascript:;"></a>
+            <a class href="javascript:;"></a>
+          </div>
+          <div class="button">
+            <a href="#">更多故宫刊物</a>
+            <a href="#">故宫出版旗舰店</a>
+          </div>
+          <div class="icon"></div>
+        </div>
+      </div>
+      <!--主体第一个部分轮卖书播图结束-->
+      <script src="js/wc1-js.js"></script>
+      <!--主体第二个部分卖扇子轮播图开始-->
+      <div class="protects">
+        <div class="focus">
+          <div class="frame">
+            <div class="child ">
+              <div class="icon1">
+                <img alt="" src="picture/s5b447aca93ccc.png">
+              </div>
+              <div class="image">
+                <a href="#">
+                  <img alt="蹴鞠 胸针" src="picture/s5b447baa16144.png"
+                       style="width: 342px;height: 413px;">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">蹴鞠 胸针</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    设计来源于故宫书画藏品，分别取材于：宋《出水芙蓉》图；宋徽宗《夏日》诗帖；宋《千里江山》图；明《项圣谟花卉册》。团扇选用真丝材质，轻薄透亮；配以多彩流苏，柔顺光滑。夏日午后小憩，小扇轻摇，清风徐来。
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="child ">
+              <div class="icon1">
+                <img alt="" src="picture/s5b447aff6ef26.png">
+              </div>
+              <div class="image">
+                <a href="#">
+                  <img alt="清风徐来 真丝团扇" src="picture/s5b447aff6f8a0.png"
+                       style="width: 342px;height: 413px;">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">清风徐来 真丝团扇</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    设计来源于故宫书画藏品，分别取材于：宋《出水芙蓉》图；宋徽宗《夏日》诗帖；宋《千里江山》图；明《项圣谟花卉册》。团扇选用真丝材质，轻薄透亮；配以多彩流苏，柔顺光滑。夏日午后小憩，小扇轻摇，清风徐来。
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="child ">
+              <div class="icon1">
+                <img alt="" src="picture/s5b0f4b219a04c.png">
+              </div>
+              <div class="image">
+                <a href="#">
+                  <img alt="故宫猫手表"
+                       src="picture/s5b0f4e7d37f9a.png">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">故宫猫手表</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    故宫猫手表铭记着时光的流逝，滴答声中，讲述着历史的故事。造型可爱，计时精准，佩戴方便。
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="child ">
+              <div class="icon1">
+                <img alt="" src="picture/s5b0f4b6aa43bf.png">
+              </div>
+              <div class="image">
+                <a href="#">
+                  <img alt="故宫猫书包"
+                       src="picture/s5b0f4eb98b266.png">
+                </a>
+              </div>
+              <div class="text">
+                <div class="public-title">
+                  <span class="s1"></span>
+                  <a href="#">故宫猫书包</a>
+                  <span class="s2"></span>
+
+                </div>
+                <a href="#">
+                  <div class="text-1"></div>
+                  <p>
+                    书包图案选用故宫猫经典形象，包身选用故宫标志色彩——红色和黄色，体现了现代风格与传统元素的结合。故宫猫书包与您相伴，祈盼吉祥，守护平安。
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav">
+            <a class href="javascript:;"></a>
+            <a class href="javascript:;"></a>
+            <a class href="javascript:;"></a>
+            <a class href="javascript:;"></a>
+          </div>
+          <div class="button">
+            <a href="#">故宫商城</a>
+            <a href="#">故宫文创旗舰店</a>
+            <a href="#">故宫淘宝</a>
+          </div>
+          <div class="icon"></div>
+        </div>
+      </div>
+      <!--主体第二个部分卖扇子轮播图结束-->
+      <!--主体第三个部分壁纸轮播图开始-->
+      <div class="item3">
+        <div class="icon1">
+
+        </div>
+        <div class="icon2"></div>
+        <div class="piclist">
+          <div class="img i1">
+            <img alt="" src="picture/s5b3592e6cb2be.png">
+            <a class="mask downs" href="#" tittle="世人谓我恋长安"></a>
+          </div>
+          <div class="img i2">
+            <img alt="" src="picture/s5b35a6fe48c5e.png">
+            <a class="mask downs" href="#" tittle="其实只恋长安某"></a>
+          </div>
+          <div class="img i3">
+            <img alt="" src="picture/s5b35a47d0df1a.png">
+            <a class="mask downs" href="#" tittle="择一城终老"></a>
+          </div>
+          <div class="img i4">
+            <img alt="" src="picture/s5b35a268b4d0d.png">
+            <a class="mask downs" href="#" tittle="等一人白首"></a>
+          </div>
+        </div>
+        <div class="text">
+          <div class="public-title">
+            <span class="s1"></span>
+            缤纷你的移动生活
+            <span class="s2"></span>
+          </div>
+          <p>把故宫装进口袋</p>
+          <div class="button">
+            <a href="#">更多故宫壁纸</a>
+          </div>
+        </div>
+      </div>
+      <!--主体第三个部分壁纸轮播图结束-->
+      <!--主体第四个部分皮肤轮播图开始-->
+      <div class="item3-1">
+        <div class="text">
+          <div class="public-title" style="margin-top:40px;">
+            <span class="s1"></span>
+            <a href="#">故宫输入法皮肤</a>
+            <span class="s2"></span>
+          </div>
+          <div class="gengduo">更多精彩皮肤、表情等你来发现</div>
+
+          <div class="desc1"></div>
+          <div class="button">
+            <a href="#">更多故宫皮肤</a>
+          </div>
+        </div>
+        <div class="imglist clearfix">
+          <div class="item">
+            <img alt="" src="picture/s5a5dba0852e2d.jpg">
+            <a href="#"></a>
+          </div>
+          <div class="item">
+            <img alt="" src="picture/s5a5dba0856646.jpg">
+            <a href="#"></a>
+          </div>
+          <div class="item">
+            <img alt="" src="picture/s5a5dba0855bd7.jpg">
+            <a href="#"></a>
+          </div>
+
+        </div>
+        <div class="gif1">
+          <img alt="" src="picture/s5a5c666c1f559.gif">
+        </div>
+        <div class="gif2">
+          <img alt="" src="picture/s5a5d6f9528d84.png">
+        </div>
+      </div>
+      <!--主体第四个部分皮肤轮播图结束-->
+      <!--主体第五个部分游戏轮播图开始-->
+      <div class="item4">
+        <div class="icon"></div>
+        <div class="child">
+          <div class="text">
+            <div class="public-title">
+              <span class="s1"></span>
+              <a href="#"> 太和殿的脊兽 </a>
+              <span class="s2"></span>
+            </div>
+            <p>太和殿屋脊上的脊兽顺序都乱了 <br>
+
+              请把他们放在正确的位置</p>
+          </div>
+          <div class="img">
+            <img alt="" src="picture/s58535685318b3.png">
+          </div>
+        </div>
+        <div class="nav"></div>
+        <div class="button">
+          <a href="#">更多故宫游戏</a>
+        </div>
+      </div>
+      <!--主体第五个部分游戏轮播图结束-->
+      <!--主体第六个部分最大轮播图开始-->
+      <div class="item5 now">
+        <div class="icon1"></div>
+        <div class="icon"></div>
+        <div class="icon2"></div>
+        <div class="icon3"></div>
+
+        <div class="arc">
+          <div class="arcbox">
+            <div class="img " style="position: absolute; left:104.016px; top:381.232px">
+              <img alt="每日故宫" src="picture/s591d444ba3fdb.png">
+            </div>
+            <div class="img " style="position: absolute; left:-5.98374px; top:301.313px">
+              <img alt="故宫陶瓷馆" src="picture/s5864b1c769f77.png">
+            </div>
+            <div class="img" style="position: absolute; left:-48px; top:172px">
+              <img alt="清代皇帝服饰" src="picture/s5864b1b359a16.png">
+            </div>
+            <div class="img" style="position: absolute; left:-5.98374px; top:42.6872px">
+              <img alt="韩熙载夜宴图" src="picture/s5864b19c97a4a.png">
+            </div>
+            <div class="img" style="position: absolute; left:104.016px; top:-37.2324px">
+              <img alt="紫禁城祥瑞" src="picture/s5864b18134a04.png">
+            </div>
+            <div class="img" style="position: absolute; left:239.984px; top:-37.2324px">
+              <img alt="胤禛美人图" src="picture/s5864b1687ce05.png">
+            </div>
+            <div class="img" style="position: absolute; left:349.984px; top:42.6872px">
+              <img alt="皇帝的一天" src="picture/s5864b154802a4.png">
+            </div>
+            <div class="img img1" style="position: absolute; left:392px; top:172px">
+              <img alt="紫禁城祥瑞PRO" src="picture/s5864b18134a04.png">
+            </div>
+            <div class="img" style="position: absolute; left:349.984px; top:301.313px">
+              <img alt="故宫社区" src="picture/s5912d2bb11510.png">
+            </div>
+            <div class="img" style="position: absolute; left:239.984px; top:381.232px">
+              <img alt="故宫展览" src="picture/s5864b1f90e99f.png">
+            </div>
+          </div>
+
+        </div>
+        <div class="button1">
+          <a class="a prev" href="javascript:;"></a>
+          <a class="a next" href="javascript:;"></a>
+        </div>
+        <div class="imgtextwarp">
+          <div class="w1  ">
+            <div class="imglist">
+              <img alt="皇帝的一天" src="picture/s5864afeeda8a5.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">皇帝的一天</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>紫禁城高高的宫墙后面，昔日的天子究竟过着怎样的生活呢？这是一本故宫博物院官方出品，专为孩子们讲过去的未来“书”。乾清门外的小
+                    狮子将带你角色扮演，深入清宫，了解皇帝一天的衣食起居和工作娱乐，还有更多文物卡片和霸气成就等你来收集！</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="胤禛美人图" src="picture/s5864b00e6b9d9.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">胤禛美人图</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>故宫博物院出品的首个应用，让您指尖轻触，从十二幅美人屏风画像一窥清朝盛世华丽优雅的宫廷生活。</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="紫禁城祥瑞" src="picture/s5864b0e41ca33.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">紫禁城祥瑞</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>故宫博物院官方出品，2014年清新发布！<br>
+                    独家揭秘紫禁城里的祥瑞符号，带您领略宫廷珍宝上的皇家文化。</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="韩熙载夜宴图" src="picture/s5864afa72c459.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">韩熙载夜宴图</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>
+                    南唐末年，朝廷重臣韩熙载为避免陷入政治的泥潭，故意沉溺于夜宴笙歌、不问世事。后主李煜心生疑问，派宫廷画师顾闳中深夜潜入韩府，目识心记，画下了不朽名作《夜宴图》。根据这幅院藏珍品，故宫博物院集两岸三地学者及艺术家之心力，历时两年，以专业的学术资料、丰富的媒体内容及创新的交互美学，精心研发了《韩熙载夜宴图》App。</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="清代皇帝服饰" src="picture/s5864af8802089.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">清代皇帝服饰</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>
+                    清帝冠服是中国数千年服饰文化史中不可或缺的一页，也是故宫博物院宫廷旧藏中的重要组成部分。故宫博物院精心打造的《清代皇帝服饰》iPad应用程序，邀您与清代皇帝冠服进行一次全方位的亲密接触！</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="故宫陶瓷馆" src="picture/s5864af6a03267.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">故宫陶瓷馆</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>
+                    故宫博物院官方出品，基于iPhone系列手机制作的《故宫陶瓷馆》APP，它以“时间轴”为骨架，串联起文华殿陶瓷馆在陈的全部藏品，每件藏品都有清晰的图片和专家撰写的介绍，更有8件精品可以水平360°水平环绕欣赏！把“故宫陶瓷馆”装进口袋里，随时随地看展览，长知识！ </p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1  ">
+            <div class="imglist">
+              <img alt="每日故宫" src="picture/s5864b0fe4e838.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">每日故宫</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>每日甄选一款馆藏珍品，邀您同游宋元山水，共访禁城别苑，探寻皇家日常那些令人惊叹的细节，感受传世珍品不竭的历史生命。</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="故宫展览" src="picture/s5864f2248055e.jpeg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">故宫展览</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>
+                    故宫出品，打造7×24小时的线上展厅，邀您指尖访古，看遍宫廷原状、常设专馆、专题特展，让故宫博物院精品展览一览无余，深度体验传统艺术与宫廷文化的丰富内涵。</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="故宫社区" src="picture/s5912cffaa3899.jpg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">故宫社区</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>故宫社区，当然故宫出品，宫粉们信得过的靠谱组织！<br>
+
+                    仰望星空，亲历紫微宫中的故事、新事；纵览世间，在紫微城中建造属于自己的宅院，走街串巷探寻别样的文化空间，最具创新玩法的文化体验，
+                    可持续生长的文化生态，这是一个有温度、会呼吸的线上文化社区。</p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w1 ">
+            <div class="imglist">
+              <img alt="紫禁城祥瑞PRO" src="picture/s5b0299e0e7ff6.jpg">
+            </div>
+            <div class="text">
+              <div class="w0">
+                <div class="textw">
+                  <div class="public-title">
+                    <span class="s1"></span>
+                    <a href="#">紫禁城祥瑞PRO</a>
+                    <span class="s2"></span>
+                  </div>
+                  <p>《紫禁城祥瑞》全明星阵容强势扩容回归，一起来探索精彩无限的“祥瑞之岛”，破解传统文化符号背后隐藏的秘密吧！<br>
+                    清代准皇后如何通过大婚化身为“凤”？狻猊为何总为香具代言？打开球形熏炉3D模型的外壳，看看熏炉滚动时，悬心机械结构如何保持中心盛香小碗始终朝上……《紫禁城祥瑞PRO》以主题性、多角度呈现17种传统祥瑞符号，甄选170余件故宫博物院藏文物精品，解读这些传统符号的历史演变及文化内涵。
+                  </p>
+                  <div class="button">
+                    <a class="a1" href="#"></a>
+                    <!--<a href="#" class="a2"></a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!--主体第六个部分最大轮播图结束-->
+    </div>
+
+
+  </div>
+  <div class="h2"></div>
+
+</div>
+</div>
+
+
+<!--主体部分结束-->
+
+<!--页脚开始-->
+<div class="pageWide" id="footer">
+  <div class="stats">
+    <div class="total">网站访问量</div>
+    <ul>
+      <li>2</li>
+      <li>3</li>
+      <li>2</li>
+      <li>5</li>
+      <li>0</li>
+      <li>7</li>
+      <li>5</li>
+      <li>0</li>
+    </ul>
+  </div>
+  <div class="webInfo clearfix">
+    <ul>
+      <li>
+        <a href="javascript:void(0)">网站地图</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">相关链接</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">影像授权</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">隐私政策</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">版权声明</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">常见问题 </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">联系我们</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">调查问卷 </a>
+      </li>
+    </ul>
+  </div>
+  <div class="icp">
+    <p>COPYRIGHT © 2015 故宫博物院. ALL RIGHTS RESERVED &nbsp;京ICP备05067311号-1</p>
+    <div class="webDev">
+      <a href="javascript:void(0)">网站建设:</a>
+      &nbsp;&nbsp;
+      <a href="javascript:void(0)">北京分形科技</a>
+    </div>
+  </div>
+  <div class="suggestion">
+    <a href="javascript:void(0)">浏览建议</a>
+  </div>
+  <div class="qrCode">
+    <a href="javascript:void(0)"></a>
+    <a class="hand" href="javascript:void(0)"></a>
+  </div>
+  <div class="qrCodeImg">
+    <img src="picture/s5951d5fde520f.jpg">
+  </div>
+</div>
+
+
+<!--页脚结束-->
+</body>
+</html>

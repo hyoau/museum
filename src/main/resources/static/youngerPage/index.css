@@ -1,0 +1,858 @@
+@charset "utf-8";
+.focusarea {
+  position: absolute;
+  width: 100%;
+  z-index: 900;
+}
+
+.focusarea section.style_1 {
+  background: url(images/focusimgbg.jpg) repeat-x top;
+  display: block;
+  height: 600px;
+  position: relative;
+  width: 100%;
+}
+
+.focusarea section.style_1 .mpic {
+  margin: auto;
+  padding-top: 182px;
+  width: 1150px;
+  text-align: center;
+  position: relative;
+  padding-right: 50px;
+  background: url(images/focusimg_07.jpg) no-repeat center 119px;
+  height: 418px;
+}
+
+.focusarea section.style_1 .mpic #damaoxianwraper {
+  width: 470px;
+  height: 395px;
+  background: url(images/indexbg.png) no-repeat;
+  margin: auto;
+  position: relative;
+}
+
+.focusarea section.style_1 .mpic #damaoxianwraper a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0
+}
+
+.focusarea section.style_1 .cloud {
+  margin: auto;
+  position: absolute;
+  background: url(images/cloud.png) no-repeat top center;
+  height: 680px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 1200px;
+}
+
+.map {
+  padding-top: 600px;
+  background: #EDE8D5;
+}
+
+.mapwrap {
+  overflow: hidden;
+  width: 100%;
+  height: 933px;
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+}
+
+.map .tools {
+  position: absolute;
+  width: 49px;
+  bottom: 80px;
+  right: 80px;
+  z-index: 1;
+}
+
+.map .tools li, .popmap .tools li {
+  margin: 10px 0;
+}
+
+.map .tools .caption, .popmap .tools .caption {
+  background: url(images/mapicon.png) no-repeat;
+  background-position: 0 0;
+  height: 115px;
+}
+
+.map .tools .zoom, .popmap .tools .zoom {
+  height: 88px;
+}
+
+.map .tools .zoom span, .popmap .tools .zoom span {
+  background: url(images/mapicon.png) no-repeat;
+  display: block;
+  height: 44px;
+  cursor: pointer;
+}
+
+.map .tools .zoom span.zoomin, .popmap .tools .zoom span.zoomin {
+  background-position: 0 -122px;
+}
+
+.map .tools .zoom span.zoomout, .popmap .tools .zoom span.zoomout {
+  background-position: 0 -166px;
+}
+
+.map .tools .zoom span.zoomin:hover, .popmap .tools .zoom span.zoomin:hover {
+  background-position: 0 -218px;
+}
+
+.map .tools .zoom span.zoomout:hover, .popmap .tools .zoom span.zoomout:hover {
+  background-position: 0 -262px;
+}
+
+.map .sprite {
+  background: url(images/spriteanimate.png) no-repeat;
+  height: 192px;
+  width: 136px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  background: #EDE8D5 url(images/penbg.jpg) no-repeat top;
+}
+
+.content .penbg {
+  background: url(images/penbg.png) no-repeat center center;
+  height: 53px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: -53px;
+  left: 0;
+}
+
+.content .promotearea {
+  padding: 90px 0 40px 0;
+}
+
+.content .promotearea ul li {
+  background: url(images/promotebg.png) no-repeat;
+  height: 207px;
+  width: 400px;
+  float: left;
+  _display: inline;
+}
+
+.content .promotearea ul li a {
+  display: block;
+  padding: 58px 0 0 54px;
+}
+
+.content .promotearea ul li img {
+  float: left;
+  _display: inline;
+  margin-right: 20px;
+}
+
+.content .promotearea ul li a:hover img {
+  animation: shake 0.8s linear 0s infinite;
+  -webkit-animation: shake 0.8s linear 0s infinite;
+}
+
+.content .promotearea ul li section {
+  float: left;
+  display: inline;
+  width: 180px;
+}
+
+.content .promotearea ul li h3 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.content .promotearea ul li p {
+  color: #4c4c4c;
+}
+
+.content .promotearea ul li a:hover h3, .content .promotearea ul li a:hover p {
+  color: #9e8641;
+}
+
+/*map css*/
+
+.animatemarkerwrap {
+  background: none;
+}
+
+.animatemarker {
+  animation: flow 5s linear 0s infinite alternate;
+  -webkit-animation: flow 5s linear 0s infinite alternate;
+  -o-animation: flow 5s linear 0s infinite alternate;
+  -moz-animation: flow 5s linear 0s infinite alternate;
+  transform-origin: bottom left;
+  -webkit-transform-origin: bottom left;
+  -o-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  position: absolute;
+}
+
+.museumbg .leaflet-popup-content-wrapper, .exbg .leaflet-popup-content-wrapper {
+  background: none;
+  box-shadow: none;
+}
+
+.museumbg .leaflet-popup-tip-container, .exbg .leaflet-popup-tip-container {
+  display: none;
+}
+
+.museumbg {
+  width: 390px;
+  height: 300px;
+  background: url(images/mubg.png);
+}
+
+.exbg {
+  width: 390px;
+  height: 300px;
+  background: url(images/exbg.png);
+}
+
+.markertitle {
+  margin-top: 23px;
+  margin-left: 24px;
+  font-size: 15px;
+  width: 230px;
+  font-family: "Hiragino Sans GB W3", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti Light";
+  line-height: 22px;
+}
+
+.markercontent {
+  margin-left: 24px;
+  margin-top: 10px;
+  width: 230px;
+  color: #888;
+  font-family: "Hiragino Sans GB W3", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti Light";
+  line-height: 20px;
+}
+
+.markerlink {
+  width: 230px;
+  position: absolute;
+  left: 46px;
+  bottom: 105px;
+  font-family: "Hiragino Sans GB W3", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti Light";
+}
+
+.markerlink a:hover {
+  color: #C00;
+}
+
+.leaflet-marker-pane .leaflet-marker-icon {
+  z-index: 999 !important;
+}
+
+.leaflet-marker-pane .animatemarkerwrap {
+  z-index: 9000 !important
+}
+
+/*wangyan*/
+.gb .content {
+  background: none;
+}
+
+.gb .content .penbg {
+  background: none;
+  height: 251px;
+  top: -175px;
+  left: 50%;
+  margin-left: -645px;
+  width: auto;
+}
+
+.gb .content .gbtitle {
+  text-align: center;
+}
+
+.gb .content .penbg img {
+  width: 100%;
+}
+
+.gb .content .mainwrap {
+  width: 1000px;
+}
+
+.gb .content .promotearea {
+  padding: 40px 0 15px 0;
+  position: relative;
+  z-index: 20;
+}
+
+.gb .content .promotearea ul li {
+  background: none;
+  height: auto;
+  border-left-width: 2px;
+  border-image: url(images/line.png);
+  width: auto;
+}
+
+.gb .content .promotearea ul li .news {
+  padding: 10px 44px 0 44px;
+  width: 240px;
+  text-align: center;
+}
+
+.gb .content .promotearea ul li .news i {
+  text-align: center;
+  color: #e10200;
+  font-size: 14px;
+  font-family: "Times New Roman", serif;
+}
+
+.gb .content .promotearea ul li .news a {
+  display: block;
+  text-align: left;
+  padding: 0;
+  font-size: 16px;
+  color: #000;
+  line-height: 24px;
+  padding: 19px 0 17px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.gb .content .promotearea ul li .news a:hover, .gb .content .soundwrap ul li a:hover h3, .gb .content .mainwrap .download li a:hover span, .gb .content .mainwrap .alink a:hover {
+  color: #e10200;
+}
+
+.gb .content .promotearea ul li .news p {
+  color: #767676;
+  text-align: left;
+  height: 12em;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.gb .content .line {
+  width: 2px;
+  height: 283px;
+  background: url(images/line.png) no-repeat;
+}
+
+.gb .content .centerimg {
+  text-align: center;
+}
+
+.gb .content .soundwrap ul {
+  margin-left: -45px;
+  padding: 45px 0 15px 0;
+}
+
+.gb .content .soundwrap ul li {
+  width: 33.33%;
+  float: left;
+}
+
+.gb .content .soundwrap ul li .news {
+  padding-left: 45px;
+}
+
+.gb .content .soundwrap ul li a h3 {
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+  padding: 25px 0 15px 0;
+}
+
+.gb .content .soundwrap ul li a span {
+  color: #767676;
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", sans-serif;
+}
+
+.gb .content .play {
+  position: relative;
+}
+
+.gb .content .play i {
+  width: 31px;
+  height: 31px;
+  display: block;
+  background: url(images/sound.png) no-repeat;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+}
+
+.gb .content .mapwrap {
+  height: auto;
+}
+
+.gb .content .map {
+  background: none;
+  padding: 55px 0 0 0;
+}
+
+.gb .content .map .maptop {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 10;
+}
+
+.gb .content .map .mapbottom {
+  top: auto;
+  bottom: 0
+}
+
+.gb .content .taihe {
+  margin-top: -20px;
+}
+
+.gb .content .gtext {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -170px;
+}
+
+.gb .content .ty-2 {
+  position: absolute;
+  top: 387px;
+  left: 50%;
+  margin-left: -75px;
+  background: url(images/taotie.png) no-repeat;
+  height: 118px;
+  width: 149px;
+}
+
+.gb .content .ty-2.r {
+  background-position: 0 -118px
+}
+
+.gb .content .ty-5 {
+  position: absolute;
+}
+
+.gb .content .ty-3 {
+  position: absolute;
+}
+
+.gb .content .ty-4 {
+  position: absolute;
+}
+
+.gb .content .mainwrap .more {
+  padding: 50px 0 60px 0;
+}
+
+.gb .content .mainwrap .weixin li {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.gb .content .mainwrap .weixin li span, .gb .content .mainwrap .download li a span {
+  display: block;
+  color: #5a5a5a;
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", sans-serif;
+  padding-top: 10px;
+}
+
+.gb .content .mainwrap .link {
+  width: 451px;
+  padding-left: 14px;
+}
+
+.gb .content .mainwrap .alink {
+  background: url(images/foot-4.jpg) no-repeat;
+  margin-top: 20px;
+  padding: 40px 45px 65px 45px;
+}
+
+.gb .content .mainwrap .alink a {
+  display: block;
+  float: left;
+  width: 50%;
+  font-size: 14px;
+  font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft YaHei", sans-serif;
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.gb .content .mainwrap .download ul {
+  width: 470px;
+  padding: 0 15px 0 35px;
+}
+
+.gb .content .mainwrap .download li {
+  width: 100px;
+  text-align: center;
+  margin: 0 8px 28px 8px;
+}
+
+.gb .content .mainwrap .download li img {
+  width: 100px;
+  height: 100px;
+  border-radius: 18px;
+  box-shadow: 0 0 10px 0 #ddd;
+}
+
+.gb .content .line2 {
+  margin-left: 42px;
+}
+
+.gb .content .mainwrap .download .ulink {
+  padding-left: 60px;
+}
+
+.gb .content .mainwrap .download .ulink li {
+  width: auto;
+  margin: 0 50px 25px 0;
+}
+
+.gb .content .mainwrap .download .ulink li a {
+  display: block;
+  border: 1px solid #d5d5d5;
+  width: 168px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.gb .content .mainwrap .download .ulink li a img {
+  border-radius: 0;
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  box-shadow: none
+}
+
+.gb .content .mainwrap .download .ulink li a span {
+  float: left;
+  color: #5a5a5a;
+  font-size: 14px;
+  padding: 0;
+  margin-left: 45px;
+}
+
+.gb .content .mainwrap .download .ulink li a:hover span {
+  color: #e10200;
+}
+
+.gb .content .mainwrap .download .ulink li a:hover .left {
+  animation: gogo 0.5s linear 0s infinite alternate;
+  -webkit-animation: gogo 0.5s linear 0s infinite alternate;
+  -o-animation: gogo 0.5s linear 0s infinite alternate;
+  -moz-animation: gogo 0.5s linear 0s infinite alternate;
+}
+
+@keyframes gogo {
+  0% {
+    transform: translate(0px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
+@-moz-keyframes gogo {
+  0% {
+    transform: translate(0px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
+@-webkit-keyframes gogo {
+  0% {
+    transform: translate(0px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
+@-o-keyframes gogo {
+  0% {
+    transform: translate(0px, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
+.gb .content .mainwrap .scan {
+  position: relative;
+}
+
+.gb .content .mainwrap .scan .code {
+  margin: 0 40px 0 20px;
+}
+
+.gb .content .mainwrap .scan .code i.c-1 {
+  background: url(images/code.png) no-repeat 0 0;
+  width: 255px;
+  height: 219px;
+  display: block;
+}
+
+.gb .content .mainwrap .scan .code i.c-2 {
+  background: url(images/code.png) no-repeat 0 -219px;
+  width: 255px;
+  height: 260px;
+  display: block;
+}
+
+.gb .content .mainwrap .scan .weibo {
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.gb .content .mainwrap .scan .weixin {
+  position: absolute;
+  bottom: 43px;
+  right: 305px;
+}
+
+.gb .footer .mainwrap {
+  width: auto;
+}
+
+.gb .foottop {
+  margin-top: 100px;
+}
+
+.gb .focusarea {
+  z-index: 0;
+  position: static;
+  max-width: 1920px;
+  min-width: 1200px;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gb .focusarea.autumn .centerbg {
+  background: url(images/bg_02.jpg) no-repeat center 335px;
+  height: 100vh;
+  max-height: 908px;
+  margin: auto;
+  position: relative;
+}
+
+.gb .focusarea.autumn .centerbg canvas {
+  position: absolute;
+  left: 0;
+  top: -240px;
+  left: 50%;
+  margin-left: -960px;
+}
+
+.gb .focusarea.autumn .centerbg .topwbg {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  background: url(images/topwbg.png);
+  height: 90px;
+}
+
+.popmap {
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  display: none;
+  z-index: 9999;
+  min-width: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.popmap .close {
+  background: url(images/close.png) rgba(255, 255, 255, 0.7) no-repeat center center;
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+#mapcontainer {
+  height: 100%;
+  width: 100%;
+  background: #FDF3E9;
+}
+
+.mapguide {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  top: 140px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #c9ac7d;
+  border-radius: 0 0 60px 60px;
+  padding: 60px 0 20px;
+}
+
+.mapguide li {
+  height: 100px;
+  cursor: pointer;
+  width: 120px;
+}
+
+.mapguide .guide_1 {
+  background: url(images/mapguide1.png) no-repeat center center;
+}
+
+.mapguide .guide_2 {
+  background: url(images/mapguide2.png) no-repeat center center;
+}
+
+.mapguide .guide_3 {
+  background: url(images/mapguide3.png) no-repeat center center;
+}
+
+.mapguide .guide_1:hover {
+  background-position: 0 0
+}
+
+.mapguide .guide_2:hover {
+  background-position: 0 100%
+}
+
+.mapguide .guide_3:hover {
+  background-position: 100% 0
+}
+
+.mapswitch {
+  position: absolute;
+  z-index: 1;
+  right: 65px;
+  top: 80px;
+  width: 76px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #c9ac7d;
+  border-radius: 45px;
+  padding: 20px 0 20px 0;
+}
+
+.mapswitch li {
+  height: 90px;
+  cursor: pointer;
+}
+
+.mapswitch .guide_1 {
+  background: url(images/exhib.png) no-repeat center 2px;
+}
+
+.mapswitch .switch {
+  background: url(images/switch.png) no-repeat center -16px;
+  height: 16px;
+  width: 30px;
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.mapswitch .guide_1.off .switch {
+  background-position: 0 0;
+}
+
+.spriteguide {
+  top: 80px;
+  left: 50px;
+  position: absolute;
+}
+
+.taihe {
+  background: url(images/taihe.jpg) #edefe4 no-repeat center top;
+  width: 100%;
+}
+
+.taihe .taihebottom {
+  background: url(images/taihebottom.png) no-repeat center top;
+  height: 39px;
+}
+
+.gamelist {
+  width: 860px;
+  margin: auto;
+  padding-bottom: 30px
+}
+
+.gamelist li {
+  float: left;
+  position: relative;
+  margin: 15px;
+}
+
+.gamelist li i {
+  display: block;
+  background: url(images/advanture_39.png) no-repeat;
+  height: 154px;
+  width: 270px;
+  position: absolute;
+  top: -8px;
+  left: -5px;
+}
+
+.gamelist li span {
+  display: block;
+  line-height: 30px;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.gamelist li:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90)
+}
+
+.gamelist li:hover span {
+  color: #e10200
+}
+
+.gamelist .gline {
+  background: url(images/gb/gline.png) no-repeat center;
+  height: 2px;
+  width: 376px;
+  margin: 0 auto 50px auto;
+}
+
+/*wangyan*/
+
