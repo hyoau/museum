@@ -47,10 +47,12 @@ public class UserController {
 
   @CrossOrigin("*")
   @RequestMapping("/api/user/create")
-  public void createUser(@RequestBody Request request) {
+  public Response createUser(@RequestBody HashMap<String, User> request) {
     log.info("Create user");
-    log.info("Request: " + request + " is created");
-    log.info(request.getData().toString());
+    User user = request.get("user");
+    log.info("User: " + user + " is created");
+    userService.insert(user);
+    return new Response(20000, "创建新用户成功", null);
   }
 
   @CrossOrigin("*")
