@@ -1,7 +1,7 @@
 package edu.nwu.museum.controller;
 
 import edu.nwu.museum.common.annotation.Log;
-import edu.nwu.museum.common.authentication.Response;
+import edu.nwu.museum.domain.Response;
 import edu.nwu.museum.common.exception.UnauthorizedException;
 import edu.nwu.museum.domain.User;
 import edu.nwu.museum.service.UserService;
@@ -72,17 +72,6 @@ public class LoginController {
     } else {
       return new Response(50008, "Login failed, unable to get user details.", null);
     }
-  }
-
-  @CrossOrigin("*")
-  @RequestMapping(value = "/user/list", method = RequestMethod.GET)
-  public Response getUserList(@RequestParam("offset") Integer offset) {
-    ArrayList<User> users = new ArrayList<>(userService.paginate(offset));
-    HashMap<String, Object> data = new HashMap<>();
-    for (User user: users) {
-      data.put("users", users);
-    }
-    return new Response(20000, "SUCCESS", data);
   }
 
   @CrossOrigin("*")

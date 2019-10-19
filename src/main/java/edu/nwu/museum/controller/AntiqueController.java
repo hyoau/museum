@@ -1,6 +1,6 @@
 package edu.nwu.museum.controller;
 
-import edu.nwu.museum.common.authentication.Response;
+import edu.nwu.museum.domain.Response;
 import edu.nwu.museum.domain.Antique;
 import edu.nwu.museum.service.AntiqueService;
 import java.util.ArrayList;

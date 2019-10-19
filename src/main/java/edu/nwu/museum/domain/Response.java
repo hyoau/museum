@@ -1,4 +1,4 @@
-package edu.nwu.museum.common.authentication;
+package edu.nwu.museum.domain;
 
 import lombok.Data;
 

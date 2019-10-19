@@ -2,6 +2,7 @@ package edu.nwu.museum.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
+import lombok.Builder;
 import lombok.Data;
 
 @Data

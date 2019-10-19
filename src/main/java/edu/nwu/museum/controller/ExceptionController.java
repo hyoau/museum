@@ -1,6 +1,6 @@
 package edu.nwu.museum.controller;
 
-import edu.nwu.museum.common.authentication.Response;
+import edu.nwu.museum.domain.Response;
 import edu.nwu.museum.common.exception.UnauthorizedException;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.shiro.ShiroException;
