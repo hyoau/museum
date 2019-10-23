@@ -3,7 +3,6 @@ package edu.nwu.museum.controller.admin;
 import edu.nwu.museum.controller.LoginForm;
 import edu.nwu.museum.domain.Response;
 import java.util.HashMap;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class LoginController {
-  @CrossOrigin
   @PostMapping("/user/login")
   public Response login(@RequestBody LoginForm loginform) {
     if (loginform.getUsername().equals("admin") && loginform.getPassword().equals("111111")) {
@@ -21,7 +19,6 @@ public class LoginController {
     }
   }
 
-  @CrossOrigin
   @GetMapping("/user/info")
   public Response getUserInfo() {
     HashMap<String, Object> data = new HashMap<>();

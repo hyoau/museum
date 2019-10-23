@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +19,6 @@ public class UserController {
   @Autowired
   private UserService userService;
 
-  @CrossOrigin()
   @RequestMapping("/api/user/create")
   public Response createUser(@RequestBody HashMap<String, User> request) {
     log.info("Create user");
@@ -30,7 +28,6 @@ public class UserController {
     return new Response(20000, "创建新用户成功", null);
   }
 
-  @CrossOrigin()
   @RequestMapping(value = "/api/user/list", method = RequestMethod.GET)
   public Response getUserList(@RequestParam("offset") Integer offset) {
     ArrayList<User> users = new ArrayList<>(userService.paginate(offset));

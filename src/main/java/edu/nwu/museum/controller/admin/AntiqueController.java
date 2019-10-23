@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +17,6 @@ public class AntiqueController {
   @Autowired
   private AntiqueService antiqueService;
 
-  @CrossOrigin()
   @GetMapping(value = "/api/antique/list")
   public Response getAntiqueList(@RequestParam("offset") Integer offset) {
     ArrayList<Antique> antiques = new ArrayList<>(antiqueService.paginate(offset));
