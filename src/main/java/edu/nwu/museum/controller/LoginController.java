@@ -30,7 +30,6 @@ public class LoginController {
   @Autowired
   private UserService userService;
 
-  @Log("logout")
   @RequestMapping(value = "/logout")
   public String logout() {
     // 使用权限管理工具进行用户的退出，跳出登录，给出提示信息
@@ -87,7 +86,6 @@ public class LoginController {
     return new Response(20000, "Login success", data);
   }
 
-  @Log("article")
   @RequestMapping(value = "/article", method = RequestMethod.GET)
   public Response article() {
     Subject subject = SecurityUtils.getSubject();

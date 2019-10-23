@@ -75,11 +75,6 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>1.1.17</version>
     </dependency>
-    <!-- AOP -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-    </dependency>
     <!-- Shiro Spring -->
     <dependency>
       <groupId>org.apache.shiro</groupId>
