@@ -1,6 +1,5 @@
 package edu.nwu.museum.controller;
 
-import edu.nwu.museum.domain.Request;
 import edu.nwu.museum.domain.Response;
 import edu.nwu.museum.domain.User;
 import edu.nwu.museum.service.UserService;
@@ -8,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,13 +21,11 @@ public class UserController {
   @Autowired
   private UserService userService;
 
-  @RequiresPermissions("user:user")
   @RequestMapping("/list")
   public List<User> userList() {
     return userService.findAll();
   }
 
-  @RequiresPermissions("user:add")
   @RequestMapping("/add")
   public List<User> userAdd() {
     User user = new User();
@@ -38,7 +34,6 @@ public class UserController {
     return userService.findAll();
   }
 
-  @RequiresPermissions("user:delete")
   @RequestMapping("/delete")
   public List<User> userDelete() {
     userService.deleteById("8832");

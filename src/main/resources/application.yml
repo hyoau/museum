@@ -5,7 +5,7 @@ spring:
     url: jdbc:mysql://39.107.230.204:3306/museum?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: test
     password: test
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
   messages:
     encoding: utf-8
   jackson:
