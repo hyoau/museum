@@ -1,4 +1,4 @@
-package edu.nwu.museum.controller;
+package edu.nwu.museum.controller.admin;
 
 import edu.nwu.museum.domain.Response;
 import edu.nwu.museum.domain.Antique;
@@ -8,8 +8,7 @@ import java.util.HashMap;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +18,8 @@ public class AntiqueController {
   @Autowired
   private AntiqueService antiqueService;
 
-  @CrossOrigin("*")
-  @RequestMapping(value = "/api/antique/list", method = RequestMethod.GET)
+  @CrossOrigin()
+  @GetMapping(value = "/api/antique/list")
   public Response getAntiqueList(@RequestParam("offset") Integer offset) {
     ArrayList<Antique> antiques = new ArrayList<>(antiqueService.paginate(offset));
     HashMap<String, Object> data = new HashMap<>();

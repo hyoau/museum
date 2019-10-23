@@ -1,11 +1,10 @@
-package edu.nwu.museum.controller;
+package edu.nwu.museum.controller.admin;
 
 import edu.nwu.museum.domain.Response;
 import edu.nwu.museum.domain.User;
 import edu.nwu.museum.service.UserService;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,26 +20,7 @@ public class UserController {
   @Autowired
   private UserService userService;
 
-  @RequestMapping("/list")
-  public List<User> userList() {
-    return userService.findAll();
-  }
-
-  @RequestMapping("/add")
-  public List<User> userAdd() {
-    User user = new User();
-    user.setUserId("8832");
-    userService.insert(user);
-    return userService.findAll();
-  }
-
-  @RequestMapping("/delete")
-  public List<User> userDelete() {
-    userService.deleteById("8832");
-    return userService.findAll();
-  }
-
-  @CrossOrigin("*")
+  @CrossOrigin()
   @RequestMapping("/api/user/create")
   public Response createUser(@RequestBody HashMap<String, User> request) {
     log.info("Create user");
@@ -50,7 +30,7 @@ public class UserController {
     return new Response(20000, "创建新用户成功", null);
   }
 
-  @CrossOrigin("*")
+  @CrossOrigin()
   @RequestMapping(value = "/api/user/list", method = RequestMethod.GET)
   public Response getUserList(@RequestParam("offset") Integer offset) {
     ArrayList<User> users = new ArrayList<>(userService.paginate(offset));
