@@ -32,9 +32,7 @@ public class UserController {
   public Response getUserList(@RequestParam("offset") Integer offset) {
     ArrayList<User> users = new ArrayList<>(userService.paginate(offset));
     HashMap<String, Object> data = new HashMap<>();
-    for (User user: users) {
-      data.put("users", users);
-    }
+    data.put("users", users);
     return new Response(20000, "SUCCESS", data);
   }
 }
