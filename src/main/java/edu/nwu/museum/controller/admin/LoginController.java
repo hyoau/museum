@@ -1,7 +1,7 @@
 package edu.nwu.museum.controller.admin;
 
 import edu.nwu.museum.controller.LoginForm;
-import edu.nwu.museum.domain.Response;
+import edu.nwu.museum.common.response.Response;
 import java.util.HashMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
