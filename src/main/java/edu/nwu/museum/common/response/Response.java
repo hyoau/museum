@@ -1,4 +1,4 @@
-package edu.nwu.museum.domain;
+package edu.nwu.museum.common.response;
 
 import lombok.Data;
 
