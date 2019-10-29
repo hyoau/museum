@@ -42,4 +42,6 @@ public class User implements Serializable {
   private Date updateDate;
   // 更新者id
   private String updater;
+  // 角色
+  private String role;
 }

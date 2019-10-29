@@ -19,6 +19,7 @@
     <result column="creator" jdbcType="VARCHAR" property="creator"/>
     <result column="update_date" jdbcType="DATE" property="updateDate"/>
     <result column="updater" jdbcType="VARCHAR" property="updater"/>
+    <result column="role" jdbcType="VARCHAR" property="updater"/>
   </resultMap>
 
   <select id="findAll" resultType="edu.nwu.museum.domain.User">
@@ -39,7 +40,8 @@
       create_date createDate,
       creator creator,
       update_date updateDate,
-      updater updater
+      updater updater,
+      role role
     FROM t_user
   </select>
 
@@ -61,7 +63,8 @@
       create_date createDate,
       creator creator,
       update_date updateDate,
-      updater updater
+      updater updater,
+      role role
     FROM t_user
     LIMIT 10 OFFSET #{offset}
   </select>
@@ -84,7 +87,8 @@
       create_date createDate,
       creator creator,
       update_date updateDate,
-      updater updater
+      updater updater,
+      role role
     FROM t_user
     WHERE user_id = #{userId}
   </select>
@@ -107,7 +111,8 @@
       create_date,
       creator,
       update_date,
-      updater
+      updater,
+      role
     ) VALUES (
       #{userId},
       #{userName},
@@ -125,7 +130,8 @@
       #{createDate},
       #{creator},
       #{updateDate},
-      #{updater}
+      #{updater},
+      #{role}
     )
   </insert>
 
@@ -147,7 +153,8 @@
         create_date = #{createDate},
         creator = #{creator},
         update_date = #{updateDate},
-        updater = #{updater}
+        updater = #{updater},
+        role = #{role}
     WHERE user_id = #{userId}
   </update>
 
