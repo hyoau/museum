@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 @Data
 public class Comment {
   //文物序列号
-  private Integer antiqueSeqNo;
+  private String antiqueId;
   //评论序列号
   private Integer commentSeqNo;
   //内容
