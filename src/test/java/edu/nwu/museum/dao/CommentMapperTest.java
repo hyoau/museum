@@ -38,6 +38,7 @@ public class CommentMapperTest {
   @Test
   public void testInsert() {
     Comment comment = new Comment();
+    comment.setAntiqueId("Meow");
     comment.setCommentSeqNo(8888);
     comment.setCommentContent("Meow");
     commentMapper.insert(comment);
@@ -47,19 +48,19 @@ public class CommentMapperTest {
   }
 
   @Test
-  public void testDelete() {
-    commentMapper.delete(8888);
+  public void testUpdate() {
+    Comment comment = commentMapper.find(1);
+    comment.setCommentSeqNo(8888);
+    comment.setCommentContent("Joo");
+    commentMapper.update(comment);
     System.out.println("====================");
     System.out.println(commentMapper.findAll());
     System.out.println("====================");
   }
 
   @Test
-  public void testUpdate() {
-    Comment comment = new Comment();
-    comment.setCommentSeqNo(8888);
-    comment.setCommentContent("Joo");
-    commentMapper.update(comment);
+  public void testDelete() {
+    commentMapper.delete(8888);
     System.out.println("====================");
     System.out.println(commentMapper.findAll());
     System.out.println("====================");
