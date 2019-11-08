@@ -29,7 +29,6 @@ public class PaperMapperTest {
 
   @Test
   public void testSelectById() {
-
     System.out.println("==========testSelectById==========");
     System.out.println(paperMapper.findById("1"));
     System.out.println(paperMapper.findById("3"));
@@ -62,7 +61,6 @@ public class PaperMapperTest {
 
   @Test
   public void testDeleteById() {
-
     System.out.println("==========testDeleteById==========");
     System.out.println(paperMapper.deleteById("6"));
     for (Paper userIterator: paperMapper.findAll()) {

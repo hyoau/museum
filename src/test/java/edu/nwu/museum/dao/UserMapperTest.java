@@ -51,23 +51,23 @@ public class UserMapperTest {
   }
 
   @Test
+  public void testUpdate() {
+    User user = userMapper.findById("8362");
+    user.setUserId("8362");
+    user.setUserName("Joo");
+    userMapper.update(user);
+    System.out.println("========== UserMapper Test ==========");
+    System.out.println(userMapper.findById("8362"));
+    System.out.println("========== UserMapper Test ==========");
+  }
+
+  @Test
   public void testDeleteById() {
     userMapper.deleteById("8362");
     System.out.println("========== UserMapper Test ==========");
     for (User userIterator: userMapper.findAll()) {
       System.out.println(userIterator);
     }
-    System.out.println("========== UserMapper Test ==========");
-  }
-
-  @Test
-  public void testUpdate() {
-    User user = new User();
-    user.setUserId("8362");
-    user.setUserName("Joo");
-    userMapper.update(user);
-    System.out.println("========== UserMapper Test ==========");
-    System.out.println(userMapper.findById("8362"));
     System.out.println("========== UserMapper Test ==========");
   }
 }

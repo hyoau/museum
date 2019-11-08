@@ -29,7 +29,7 @@ public class Museum {
   private Double museumTicketPrice;
   //  竣工时间
   @DateTimeFormat(pattern = "yyyy-MM-dd")
-  private Date museumCompleteTime;
+  private Date museumCompletedTime;
   //  组织结构说明
   private String museumManageImg;
   //  详细介绍

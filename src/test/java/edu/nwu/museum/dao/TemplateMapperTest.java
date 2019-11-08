@@ -47,19 +47,19 @@ public class TemplateMapperTest {
   }
 
   @Test
-  public void testDelete() {
-    templateMapper.delete("8362");
+  public void testUpdate() {
+    Template template = templateMapper.find("8362");
+    template.setTemplateId("8362");
+    template.setTemplateName("W.C.Martin");
+    templateMapper.update(template);
     System.out.println("====================");
     System.out.println(templateMapper.findAll());
     System.out.println("====================");
   }
 
   @Test
-  public void testUpdate() {
-    Template template = new Template();
-    template.setTemplateId("8362");
-    template.setTemplateName("Joo");
-    templateMapper.update(template);
+  public void testDelete() {
+    templateMapper.delete("8362");
     System.out.println("====================");
     System.out.println(templateMapper.findAll());
     System.out.println("====================");

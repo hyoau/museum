@@ -38,7 +38,7 @@ public class PermResourceMapperTest {
   @Test
   public void testInsert() {
     PermResource permResource = new PermResource();
-    permResource.setPermResId("222");
+    permResource.setPermResId("8362");
     permResource.setPermResName("小笨蛋");
     permResourceMapper.insert(permResource);
     System.out.println("====================");
@@ -47,19 +47,19 @@ public class PermResourceMapperTest {
   }
 
   @Test
-  public void testDelete() {
-    permResourceMapper.delete("222");
+  public void testUpdate() {
+    PermResource permResource = permResourceMapper.find("8362");
+    permResource.setPermResId("8362");
+    permResource.setPermResName("Joo");
+    permResourceMapper.update(permResource);
     System.out.println("====================");
     System.out.println(permResourceMapper.findAll());
     System.out.println("====================");
   }
 
   @Test
-  public void testUpdate() {
-    PermResource permResource = new PermResource();
-    permResource.setPermResId("8362");
-    permResource.setPermResName("Joo");
-    permResourceMapper.update(permResource);
+  public void testDelete() {
+    permResourceMapper.delete("8362");
     System.out.println("====================");
     System.out.println(permResourceMapper.findAll());
     System.out.println("====================");

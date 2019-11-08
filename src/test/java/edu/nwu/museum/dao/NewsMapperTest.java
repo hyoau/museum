@@ -29,7 +29,6 @@ public class NewsMapperTest {
 
   @Test
   public void testSelectById() {
-
     System.out.println("==========testSelectById==========");
     System.out.println(newsMapper.findById("1"));
     System.out.println(newsMapper.findById("3"));
@@ -63,7 +62,6 @@ public class NewsMapperTest {
 
   @Test
   public void testDeleteById() {
-
     System.out.println("==========testDeleteById==========");
     newsMapper.deleteById("12");
     for (News userIterator: newsMapper.findAll()) {

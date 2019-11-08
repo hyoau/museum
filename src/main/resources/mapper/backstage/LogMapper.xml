@@ -1,74 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.nwu.museum.dao.LogMapper">
   <resultMap id="BaseResultMap" type="edu.nwu.museum.domain.Log">
     <id column="log_seq_no" jdbcType="INTEGER" property="logSeqNo"/>
     <result column="user_id" jdbcType="VARCHAR" property="userId"/>
-    <result column="user_name" jdbcType="VARCHAR" property="userName"/>
     <result column="login_ip" jdbcType="INTEGER" property="loginIp"/>
     <result column="log_action_type" jdbcType="INTEGER" property="logActionType"/>
     <result column="log_action" jdbcType="VARCHAR" property="logAction"/>
     <result column="log_action_time" jdbcType="TIMESTAMP" property="logActionTime"/>
+    <result column="logout_time" jdbcType="TIMESTAMP" property="logoutTime"/>
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime"/>
   </resultMap>
 
   <select id="findAll" resultType="edu.nwu.museum.domain.Log">
     SELECT
       log_seq_no logSeqNo,
       user_id userId,
-      user_name userName,
       login_ip loginIp,
+      login_time loginTime,
+      logout_time logoutTime,
       log_action_type logActionType,
       log_action logAction,
       log_action_time logActionTime
-    FROM log
+    FROM t_log
   </select>
 
   <select id="find" parameterType="java.lang.Integer" resultType="edu.nwu.museum.domain.Log">
     SELECT
-    log_seq_no logSeqNo,
-    user_id userId,
-    user_name userName,
-    login_ip loginIp,
-    log_action_type logActionType,
-    log_action logAction,
-    log_action_time logActionTime
-    FROM log
+      log_seq_no logSeqNo,
+      user_id userId,
+      login_ip loginIp,
+      login_time loginTime,
+      logout_time logoutTime,
+      log_action_type logActionType,
+      log_action logAction,
+      log_action_time logActionTime
+    FROM t_log
     WHERE log_seq_no = #{logSeqNo}
   </select>
 
   <insert id="insert" parameterType="edu.nwu.museum.domain.Log">
-    INSERT INTO log(
+    INSERT INTO t_log(
       log_seq_no,
       user_id,
-      user_name,
       login_ip,
+      login_time,
+      logout_time,
       log_action_type,
       log_action,
       log_action_time
       ) VALUES (
       #{logSeqNo},
       #{userId},
-      #{userName},
       #{loginIp},
+      #{loginTime, jdbcType=TIMESTAMP},
+      #{logoutTime, jdbcType=TIMESTAMP},
       #{logActionType},
       #{logAction},
-      #{logActionTime,jdbcType=TIMESTAMP}
+      #{logActionTime, jdbcType=TIMESTAMP}
     )
   </insert>
 
   <update id="update" parameterType="edu.nwu.museum.domain.Log">
-    UPDATE log
+    UPDATE t_log
     SET log_seq_no = #{logSeqNo},
         user_id = #{userId},
-        user_name = #{userName},
         login_ip = #{loginIp},
+        login_time = #{loginTime,jdbcType=TIMESTAMP},
+        logout_time = #{logoutTime,jdbcType=TIMESTAMP}
         log_action_type = #{logActionType},
         log_action = #{logAction},
         log_action_time = #{logActionTime,jdbcType=TIMESTAMP}
   </update>
 
   <delete id="delete" parameterType="java.lang.String">
-    delete from log where log_seq_no = #{logSeqNo}
+    delete from t_log where log_seq_no = #{logSeqNo}
   </delete>
 
 </mapper>

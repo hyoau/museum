@@ -38,6 +38,7 @@ public class FavouriteMapperTest {
   @Test
   public void testInsert() {
     Favourite favourite = new Favourite();
+    favourite.setUserId("Meow");
     favourite.setSeqNo(8362);
     favourite.setAntiqueId("Meow");
     favouriteMapper.insert(favourite);
@@ -56,8 +57,8 @@ public class FavouriteMapperTest {
 
   @Test
   public void testUpdate() {
-    Favourite favourite = new Favourite();
-    favourite.setSeqNo(8362);
+    Favourite favourite = favouriteMapper.find(8362);
+    favourite.setSeqNo(8352);
     favourite.setAntiqueId("Joo");
     favouriteMapper.update(favourite);
     System.out.println("====================");

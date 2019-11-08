@@ -30,7 +30,6 @@ public class AntiqueMapperTest {
 
   @Test
   public void testSelectById() {
-
     System.out.println("==========testSelectById==========");
     System.out.println(antiqueMapper.findById("1",1));
     System.out.println(antiqueMapper.findById("3",3));

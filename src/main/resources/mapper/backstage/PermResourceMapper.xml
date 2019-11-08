@@ -40,7 +40,7 @@
     UPDATE perm_resource
     SET perm_res_id = #{permResId},
         perm_res_name = #{permResName},
-        perm_url = #{groupInfo},
+        perm_url = #{permUrl}
     WHERE perm_res_id = #{permResId}
   </update>
 

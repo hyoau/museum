@@ -69,5 +69,4 @@ public class BackupMapperTest {
     }
     System.out.println("========== UserMapper Test ==========");
   }
-
 }

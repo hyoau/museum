@@ -47,16 +47,8 @@ public class MuseumMapperTest {
   }
 
   @Test
-  public void testDelete() {
-    museumMapper.delete("8362");
-    System.out.println("====================");
-    System.out.println(museumMapper.findAll());
-    System.out.println("====================");
-  }
-
-  @Test
   public void testUpdate() {
-    Museum museum = new Museum();
+    Museum museum = museumMapper.find("8362");
     museum.setMuseumId("8362");
     museum.setMuseumName("Joo");
     museumMapper.update(museum);
@@ -64,4 +56,14 @@ public class MuseumMapperTest {
     System.out.println(museumMapper.findAll());
     System.out.println("====================");
   }
+
+  @Test
+  public void testDelete() {
+    museumMapper.delete("8362");
+    System.out.println("====================");
+    System.out.println(museumMapper.findAll());
+    System.out.println("====================");
+  }
+
+
 }
