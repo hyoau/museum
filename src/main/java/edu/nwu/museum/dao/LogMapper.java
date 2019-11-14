@@ -2,9 +2,11 @@ package edu.nwu.museum.dao;
 
 import edu.nwu.museum.domain.Log;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Mapper
 public interface LogMapper {
   List<Log> findAll();
 

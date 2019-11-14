@@ -2,9 +2,11 @@ package edu.nwu.museum.dao;
 
 import edu.nwu.museum.domain.Expert;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Mapper
 public interface ExpertMapper {
   //查询所有专家信息
   List<Expert> findAll();

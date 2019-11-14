@@ -2,9 +2,11 @@ package edu.nwu.museum.dao;
 
 import edu.nwu.museum.domain.Paper;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Mapper
 public interface PaperMapper {
   //查询所有论文信息
   List<Paper> findAll();
