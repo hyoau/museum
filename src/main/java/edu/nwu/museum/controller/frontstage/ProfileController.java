@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/profile")
 public class ProfileController {
-  @RequestMapping("/favourite")
-  public String favourite() {
-    return "收藏";
-  }
+    @RequestMapping("/favourite")
+    public String favourite() {
+        return "收藏";
+    }
 
-  @RequestMapping("/comment")
-  public String comment() {
-    return "评论";
-  }
+    @RequestMapping("/comment")
+    public String comment() {
+        return "评论";
+    }
 
-  @RequestMapping("/history")
-  public String history() {
-    return "浏览足迹";
-  }
+    @RequestMapping("/history")
+    public String history() {
+        return "浏览足迹";
+    }
 }

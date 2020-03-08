@@ -1,12 +1,13 @@
 package edu.nwu.museum.domain;
 
 import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
 public class Role implements Serializable {
-  private static final long serialVersionUID = 1L;
-  private Integer id;
-  private String name;
-  private String memo;
+    private static final long serialVersionUID = 1L;
+    private Integer id;
+    private String name;
+    private String memo;
 }

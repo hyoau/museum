@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 @Configuration
 public class MuseumApplication {
-  public static void main(String[] args) {
-    SpringApplication.run(MuseumApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(MuseumApplication.class, args);
+    }
 }

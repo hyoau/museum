@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/search")
 public class SearchController {
-  @RequestMapping("/")
-  public String search() {
-    return "搜索接口";
-  }
+    @RequestMapping("/")
+    public String search() {
+        return "搜索接口";
+    }
 }

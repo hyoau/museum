@@ -1,6 +1,7 @@
 package edu.nwu.museum.dao;
 
 import edu.nwu.museum.domain.Antique;
+
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -9,15 +10,15 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 public interface AntiqueMapper {
-  List<Antique> findAll();
+    List<Antique> findAll();
 
-  Antique findById(String antiqueId, Integer seqNo);
+    Antique findById(String antiqueId, Integer seqNo);
 
-  void insert(Antique antique);
+    void insert(Antique antique);
 
-  void update(Antique antique);
+    void update(Antique antique);
 
-  int deleteById(String antiqueId, Integer seqNo);
+    int deleteById(String antiqueId, Integer seqNo);
 
-  List<Antique> paginate(Integer offset);
+    List<Antique> paginate(Integer offset);
 }
